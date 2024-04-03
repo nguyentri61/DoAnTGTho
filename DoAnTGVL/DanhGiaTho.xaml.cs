@@ -44,6 +44,7 @@ namespace DoAnTGVL
             bitmap.BeginInit();
             bitmap.UriSource = imageUri;
             bitmap.EndInit();
+//testtstset
             clickedImage.Source= bitmap;
             //OpenFileDialog openFileDialog = new OpenFileDialog();
             //openFileDialog.Filter = "Image files|*.bmp;*.jpg;*.png";
