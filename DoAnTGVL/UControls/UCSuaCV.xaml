@@ -1,0 +1,168 @@
+﻿<UserControl x:Class="DoAnTGVL.UControls.UCSuaCV"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:DoAnTGVL.UControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="800">
+    <Grid >
+
+        <Border BorderThickness="1" BorderBrush="#FF807D7D" CornerRadius="10">
+            <Grid Background="#F2F1F1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="110"></RowDefinition>
+                    <RowDefinition Height="305"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock Text="Chỉnh sửa CV" FontSize="30" Foreground="#FF8C00FC" FontWeight="Bold"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="txbTitle">
+
+                    </TextBlock>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid Width="646" Height="304" Background="#F2F1F1">
+                        <Grid.Clip>
+                            <RectangleGeometry Rect="0,0,646,304" RadiusX="10" RadiusY="10"/>
+                        </Grid.Clip>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="2"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0">
+                            <Grid Height="30" Width="213" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40 35 0 0">
+                                <materialDesign:PackIcon Kind="AccountBox" Height="25" Width="25" VerticalAlignment="Center"/>
+                                <TextBox  x:Name="txbHoTenNV" Margin="30 0 0 0" Padding="0"
+                                  materialDesign:HintAssist.Hint="Nhập họ tên "
+                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            </Grid>
+                            <Grid Height="30" Width="213" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40 40 0 0">
+                                <materialDesign:PackIcon Kind="CalendarRange" Height="25" Width="25" VerticalAlignment="Center"/>
+                                <DatePicker x:Name="dtNTNS" Margin="30 0 0 0" Padding="0"
+                                      materialDesign:HintAssist.Hint="Ngày tháng năm sinh"
+                                      Style="{StaticResource MaterialDesignFloatingHintDatePicker}" DisplayDate="2021-10-01" />
+                            </Grid>
+                            <Grid Height="30" Width="213" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40 40 0 0">
+                                <materialDesign:PackIcon Kind="CardAccountDetailsOutline" Height="25" Width="25" VerticalAlignment="Center"/>
+                                <TextBox  x:Name="txbCCCD" Margin="30 0 0 0" Padding="0" MaxLength="12"
+                                  materialDesign:HintAssist.Hint="Nhập họ căn cước công dân"
+                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            </Grid>
+                            <Grid Height="25" Width="213" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40 40 0 0">
+                                <materialDesign:PackIcon Kind="Counter" Height="25" Width="25" VerticalAlignment="Center"/>
+                                <!--<TextBox  x:Name="txbLuong" Margin="30 0 0 0" Padding="0"
+                                  materialDesign:HintAssist.Hint="Nhập lương"
+                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />-->
+                                <ComboBox Text=""  Width="150" materialDesign:HintAssist.Hint="Kinh Nghiệm">
+                                    <ComboBoxItem Content="Ít hơn 1 năm">
+
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Content="1 - 2 năm">
+
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Content="2 - 3 năm">
+
+                                    </ComboBoxItem>
+                                    <ComboBoxItem  Content="Trên 3 năm">
+
+                                    </ComboBoxItem>
+                                </ComboBox>
+
+                            </Grid>
+                        </StackPanel>
+
+                        <Grid Height="200" VerticalAlignment="Center" Background="#9A8A8A" Grid.Column="1"/>
+
+                        <StackPanel Grid.Column="2">
+                            <Grid Height="30" Width="213" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40 35 0 0">
+                                <materialDesign:PackIcon Kind="Phone" Height="25" Width="25" VerticalAlignment="Center"/>
+                                <TextBox  x:Name="txbSDT" Margin="30 0 0 0" Padding="0" MaxLength="10"
+                                  materialDesign:HintAssist.Hint="Nhập số điện thoại"
+                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            </Grid>
+                            <Grid Height="30" Width="213" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40 40 0 0">
+                                <materialDesign:PackIcon Kind="GenderMaleFemaleVariant" Height="25" Width="25" VerticalAlignment="Center"/>
+
+
+                                <ComboBox x:Name="cbGioiTinh" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="30 0 0 0"
+                                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                    materialDesign:HintAssist.Hint="Giới tính"
+                                    Height="25" Padding="5" Width="180">
+                                    <ComboBoxItem Content="Nam" />
+                                    <ComboBoxItem Content="Nữ" />
+                                </ComboBox>
+                            </Grid>
+                            <Grid Height="30" Width="213" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40 40 0 0">
+                                <materialDesign:PackIcon Kind="MapMarkerRadiusOutline" Height="25" Width="25" VerticalAlignment="Center"/>
+                                <TextBox  x:Name="txbDiaChi" Margin="30 0 0 0" Padding="0"
+                                  materialDesign:HintAssist.Hint="Nhập địa chỉ"
+                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            </Grid>
+                            <Grid Height="25" Width="213" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40 40 0 0">
+                                <materialDesign:PackIcon Kind="AccountHardHat" Height="25" Width="25" VerticalAlignment="Center"/>
+                                <ComboBox    Width="150" materialDesign:HintAssist.Hint="Lĩnh Vực">
+
+                                    <ComboBoxItem Content="Điện nước">
+
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Content="Điện Tủ">
+
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Content="Bảo Trì">
+
+                                    </ComboBoxItem>
+                                    <ComboBoxItem  Content="Sửa Nhà">
+
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Content="Gia Su">
+
+                                    </ComboBoxItem>
+
+                                </ComboBox>
+
+                            </Grid>
+                        </StackPanel>
+
+                    </Grid>
+
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Button Width="89" Height="36" Background="#478C10" Content="Cập nhật"  
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 212 20" >
+                        <Button.Clip>
+                            <RectangleGeometry Rect="0,0,89,36" RadiusX="10" RadiusY="10"/>
+                        </Button.Clip>
+
+                    </Button>
+                    <Button Width="89" Height="36" Background="#478C10" Content="Thêm"  Foreground="White"
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 212 20" >
+                        <Button.Clip>
+                            <RectangleGeometry Rect="0,0,89,36" RadiusX="10" RadiusY="10"/>
+                        </Button.Clip>
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Visibility" Value="Hidden"></Setter>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Path=Text, ElementName=txbTitle }" Value="Thêm nhân viên">
+                                        <Setter Property="Visibility" Value="Visible"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                    <Button Width="89" Height="36" Background="#9D9999" Content="Hủy"
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 80 20"    >
+                        <Button.Clip>
+                            <RectangleGeometry Rect="0,0,89,36" RadiusX="10" RadiusY="10"/>
+                        </Button.Clip>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

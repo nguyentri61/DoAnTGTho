@@ -1,0 +1,99 @@
+﻿<Window x:Class="DoAnTGVL.XacNhanThueTho"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAnTGVL"
+        mc:Ignorable="d"
+        Title="Xác Nhận Thông Tin" Height="600" Width="700"
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="13"
+            TextOptions.TextFormattingMode="Ideal"
+            TextOptions.TextRenderingMode="Auto"
+            Background="#F2F1F1"
+            FontFamily="{DynamicResource MaterialDesignFont}"
+            WindowStyle="None"
+            AllowsTransparency="True" 
+            WindowStartupLocation="CenterScreen">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                 From="0.0" To="1.0" Duration="0:0:0:0.1" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+   
+    <Border BorderBrush="Black" BorderThickness="1">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" FontSize="30" FontWeight="Bold" Text="Thuê Thợ" 
+           Foreground="#FF8C00FC" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Grid Grid.Row="1">
+                <Grid  Width="605" Height="450" Background="White"
+      VerticalAlignment="Top" HorizontalAlignment="Center">
+                    <Grid.Clip>
+                        <RectangleGeometry Rect="0,0,605,450" RadiusX="10" RadiusY="10"/>
+                    </Grid.Clip>
+                    <StackPanel Orientation="Vertical">
+
+                        <Grid Height="60" Margin="0,5,0,0">
+
+                            <Grid Height="60" Width="552" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25 5 0 0">
+                                <GroupBox Header="Tiêu đề" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="50">
+                                    <TextBox Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" Text="{Binding Path=TieuDe, UpdateSourceTrigger=PropertyChanged}" />
+                                </GroupBox>
+                            </Grid>
+
+                        </Grid>
+
+                        <Grid Height="60" Margin="0,15,0,0">
+                            <Grid Height="60" Width="552" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25 5 0 0">
+                                <GroupBox Header="Mô tả việc chi tiết" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="50">
+                                    <TextBox Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" Text="{Binding Path=MoTa, UpdateSourceTrigger=PropertyChanged}"/>
+                                </GroupBox>
+                            </Grid>
+
+                        </Grid>
+
+                        <Grid Height="auto" Margin="0,15,0,0">
+                            <GroupBox Width="552"  Header="Ngày thuê" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="280" >
+                                <Calendar x:Name="calenNgayThue" 
+                                        materialDesign:CalendarAssist.Orientation="Horizontal" Loaded="calenNgayThue_Loaded" SelectedDate="{Binding DateThue, UpdateSourceTrigger=PropertyChanged}" >
+                                    <Calendar.BlackoutDates >
+
+                                    </Calendar.BlackoutDates>
+                                </Calendar>
+                            </GroupBox>
+                        </Grid>
+
+                        
+
+                    </StackPanel>
+
+                </Grid>
+                <Button x:Name="btn_Xacnhan" Width="150" Height="40" Background="#478C10" Content="Xác nhận" FontSize="18"
+                HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,474,0,0" Click="btn_Xacnhan_Click" >
+                    <Button.Clip>
+                        <RectangleGeometry Rect="0,0,150,40" RadiusX="10" RadiusY="10"/>
+                    </Button.Clip>
+                </Button>
+                <Button Width="89" Height="40" Background="#9D9999" Content="Hủy" Click="click_Huy"
+                HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,46,26">
+                    <Button.Clip>
+                        <RectangleGeometry Rect="0,0,89,40" RadiusX="10" RadiusY="10"/>
+                    </Button.Clip>
+                </Button>
+            </Grid>
+        </Grid> 
+    </Border>
+</Window>

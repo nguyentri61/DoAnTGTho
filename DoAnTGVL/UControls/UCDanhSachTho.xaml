@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="DoAnTGVL.UControls.UCDanhSachTho"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DoAnTGVL.UControls"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             
+             d:DesignHeight="450" d:DesignWidth="275">
+    <Border CornerRadius="24" Background="White" BorderThickness="2" BorderBrush="#D5E0D5">
+        <Grid Background="Transparent" Margin="0,0,-2,0">
+            <Grid Margin="20">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="120"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="120"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+
+                    <TextBlock x:Name="txtKhucVuc"  Text="{Binding Path= Khuvuc }"  Foreground="#5E6D55" FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Left" Height="30" Margin="150,0,0,0" VerticalAlignment="Center" Grid.Column="1">
+
+                    </TextBlock>
+                    <ToggleButton HorizontalAlignment="Left"  Width="25" Height="25"
+                     Content="{materialDesign:PackIcon Kind=Heart,Size=20}"
+                        IsChecked="{Binding Path= DcYeuThich }"  
+                        Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"
+            ToolTip="MaterialDesignFlatPrimaryToggleButton" Margin="0,2,0,2" Click="ToggleButton_Click" />
+
+                </Grid>
+                <Ellipse Grid.Row="1" Width="110" Margin="0 0 0 0">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/image/man.jpg"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+
+                <Grid Grid.Row="2">
+                    <StackPanel Orientation="Vertical">
+
+                        <TextBlock x:Name="txtName" Text="{Binding Path= HoTen }" Width="auto" Height="auto" Foreground="#001E00" FontSize="25" FontWeight="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 5 0 0" FontFamily="Yu Gothic UI Semibold">
+
+                        </TextBlock>
+
+                        <TextBlock x:Name="txtLinhVuc" Text="{Binding Path= LinhVuc }" Width="auto" Height="auto" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Yu Gothic UI Light">
+                        </TextBlock>
+
+                    </StackPanel>
+
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <StackPanel>
+                        <WrapPanel HorizontalAlignment="Center" Margin="-5,0,0,0">
+                            <materialDesign:PackIcon  Kind="Star"  Height="25" Width="25" Foreground="#14A800" />
+                            <TextBlock x:Name="txtDanhGia"   Text="{Binding Path= DanhGia }" FontSize="20" Foreground="#5E6D55" ></TextBlock>
+                            <TextBlock   Text="/5" FontSize="20" Foreground="#5E6D55" ></TextBlock>
+                        </WrapPanel>
+
+                        <TextBlock x:Name="txtKinhNghiem" Margin="0,5,0,0" Text="{Binding Path= Kinhnghiem }" FontSize="18" Foreground="#5E6D55" HorizontalAlignment="Center">
+
+                        </TextBlock>
+
+
+                        <TextBlock x:Name="txtChuyenMon" TextWrapping="WrapWithOverflow" Text="{Binding Path= ChuyenMon }" Foreground="#5E6D55" Margin="0 10 0 0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30"  >
+
+                        </TextBlock>
+
+
+
+                    </StackPanel>
+
+
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <Button Content="Xem chi tiết" FontSize="18" Margin="0 5 0 0" Height="40" Width="150" Click="btnXemChiTiet_Click" Background="#FF8C00FC">
+
+                        <Button.Clip>
+                            <RectangleGeometry Rect="0,0,150,40" RadiusX="10" RadiusY="10"/>
+                        </Button.Clip>
+                    </Button>
+                </Grid>
+
+            </Grid>
+        </Grid>
+    </Border>
+
+
+</UserControl>

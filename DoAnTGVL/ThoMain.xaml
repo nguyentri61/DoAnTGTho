@@ -1,0 +1,207 @@
+﻿<Window x:Class="DoAnTGVL.ThoMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAnTGVL"
+        xmlns:UCSuaCV="clr-namespace:DoAnTGVL.UControls"
+        xmlns:UCCViecTho="clr-namespace:DoAnTGVL.UControls"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="ThoMain" Height="800" Width="1500">
+
+    <Window.Resources>
+        <Storyboard x:Key="OpenMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="gridMainmenu">
+
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="200"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CloseMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="gridMainmenu">
+
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="50"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <!--<Storyboard x:Key="OpenMain">
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="gridMainWin">
+            <EasingDoubleKeyFrame KeyTime="0" Value="1300"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1450"/>
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Key="CloseMain">
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="gridMainWin">
+            <EasingDoubleKeyFrame KeyTime="0" Value="1450"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1300"/>
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>-->
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonOpenMenu">
+            <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
+        </EventTrigger>
+        <!--<EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonOpenMenu">
+        <BeginStoryboard Storyboard="{StaticResource CloseMain}"/>
+    </EventTrigger>-->
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonCloseMenu">
+            <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
+        </EventTrigger>
+        <!--<EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonCloseMenu">
+        <BeginStoryboard Storyboard="{StaticResource OpenMain}"/>
+    </EventTrigger>-->
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="gridMainmenu">
+            <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid x:Name="gridMain" >
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="gridMainWin" HorizontalAlignment="Right" Width="1450">
+
+
+        </Grid>
+        <Grid x:Name="gridMainmenu" Width="50" HorizontalAlignment="Left" MouseLeave="gridMainmenu_MouseLeave">
+            <Border BorderBrush="#CCCCCC" BorderThickness="1" Background="#FFFFFF" CornerRadius="5" HorizontalAlignment="Left" >
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="10" Opacity="0.7" Color="Black"/>
+                </Border.Effect>
+                <Grid  >
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <StackPanel  Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" Background="#FFFFFF">
+
+                        <StackPanel>
+                            <Button x:Name="ButtonOpenMenu" Height="50" Width="50" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF31577E" Click="ButtonOpenMenu_Click">
+                                <materialDesign:PackIcon Kind="Menu" Width="30" Height="30"/>
+                            </Button>
+                            <Button x:Name="ButtonCloseMenu" Visibility="Collapsed" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF31577E" Click="ButtonCloseMenu_Click">
+                                <materialDesign:PackIcon Kind="Menu" Width="30" Height="30"/>
+                            </Button>
+                            <Menu  Background="Transparent"  Margin="0,10,0,0" >
+                                <Menu.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel Orientation="Vertical"></VirtualizingStackPanel>
+                                    </ItemsPanelTemplate>
+                                </Menu.ItemsPanel>
+
+                                <MenuItem Header="Trang chủ" Width="200"  FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="MnuTrangChu_Click">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Width="28" Height="28" Kind="Home"  Margin="-8.45,-9,0,0"  >
+                                            <materialDesign:PackIcon.Foreground>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="Black"/>
+                                                    <GradientStop Color="#FFD371F0" Offset="1"/>
+                                                    <GradientStop Color="#FF512B5C" Offset="0.387"/>
+                                                    <GradientStop Color="#FF4F2A5A" Offset="0.501"/>
+                                                </LinearGradientBrush>
+                                            </materialDesign:PackIcon.Foreground>
+                                        </materialDesign:PackIcon>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Header="Tìm việc" Width="200"  FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="MnuTimViec_Click">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Width="28" Height="28" Kind="Magnify"  Margin="-7,-8,0,0"  >
+                                            <materialDesign:PackIcon.Foreground>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="Black"/>
+                                                    <GradientStop Color="#FFD371F0" Offset="1"/>
+                                                    <GradientStop Color="#FF512B5C" Offset="0.387"/>
+                                                    <GradientStop Color="#FF4F2A5A" Offset="0.501"/>
+                                                </LinearGradientBrush>
+                                            </materialDesign:PackIcon.Foreground>
+                                        </materialDesign:PackIcon>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Header="Danh sách việc làm"  Width="200"  FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="mnuDSVL_Click">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Width="28" Height="24" Kind="ListBoxOutline" Margin="-7,-6,0,-3" VerticalAlignment="Stretch"  >
+                                            <materialDesign:PackIcon.Foreground>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="Black"/>
+                                                    <GradientStop Color="#FFD371F0" Offset="1"/>
+                                                    <GradientStop Color="#FF512B5C" Offset="0.387"/>
+                                                    <GradientStop Color="#FF4F2A5A" Offset="0.501"/>
+                                                </LinearGradientBrush>
+                                            </materialDesign:PackIcon.Foreground>
+                                        </materialDesign:PackIcon>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Header="Thống kê công việc"  Width="200"   FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="mnuViecLam_Click">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Width="26" Height="24" Kind="ListStatus"  Margin="-6,0,0,0" VerticalAlignment="Center"  >
+                                            <materialDesign:PackIcon.Foreground>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="Black"/>
+                                                    <GradientStop Color="#FFD371F0" Offset="1"/>
+                                                    <GradientStop Color="#FF512B5C" Offset="0.387"/>
+                                                    <GradientStop Color="#FF4F2A5A" Offset="0.501"/>
+                                                </LinearGradientBrush>
+                                            </materialDesign:PackIcon.Foreground>
+                                        </materialDesign:PackIcon>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
+
+                                <MenuItem x:Name="mnuLogout"  Width="200"   Header="Đăng xuất" FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Margin="0,300" Click="MnuLogout_Click">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Width="26" Height="24" Kind="Logout"  Grid.IsSharedSizeScope="True" Margin="0,-5,0,0" HorizontalAlignment="Center"  >
+                                            <materialDesign:PackIcon.Foreground>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="Black"/>
+                                                    <GradientStop Color="#FFD371F0" Offset="1"/>
+                                                    <GradientStop Color="#FF512B5C" Offset="0.387"/>
+                                                    <GradientStop Color="#FF4F2A5A" Offset="0.501"/>
+                                                </LinearGradientBrush>
+                                            </materialDesign:PackIcon.Foreground>
+                                        </materialDesign:PackIcon>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </Menu>
+                        </StackPanel>
+                    </StackPanel>
+
+                </Grid>
+
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
+<!--<MenuItem Header="Trang Chủ" Width="200" FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="TrangChuUser_Click">
+    <MenuItem.Icon>
+        <materialDesign:PackIcon Kind="Home" Margin="-6,-4,0,0" Width="26" Height="26" Foreground="#DDFC1B0A" />
+    </MenuItem.Icon>
+</MenuItem>
+<MenuItem Header="Tìm Việc" Width="200" FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="mnuTimViec_Click">
+    <MenuItem.Icon>
+        <materialDesign:PackIcon Kind="Magnify" Margin="-7,-8,0,0" Width="28" Height="28" Foreground="#DD9405A1"  />
+    </MenuItem.Icon>
+</MenuItem>
+<MenuItem Header="Sửa CV" Width="200" FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="mnuSuaCV_Click">
+    <MenuItem.Icon>
+        <materialDesign:PackIcon Width="26" Height="25" Kind="AutoFix" Foreground="#DD16CE13" Margin="-7,-8,0,0"  />
+    </MenuItem.Icon>
+</MenuItem>
+<MenuItem Header="Việc Làm" Width="200" FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="mnuViecLam_Click">
+    <MenuItem.Icon>
+        <materialDesign:PackIcon Width="26" Height="24" Kind="Post" Foreground="#DDF6CE0B" Margin="-6,0,0,0" VerticalAlignment="Center"  />
+    </MenuItem.Icon>
+</MenuItem>
+<MenuItem Header="Đánh Giá" Width="200" FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="mnuViewwDG_Click" >
+    <MenuItem.Icon>
+        <materialDesign:PackIcon Width="26" Height="24" Kind="ThumbsUp" Foreground="#DD0D4CEE" Margin="-6,-6,0,0"  />
+    </MenuItem.Icon>
+</MenuItem>
+<MenuItem x:Name="mnuLogout"  Width="200" Header="Đăng xuất" FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Margin="0,300" Click="mnuLogout_Click">
+    <MenuItem.Icon>
+        <materialDesign:PackIcon Kind="Logout" Width="28" Height="28" Foreground="#DDFF0A0A" Grid.IsSharedSizeScope="True" Margin="-7,-8,0,0"  />
+    </MenuItem.Icon>
+</MenuItem>-->
+

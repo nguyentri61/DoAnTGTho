@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DoAnTGVL</id>
+    <version>1.0.0</version>
+    <authors>DoAnTGVL</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="MaterialDesignThemes" version="4.9.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net6.0-windows7.0/image/5519785.jpg" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/image/undraw_Job_hunt_re_q203.png" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGVL\bin\Debug\net6.0-windows\DoAnTGVL.runtimeconfig.json" target="lib\net6.0-windows7.0\DoAnTGVL.runtimeconfig.json" />
+    <file src="C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGVL\bin\Debug\net6.0-windows\DoAnTGVL.dll" target="lib\net6.0-windows7.0\DoAnTGVL.dll" />
+    <file src="C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGVL\image\5519785.jpg" target="content\image\5519785.jpg" />
+    <file src="C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGVL\image\5519785.jpg" target="contentFiles\any\net6.0-windows7.0\image\5519785.jpg" />
+    <file src="C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGVL\image\undraw_Job_hunt_re_q203.png" target="content\image\undraw_Job_hunt_re_q203.png" />
+    <file src="C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGVL\image\undraw_Job_hunt_re_q203.png" target="contentFiles\any\net6.0-windows7.0\image\undraw_Job_hunt_re_q203.png" />
+  </files>
+</package>

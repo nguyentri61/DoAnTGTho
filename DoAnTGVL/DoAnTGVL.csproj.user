@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ChinhSuaDSCongViec.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChiTietCongViec.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChiTietTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DangBai.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DanhGiaTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProfileTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ShowDialogCustom.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ThoMain.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCCViecTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCDanhGia.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCDanhSachCongViec.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCDanhSachTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCDSCongViecTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCHome.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCSuaCV.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCThueTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCTimViec.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCViewDG.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UserPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserMain.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="XacNhanThueTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="XuatHoaDon.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ChinhSuaDSCongViec.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChiTietCongViec.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChiTietTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DangBai.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DanhGiaTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProfileTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ShowDialogCustom.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\PagingButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\UCstyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\WinStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ThoMain.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCCViecTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCDanhGia.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCDanhSachCongViec.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCDanhSachTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCDSCongViecTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCHome.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCSuaCV.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCThueTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCTimViec.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCViewDG.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UserPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserMain.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="XacNhanThueTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="XuatHoaDon.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
