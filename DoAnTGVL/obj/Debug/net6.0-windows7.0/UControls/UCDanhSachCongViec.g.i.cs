@@ -56,7 +56,7 @@ namespace DoAnTGVL.UControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DoAnTGVL;component/ucontrols/ucdanhsachcongviec.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DoAnTGVL;V1.0.0.0;component/ucontrols/ucdanhsachcongviec.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UControls\UCDanhSachCongViec.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -49,20 +49,23 @@
 
                             <Grid Height="60" Width="552" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25 5 0 0">
                                 <GroupBox Header="Tiêu đề" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="50">
-                                    <TextBox Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" />
+                                    <TextBox Margin="3,3,3,3" Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" Text="{Binding TieuDeCViec}"/>
                                 </GroupBox>
                             </Grid>
 
 
                         </Grid>
-                        <materialDesign:RatingBar Margin="90,30,0,0"
+                        <materialDesign:RatingBar Margin="90,35,0,0"
                             x:Name="BasicRatingBarWithPreview"
-                            IsPreviewValueEnabled="True"
-                            Value="3" />
-                        <Grid Height="100" Margin="0,15,0,0">
-                            <Grid Height="100" Width="552" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25 5 0 0">
-                                <GroupBox Header="Mô tả việc chi tiết" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="90">
-                                    <TextBox Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" />
+                            Max="5"
+                            Min="0"
+                            
+                            ValueIncrements="0.25"
+                            Value="{Binding DanhGiaCV, UpdateSourceTrigger=PropertyChanged}" />
+                        <Grid Height="150" Margin="0,15,0,0">
+                            <Grid Height="150" Width="552" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25 5 0 0">
+                                <GroupBox Header="Đánh giá chi tiết" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="140">
+                                    <TextBox Margin="3,3,3,3" Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" Text="{Binding MoTaDanhGia, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
                                 </GroupBox>
                             </Grid>
 

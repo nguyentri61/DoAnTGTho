@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[4.9.0, )"
             },
+            "Microsoft.Build.Framework": {
+              "target": "Package",
+              "version": "[17.9.5, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.6, )"

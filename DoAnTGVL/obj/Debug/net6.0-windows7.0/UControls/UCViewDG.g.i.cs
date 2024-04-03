@@ -112,7 +112,7 @@ namespace DoAnTGVL.UControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DoAnTGVL;component/ucontrols/ucviewdg.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DoAnTGVL;V1.0.0.0;component/ucontrols/ucviewdg.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UControls\UCViewDG.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
