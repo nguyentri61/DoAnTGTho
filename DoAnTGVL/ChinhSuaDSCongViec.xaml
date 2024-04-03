@@ -21,17 +21,15 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <TextBlock Text="{Binding Path= TieuDe}" 
+            <TextBlock Text="{Binding Path= TieuDe}" Margin="0 20 0 0"
                        TextWrapping="Wrap" 
                        Foreground="#001E00" FontSize="25" FontWeight="DemiBold">
 
@@ -39,33 +37,29 @@
         </Grid>
 
 
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="1">
 
-            <StackPanel Grid.Column="0" Orientation="Vertical" Margin="0 20 0 0">
+            <StackPanel Grid.Column="0" Orientation="Vertical" Margin="0 50 0 0">
                 <TextBlock Text="Mô tả chi tiết công việc:" Foreground="#001E00" FontSize="20" FontWeight="DemiBold"></TextBlock>
                 <TextBlock Text="{Binding Path= MoTa}"
            TextWrapping="Wrap"
            Foreground="#001E00" FontSize="15" FontWeight="Regular"
-           Margin="0 5 0 0" Grid.ColumnSpan="2"
+           Margin="0 10 0 0" Grid.ColumnSpan="2"
            ></TextBlock>
 
             </StackPanel>
 
         </Grid>
 
-        <Grid Grid.Row="3">
-           
 
-        </Grid>
+        <Grid Grid.Row="2">
 
-        <Grid Grid.Row="3">
-
-            <StackPanel Grid.Column="0" Orientation="Vertical" Margin="0 20 0 0">
+            <StackPanel Grid.Column="0" Orientation="Vertical" Margin="0 50 0 0">
                 <TextBlock Text="Ghi chú:" Foreground="#001E00" FontSize="20" FontWeight="DemiBold"></TextBlock>
                 <TextBlock Text="{Binding Path= GhiChu}"
            TextWrapping="Wrap"
            Foreground="#001E00" FontSize="15" FontWeight="Regular"
-            Margin="0 5 0 0"
+            Margin="0 10 0 0"
            ></TextBlock>
 
             </StackPanel>
@@ -74,7 +68,7 @@
         </Grid>
 
 
-        <Grid Grid.Row="4">
+        <Grid Grid.Row="3">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -83,15 +77,15 @@
             <Grid Grid.Row="0">
                 <TextBlock  Text="Lĩnh Vực:"
                        Foreground="#001E00" FontSize="20" FontWeight="DemiBold"
-                       Margin="0 10 0 0"
+                       Margin="0 30 0 0"
                        ></TextBlock>
                 <TextBlock  Text="Ngày Thuê:"
        Foreground="#001E00" FontSize="20" FontWeight="DemiBold"
-       Margin="350 10 0 0"
+       Margin="350 30 0 0"
        ></TextBlock>
             </Grid>
 
-            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 5 0 0">
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,5,0,10">
 
                 <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2">
                     <Grid Width="97" Height="30">
@@ -113,7 +107,7 @@
         </Grid>
 
 
-        <Grid Grid.Row="6">
+        <Grid Grid.Row="4">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -128,28 +122,24 @@
             </Grid>
 
             <Grid Grid.Row="1" Margin="0 20 0 0">
-                <ListBox FontSize="15" 
+                <ListBox FontSize="18" SelectionChanged="ListBox_SelectionChanged"
                   x:Name="RadioButtonGroupChoiceChip"
-                  Style="{StaticResource MaterialDesignChoiceChipListBox}">
-                    
+                  Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}">
+
                     <ListBoxItem x:Name="dhtlstItem" Margin="10 0 0 0" 
                     Content="Đã hoàn thành" IsSelected="True"/>
                     <ListBoxItem x:Name="dthlstItem" Margin="30 0 30 0"
                     Content="Đang thực hiện"/>
                     <ListBoxItem x:Name="cthlstItem"
                     Content="Chưa thực hiện" />
-                                    
+
                 </ListBox>
-
-
-
             </Grid>
-
         </Grid>
 
-        <Grid Grid.Row="7">
-            <Button x:Name="btn_Commfirm" Margin="0 10 0 0" Width="250" Height="50" >
-                <TextBlock Text="Xác nhận" FontSize="20"></TextBlock>
+        <Grid Grid.Row="5" Margin="0,53,0,0">
+            <Button x:Name="btn_Commfirm" Margin="0 10 0 0" Width="250" Height="50" Click="btnCapNhat_Click">
+                <TextBlock Text="Cập nhật" FontSize="20"></TextBlock>
                 <Button.Clip>
                     <RectangleGeometry Rect="0,0,250,50" RadiusX="10" RadiusY="10"/>
                 </Button.Clip>

@@ -91,6 +91,8 @@ namespace DoAnTGVL.UControls
 
             ChinhSuaDSCongViec chinhSuaDSCongViec = new ChinhSuaDSCongViec(congviec, tho);
             chinhSuaDSCongViec.ShowDialog();
+            buschitietcv.Sua(congviec, tho);
+            LoadDataIntoListView();
         }
     }
 }

@@ -93,7 +93,7 @@ namespace DoAnTGVL {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DoAnTGVL;V1.0.0.0;component/showdialogcustom.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DoAnTGVL;component/showdialogcustom.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ShowDialogCustom.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

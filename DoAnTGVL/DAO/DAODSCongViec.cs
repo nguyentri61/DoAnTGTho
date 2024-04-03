@@ -37,7 +37,7 @@ namespace DoAnTGVL.DAO
 
         public void SuaDSCongViec(CongViec cv, Tho tho)
         {
-            string sqlStr = string.Format("UPDATE DSCongViec SET TrangThai = '{0}' WHERE ID = '{1}' and IDUser = '{2}'"
+            string sqlStr = string.Format("UPDATE DSCongViec SET TrangThai = N'{0}' WHERE ID = '{1}' and IDTho = '{2}'"
                     , cv.TrangThai, cv.ID, tho.Id);
             dbConection.Process(sqlStr);
         }

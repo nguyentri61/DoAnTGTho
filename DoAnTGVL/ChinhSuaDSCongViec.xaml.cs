@@ -1,7 +1,9 @@
-﻿using DoAnTGVL.Class;
+﻿using DoAnTGVL.BUS;
+using DoAnTGVL.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -39,6 +41,31 @@ namespace DoAnTGVL
         private void btnHuy_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void btnCapNhat_Click(object sender, RoutedEventArgs e)
+        {
+            if(congviec.TrangThai != selectedListBoxItemContent)
+                congviec.TrangThai = selectedListBoxItemContent;
+            var thongbao = new ShowDialogCustom("Bạn có thật sự muốn cập nhật Tình trạng Công việc này? ", ShowDialogCustom.YesNo);
+
+            if (thongbao.ShowDialog() == true)
+            {
+                new ShowDialogCustom("Cập nhật thành công", ShowDialogCustom.OK).Show();
+            }
+        }
+
+        private string selectedListBoxItemContent = "";
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListBox listBox = (ListBox)sender;
+
+            if (listBox.SelectedItem != null)
+            {
+                selectedListBoxItemContent = ((ListBoxItem)listBox.SelectedItem).Content.ToString();
+                // Now selectedListBoxItemContent holds the content of the selected ListBoxItem
+            }
         }
     }
 }
