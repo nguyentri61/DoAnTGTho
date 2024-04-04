@@ -1,0 +1,102 @@
+﻿<Window x:Class="DoAnTGVL.ThoHoanThanhCongViec"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAnTGVL"
+        mc:Ignorable="d"
+        Title="ThoHoanThanhCongViec" Height="620" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+          TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+          TextElement.FontWeight="Regular"
+          TextElement.FontSize="13"
+          TextOptions.TextFormattingMode="Ideal"
+          TextOptions.TextRenderingMode="Auto"
+          Background="#F2F1F1"
+          FontFamily="{DynamicResource MaterialDesignFont}"
+          WindowStyle="None"
+          AllowsTransparency="True" 
+          WindowStartupLocation="CenterScreen">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                           From="0.0" To="1.0" Duration="0:0:0:0.1" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Border BorderBrush="Black" BorderThickness="1">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" FontSize="30" FontWeight="Bold" Text="Hoàn thành công việc"
+     Foreground="#FF8C00FC" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Grid Grid.Row="1">
+                <Grid  Width="700" Height="480" Background="White"
+VerticalAlignment="Top" HorizontalAlignment="Center">
+                    <Grid.Clip>
+                        <RectangleGeometry Rect="0,0,700,480" RadiusX="10" RadiusY="10"/>
+                    </Grid.Clip>
+                    <StackPanel Orientation="Vertical">
+
+                        <Grid Height="200" Margin="0,15,0,0">
+                            <Grid Height="200"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 5 0 0">
+                                <GroupBox Header="Các chi tiết đã hoàn thành lắp đặt, sửa chữa" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="180" Width="600" HorizontalAlignment="Center">
+                                    <TextBox Margin="3,3,3,3" Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" TextWrapping="Wrap"/>
+                                </GroupBox>
+                            </Grid>
+
+                        </Grid>
+
+                        <Grid Height="60" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 15 0 0">
+                            <GroupBox Header="Tổng giá tiền" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="50" Width="600">
+                                <TextBox Margin="3,3,3,3" Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" />
+                            </GroupBox>
+                        </Grid>
+
+                        <Grid Height="150" Width="700">
+                            <!-- Đặt một Border để tạo khung viền cho WrapPanel -->
+                            <Border BorderBrush="Black" BorderThickness="1" CornerRadius="5" Width="600" HorizontalAlignment="Center" Margin="0,30,0,0">
+                                <!-- WrapPanel để bọc các phần tử con -->
+                                <WrapPanel>
+                                    <!-- Các phần tử con -->
+                                    <Image Source="/image/add-2935429_1280.png" Margin="8,5,5,5" MouseDown="Image_MouseDown"  ></Image>
+                                    <Image Source="/image/add-2935429_1280.png" Margin="5,5,5,5" MouseDown="Image_MouseDown" ></Image>
+                                    <Image Source="/image/add-2935429_1280.png" Margin="5,5,5,5" MouseDown="Image_MouseDown"></Image>
+                                    <Image Source="/image/add-2935429_1280.png" Margin="5,5,5,5" MouseDown="Image_MouseDown"></Image>
+                                    <Image Source="/image/add-2935429_1280.png" Margin="5,5,5,5" MouseDown="Image_MouseDown"></Image>
+
+
+                                    <!-- Thêm các phần tử khác nếu cần -->
+                                </WrapPanel>
+                            </Border>
+                        </Grid>
+
+
+
+
+                    </StackPanel>
+
+                </Grid>
+                <Button x:Name="ComfirmClick" Width="150" Height="40" Background="#478C10" Content="Hoàn thành" FontSize="18"
+          HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,502,0,0" >
+                    <Button.Clip>
+                        <RectangleGeometry Rect="0,0,150,40" RadiusX="10" RadiusY="10"/>
+                    </Button.Clip>
+                </Button>
+                <Button Width="89" Height="40" Background="#9D9999" Content="Hủy" Click="btn_Huy_Click"
+          HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,49,16" >
+                    <Button.Clip>
+                        <RectangleGeometry Rect="0,0,89,40" RadiusX="10" RadiusY="10"/>
+                    </Button.Clip>
+                </Button>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

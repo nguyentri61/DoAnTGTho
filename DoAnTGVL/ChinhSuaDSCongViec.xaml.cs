@@ -47,12 +47,22 @@ namespace DoAnTGVL
         {
             if(congviec.TrangThai != selectedListBoxItemContent)
                 congviec.TrangThai = selectedListBoxItemContent;
-            var thongbao = new ShowDialogCustom("Bạn có thật sự muốn cập nhật Tình trạng Công việc này? ", ShowDialogCustom.YesNo);
-
-            if (thongbao.ShowDialog() == true)
+            if(congviec.TrangThai == "Đã hoàn thành")
             {
-                new ShowDialogCustom("Cập nhật thành công", ShowDialogCustom.OK).Show();
+                ThoHoanThanhCongViec thtcv = new ThoHoanThanhCongViec();
+                thtcv.ShowDialog();
             }
+
+            else
+            {
+                var thongbao = new ShowDialogCustom("Bạn có thật sự muốn cập nhật Tình trạng Công việc này? ", ShowDialogCustom.YesNo);
+
+                if (thongbao.ShowDialog() == true)
+                {
+                    new ShowDialogCustom("Cập nhật thành công", ShowDialogCustom.OK).Show();
+                }
+            }
+
         }
 
         private string selectedListBoxItemContent = "";

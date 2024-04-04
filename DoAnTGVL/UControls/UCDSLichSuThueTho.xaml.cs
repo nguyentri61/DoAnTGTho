@@ -79,15 +79,14 @@ namespace DoAnTGVL.UControls
             }
         }
 
-        //private void btn_Sua(object sender, RoutedEventArgs e)
-        //{
-        //    var congviec = (sender as Button).DataContext as CongViec;
+        private void btn_XemChiTiet(object sender, RoutedEventArgs e)
+        {
+            var congviec = (sender as Button).DataContext as CongViec;
 
-        //    ChinhSuaDSCongViec chinhSuaDSCongViec = new ChinhSuaDSCongViec(congviec, tho);
-        //    chinhSuaDSCongViec.ShowDialog();
-        //    buschitietcv.Sua(congviec, tho);
-        //    LoadDataIntoListView();
-        //}
-
+            //    ChinhSuaDSCongViec chinhSuaDSCongViec = new ChinhSuaDSCongViec(congviec, tho);
+            //    chinhSuaDSCongViec.ShowDialog();
+            //    buschitietcv.Sua(congviec, tho);
+            //    LoadDataIntoListView();
+        }
     }      
 }

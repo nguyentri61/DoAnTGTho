@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:DoAnTGVL"
         mc:Ignorable="d"
         x:Name="dialogcustom"
+        WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Title="DialogCustoms" Height="150" Width="400"
         Background="White">

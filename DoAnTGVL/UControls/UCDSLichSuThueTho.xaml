@@ -107,7 +107,7 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn Width="160" Header="Trạng Thái">
+                        <GridViewColumn Width="160" Header="Giá tiền">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding TrangThai}" Margin="20 0 0 0"></TextBlock>
@@ -116,10 +116,10 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn Header="Đánh giá" Width="110" >
+                        <GridViewColumn Header="Xem chi tiết" Width="110" >
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#FBB579" BorderThickness="0" Margin="20 0 0 0" Style="{DynamicResource d}" >
+                                    <Button HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#FBB579" BorderThickness="0" Margin="20 0 0 0" Style="{DynamicResource d}" Click="btn_XemChiTiet">
                                         <materialDesign:PackIcon Kind="DotsVerticalCircleOutline"/>
                                     </Button>
                                 </DataTemplate>
