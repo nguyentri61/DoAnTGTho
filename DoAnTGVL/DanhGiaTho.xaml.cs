@@ -52,6 +52,12 @@ namespace DoAnTGVL
         private void ComfirmClick_Click(object sender, RoutedEventArgs e)
         {           
             bUSDanhGiaTho.AddData(danhGia);
-        }       
+            this.Close(); 
+        }
+
+        private void huy_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -37,6 +37,8 @@ namespace DoAnTGVL
         }
         public void MnuLogout_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();  
             Close();
         }
 

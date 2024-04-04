@@ -6,7 +6,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:DoAnTGVL.UControls"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="700">
+             d:DesignHeight="400" d:DesignWidth="800">
     <Grid>
         <Border  Grid.Row="1" BorderBrush="#F2F1F1" BorderThickness="1" Background="White" CornerRadius="5">
             <Border.Effect>
@@ -14,7 +14,7 @@
             </Border.Effect>
             <GroupBox Header="{Binding TenUser}" FontFamily="Arial" FontSize="15" Style="{DynamicResource f}" BorderBrush="#FF80056B" BorderThickness="2,2,2,2" FontStyle="Italic" Margin="0,5,0,-1" >
                 <Grid>
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBlock  Text="Ngày Thuê:" Margin="10,20,30,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" ></TextBlock>
                         <TextBlock  Text="{Binding NgayThue ,StringFormat={}{0:MM/dd/yyy}}" Margin="-20,20,30,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" ></TextBlock>
                         <TextBlock x:Name="txtSao" Text="{Binding DanhGiaCV}" Margin="150,20,30,10" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBlock>
@@ -26,13 +26,13 @@
                     <StackPanel>
                         <TextBlock x:Name="txtNoiDung"  Text="{Binding MoTaDanhGia, UpdateSourceTrigger=PropertyChanged}"  Background="White" Margin="0,20,0,0" VerticalAlignment="Top" FontStyle="Normal" FontStretch="Medium" FontWeight="Bold" Height="44" TextWrapping="Wrap">
                         </TextBlock>
-                        <WrapPanel Margin="0,30">
+                        <WrapPanel x:Name="ImagePanel" Width="600" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50">
                             <!-- Các phần tử con -->
-                            <Image Source="/image/add-2935429_1280.png" Width="108" Margin="45,5,5,5"  ></Image>
+                            <!--<Image Source="/image/add-2935429_1280.png" Width="108" Margin="5,5,5,5"  ></Image>
                             <Image Source="/image/add-2935429_1280.png" Width="108" Margin="5,5,5,5"   ></Image>
                             <Image Source="/image/add-2935429_1280.png" Width="108" Margin="5,5,5,5"   ></Image>
                             <Image Source="/image/add-2935429_1280.png" Width="108" Margin="5,5,5,5"   ></Image>
-                            <Image Source="/image/add-2935429_1280.png" Width="108" Margin="5,5,5,5"   ></Image>
+                            <Image Source="/image/add-2935429_1280.png" Width="108" Margin="5,5,5,5"   ></Image>-->
                             <!--<Image Source="/image/add-2935429_1280.png" Margin="5,5,5,5" MouseDown="Image_MouseDown" ></Image>
                             <Image Source="/image/add-2935429_1280.png" Margin="5,5,5,5" MouseDown="Image_MouseDown"></Image>
                             <Image Source="/image/add-2935429_1280.png" Margin="5,5,5,5" MouseDown="Image_MouseDown"></Image>

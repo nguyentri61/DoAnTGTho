@@ -1,4 +1,5 @@
-﻿using DoAnTGVL.Class;
+﻿using DoAnTGVL.BUS;
+using DoAnTGVL.Class;
 using DoAnTGVL.UControls;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,8 @@ namespace DoAnTGVL
     {
         Tho tho;
         User user;
+        List<DanhGia> danhGias = new List<DanhGia>();
+        BUSDanhGiaTho bUSDanhGiaTho = new BUSDanhGiaTho();
         public ChiTietTho(Tho tho, User user)
         {
             
@@ -30,21 +33,8 @@ namespace DoAnTGVL
             this.DataContext = tho;
             this.user = user;
             this.tho = tho;
-            AddUserControl();
-            AddUserControl();
-            AddUserControl();
-            AddUserControl(); 
-            AddUserControl();
-        }
-        private void AddUserControl()
-        {
-
-            UCDanhGia userControl = new UCDanhGia();
-            userControl.Width = 500;
-            userControl.Height = 200;
-
-            // Thêm UserControl vào WrapPanel
-           WpanelDanhGia.Children.Add(userControl);
+            bUSDanhGiaTho.CreateWrapDanhGia(tho,user,this); 
+            
         }
            
         private void Thue_Click(object sender, RoutedEventArgs e)

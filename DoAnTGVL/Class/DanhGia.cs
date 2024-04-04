@@ -15,7 +15,7 @@ namespace DoAnTGVL.Class
         private int danhGiaCV =1;
         private string moTaDanhGia="";
         private string tieuDeCViec= "Cần thuê thợ điện tử chuyên nghiệp cho dự án mới";
-        private List<string> imageDG;
+        private List<string> imageDG= new List<string>();
 
         public DanhGia(int iDCongViec, int danhGiaCV, string moTaDanhGia)
         {
@@ -32,5 +32,15 @@ namespace DoAnTGVL.Class
         public string TenUser { get => tenUser; set => tenUser = value; }
         public DateTime NgayThue { get => ngayThue; set => ngayThue = value; }
         public int GiaThue { get => giaThue; set => giaThue = value; }
+        public void GetSource(string input)
+        {
+            
+            string[] words = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string word in words)
+            {
+                ImageDG.Add(word);
+            }
+        }
     }
 }

@@ -1,6 +1,9 @@
-﻿using DoAnTGVL.Class;
+﻿using DoAnTGVL.BUS;
+using DoAnTGVL.Class;
+using DoAnTGVL.DAO;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +26,34 @@ namespace DoAnTGVL.UControls
     public partial class UCDanhGia : UserControl
     {
         DanhGia danhGia=new DanhGia();
-        public UCDanhGia()
+        BUSDanhGiaTho bUSDanhGiaTho = new BUSDanhGiaTho();
+        public UCDanhGia(DanhGia danhGia)
         {
             InitializeComponent();
-            
+            this.danhGia = danhGia;
             DataContext = danhGia;
+            
+            StackPanel stackPanel = new StackPanel();
+            stackPanel.Orientation = Orientation.Horizontal;
+            stackPanel.HorizontalAlignment = HorizontalAlignment.Center;
+            stackPanel.VerticalAlignment = VerticalAlignment.Center;
+            int with = 600 / danhGia.ImageDG.Count;
+            foreach (string source in danhGia.ImageDG)
+            {
+                string solutionFilePath = bUSDanhGiaTho.FindSolutionFile();
+                
+                BitmapImage bitmapImage = new BitmapImage(new Uri(solutionFilePath + "\\DoAnTGVL\\ImageDanhGia\\"+source, UriKind.Absolute));
+
+                // Tạo một Image và đặt BitmapImage làm nguồn
+                Image image = new Image();
+                image.Source = bitmapImage;
+                image.Width = with;
+                image.Height = 200;
+                image.Margin = new Thickness(5);
+                stackPanel.Children.Add(image);
+            }
+            this.ImagePanel.Children.Add(stackPanel); 
+
         }
     }
 }
