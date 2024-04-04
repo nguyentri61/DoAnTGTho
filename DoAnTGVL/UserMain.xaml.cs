@@ -95,7 +95,7 @@ namespace DoAnTGVL
         private void btnLichSuThue_Click(object sender, RoutedEventArgs e)
         {
             gridMainWin.Children.Clear();
-            CurUC = new UCDSLichSuThueTho(user);
+            CurUC = new UCDSThueTho();
             gridMainWin.Children.Add(CurUC);
         }
     }

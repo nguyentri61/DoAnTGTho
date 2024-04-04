@@ -55,6 +55,12 @@
     <Compile Update="UControls\UCDSLichSuThueTho.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UControls\UCDSThue.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCDSThueTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UControls\UCHome.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -142,6 +148,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCDSLichSuThueTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCDSThue.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCDSThueTho.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCHome.xaml">
