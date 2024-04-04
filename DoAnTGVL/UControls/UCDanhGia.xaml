@@ -6,23 +6,43 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:DoAnTGVL.UControls"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="500">
+             d:DesignHeight="400" d:DesignWidth="700">
     <Grid>
         <Border  Grid.Row="1" BorderBrush="#F2F1F1" BorderThickness="1" Background="White" CornerRadius="5">
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="10" Opacity="0.7" />
             </Border.Effect>
-            <GroupBox Header="Nguyễn Văn An" FontFamily="Arial" FontSize="15" Style="{DynamicResource f}" BorderBrush="#FF80056B" BorderThickness="2,2,2,2" FontStyle="Italic" Margin="0,5,0,0" >
+            <GroupBox Header="{Binding TenUser}" FontFamily="Arial" FontSize="15" Style="{DynamicResource f}" BorderBrush="#FF80056B" BorderThickness="2,2,2,2" FontStyle="Italic" Margin="0,5,0,-1" >
                 <Grid>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock  Text="Ngày đăng: 22/4/2024" Margin="10,20,30,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" ></TextBlock>
-                        <TextBlock x:Name="txtSao" Text="4/5" Margin="70,20,30,10" VerticalAlignment="Bottom" HorizontalAlignment="Right"></TextBlock>
+                        <TextBlock  Text="Ngày Thuê:" Margin="10,20,30,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" ></TextBlock>
+                        <TextBlock  Text="{Binding NgayThue ,StringFormat={}{0:MM/dd/yyy}}" Margin="-20,20,30,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" ></TextBlock>
+                        <TextBlock x:Name="txtSao" Text="{Binding DanhGiaCV}" Margin="150,20,30,10" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock  Text="/5" Margin="-30,20,30,10" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBlock>
                         <materialDesign:PackIcon Kind="Star" Margin="-50,20,12,11" VerticalAlignment="Bottom" HorizontalAlignment="Right" Foreground="#FFD5D70F"  />
-                        <TextBlock x:Name="txtDichVu" Text="Loại dịch vụ: Sửa điện " Background="#F2F1F1" Margin="10,20,30,10" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                        <TextBlock x:Name="txtDichVu" Text="Giá thuê dịch vụ: 1000000đ " Background="#F2F1F1" Margin="180,20,30,10" VerticalAlignment="Bottom" HorizontalAlignment="Left">
                         </TextBlock>
                     </StackPanel>
-                    <TextBlock x:Name="txtNoiDung" Text="Thợ có tay nghề cao, thân thiện, hòa đồng, chúc bạn một ngày vui! " Background="White" Margin="0,20,0,0" VerticalAlignment="Top" FontStyle="Normal" FontStretch="Medium" FontWeight="Bold" Height="44" TextWrapping="Wrap">
-                    </TextBlock>
+                    <StackPanel>
+                        <TextBlock x:Name="txtNoiDung"  Text="{Binding MoTaDanhGia, UpdateSourceTrigger=PropertyChanged}"  Background="White" Margin="0,20,0,0" VerticalAlignment="Top" FontStyle="Normal" FontStretch="Medium" FontWeight="Bold" Height="44" TextWrapping="Wrap">
+                        </TextBlock>
+                        <WrapPanel Margin="0,30">
+                            <!-- Các phần tử con -->
+                            <Image Source="/image/add-2935429_1280.png" Width="108" Margin="45,5,5,5"  ></Image>
+                            <Image Source="/image/add-2935429_1280.png" Width="108" Margin="5,5,5,5"   ></Image>
+                            <Image Source="/image/add-2935429_1280.png" Width="108" Margin="5,5,5,5"   ></Image>
+                            <Image Source="/image/add-2935429_1280.png" Width="108" Margin="5,5,5,5"   ></Image>
+                            <Image Source="/image/add-2935429_1280.png" Width="108" Margin="5,5,5,5"   ></Image>
+                            <!--<Image Source="/image/add-2935429_1280.png" Margin="5,5,5,5" MouseDown="Image_MouseDown" ></Image>
+                            <Image Source="/image/add-2935429_1280.png" Margin="5,5,5,5" MouseDown="Image_MouseDown"></Image>
+                            <Image Source="/image/add-2935429_1280.png" Margin="5,5,5,5" MouseDown="Image_MouseDown"></Image>
+                            <Image Source="/image/add-2935429_1280.png" Margin="5,5,5,5" MouseDown="Image_MouseDown"></Image>-->
+
+
+                            <!-- Thêm các phần tử khác nếu cần -->
+                        </WrapPanel>        
+                    </StackPanel>
+                    
                     
                 </Grid>
             </GroupBox>

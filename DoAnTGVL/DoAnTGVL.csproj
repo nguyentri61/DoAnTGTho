@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ImageDanhGia\cv1anh1.jpg" />
     <None Remove="image\5519785.jpg" />
     <None Remove="image\add-2935429_1280.png" />
     <None Remove="image\man.jpg" />
@@ -17,9 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="ImageDanhGia\cv1anh1.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="image\5519785.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
