@@ -107,7 +107,7 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn Width="160" Header="Giá tiền">
+                        <GridViewColumn Width="160" Header="Tình trạng">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding TrangThai}" Margin="20 0 0 0"></TextBlock>

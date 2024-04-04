@@ -93,3 +93,5 @@ D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\refint\DoAnTGVL.dll
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\DoAnTGVL.pdb
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\DoAnTGVL.genruntimeconfig.cache
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\ref\DoAnTGVL.dll
+D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\ChiTietLichSuThueTho.g.cs
+D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\ChiTietLichSuThueTho.baml

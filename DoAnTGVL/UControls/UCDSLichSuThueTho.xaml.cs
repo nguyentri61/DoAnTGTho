@@ -83,8 +83,8 @@ namespace DoAnTGVL.UControls
         {
             var congviec = (sender as Button).DataContext as CongViec;
 
-            //    ChinhSuaDSCongViec chinhSuaDSCongViec = new ChinhSuaDSCongViec(congviec, tho);
-            //    chinhSuaDSCongViec.ShowDialog();
+            ChiTietLichSuThueTho ctlstt = new ChiTietLichSuThueTho(congviec, user);
+            ctlstt.ShowDialog();
             //    buschitietcv.Sua(congviec, tho);
             //    LoadDataIntoListView();
         }
