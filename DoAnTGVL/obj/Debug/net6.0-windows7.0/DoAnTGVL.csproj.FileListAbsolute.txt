@@ -1,5 +1,4 @@
 D:\WinForm\DoAnTGVL\DoAnTGVL\bin\Debug\net6.0-windows7.0\DoAnTGVL.exe
-D:\WinForm\DoAnTGVL\DoAnTGVL\bin\Debug\net6.0-windows7.0\ImageDanhGia\cv1anh1.jpg
 D:\WinForm\DoAnTGVL\DoAnTGVL\bin\Debug\net6.0-windows7.0\image\5519785.jpg
 D:\WinForm\DoAnTGVL\DoAnTGVL\bin\Debug\net6.0-windows7.0\image\add-2935429_1280.png
 D:\WinForm\DoAnTGVL\DoAnTGVL\bin\Debug\net6.0-windows7.0\image\undraw_Job_hunt_re_q203.png
@@ -38,6 +37,7 @@ D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDanhGia.g.c
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDanhSachCongViec.g.cs
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDanhSachTho.g.cs
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSCongViecTho.g.cs
+D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSLichSuThueTho.g.cs
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCHome.g.cs
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCSuaCV.g.cs
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThueTho.g.cs
@@ -68,6 +68,7 @@ D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDanhGia.bam
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDanhSachCongViec.baml
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDanhSachTho.baml
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSCongViecTho.baml
+D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSLichSuThueTho.baml
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCHome.baml
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCSuaCV.baml
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThueTho.baml
@@ -90,5 +91,3 @@ D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\refint\DoAnTGVL.dll
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\DoAnTGVL.pdb
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\DoAnTGVL.genruntimeconfig.cache
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\ref\DoAnTGVL.dll
-D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSLichSuThueTho.g.cs
-D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSLichSuThueTho.baml

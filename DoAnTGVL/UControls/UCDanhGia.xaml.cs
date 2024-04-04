@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnTGVL.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,15 @@ namespace DoAnTGVL.UControls
     /// <summary>
     /// Interaction logic for UCDanhGia.xaml
     /// </summary>
+    /// 
     public partial class UCDanhGia : UserControl
     {
+        DanhGia danhGia=new DanhGia();
         public UCDanhGia()
         {
             InitializeComponent();
+            
+            DataContext = danhGia;
         }
     }
 }

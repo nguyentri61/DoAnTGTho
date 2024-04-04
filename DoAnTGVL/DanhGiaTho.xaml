@@ -57,11 +57,10 @@
                         </Grid>
                         <materialDesign:RatingBar Margin="90,35,0,0"
                             x:Name="BasicRatingBarWithPreview"
+                            IsPreviewValueEnabled="True"
                             Max="5"
-                            Min="0"
-                            
-                            ValueIncrements="0.25"
-                            Value="{Binding DanhGiaCV, UpdateSourceTrigger=PropertyChanged}" />
+                            Min="1"
+                            Value="{Binding DanhGiaCV, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                         <Grid Height="150" Margin="0,15,0,0">
                             <Grid Height="150" Width="552" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25 5 0 0">
                                 <GroupBox Header="Đánh giá chi tiết" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="140">
@@ -73,7 +72,7 @@
 
                         <Grid Height="150" Width="700">
                             <!-- Đặt một Border để tạo khung viền cho WrapPanel -->
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Margin="0,50,0,0">
+                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Margin="0,30,0,0">
                                 <!-- WrapPanel để bọc các phần tử con -->
                                 <WrapPanel>
                                     <!-- Các phần tử con -->
