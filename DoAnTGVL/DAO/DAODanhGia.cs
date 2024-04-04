@@ -18,5 +18,11 @@ namespace DoAnTGVL.DAO
            dbConection.Process(sqlStr);
            MessageBox.Show("Thành công"); 
         }
+
+        public List<DanhGia> ReadDanhGia(Tho tho, User user)
+        {
+            string sqlStr = string.Format("Select[User].HoTen,DanhGia.MoTaDanhGia,DanhGia.Image, DSCongViec.DateThue, DanhGia.DanhGia From DanhGia, DSCongViec, [User] Where DanhGia.IDCongViec=DSCongViec.ID and DSCongViec.IDUser=[User].ID and DSCongViec.IDTho={0}", tho.Id);
+            return dbConection.ReadDatabaseDanhGia(sqlStr); 
+        }
     }
 }

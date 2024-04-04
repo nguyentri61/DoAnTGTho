@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using DoAnTGVL.Class;
 using System.Collections;
 using System.Reflection.PortableExecutable;
+using System.Windows.Markup;
 
 namespace DoAnTGVL.DAO
 {
@@ -253,6 +254,38 @@ namespace DoAnTGVL.DAO
                 }
             }
             return DSYeuThich;
+        }
+
+        public List<DanhGia> ReadDatabaseDanhGia(string sqlStr)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.connstring);
+            List<DanhGia> DSDanhGia = new List<DanhGia>();
+            using (conn)
+            {
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+                try
+                {
+                    conn.Open();
+                    SqlDataReader dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        DanhGia temp =new DanhGia();
+                        temp.TenUser = dataReader[0].ToString(); 
+                        temp.MoTaDanhGia= dataReader[1].ToString();
+                        temp.GetSource(dataReader[2].ToString());
+                        temp.NgayThue= dataReader.GetDateTime(3);
+                        temp.DanhGiaCV= dataReader.GetInt32(4);
+                        DSDanhGia.Add(temp);
+                    }
+                    dataReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            return DSDanhGia;
         }
     }
 }

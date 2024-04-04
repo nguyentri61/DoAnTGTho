@@ -26,7 +26,6 @@ namespace DoAnTGVL.UControls
     public partial class UCThueTho : UserControl
     {
         BUSThueTho bUSThueTho = new BUSThueTho();
-        DAOTho dAOTho = new DAOTho();
         FilterTho filterTho = new FilterTho();
         public User user;
         public UCThueTho(User user)

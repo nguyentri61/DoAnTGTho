@@ -1,5 +1,6 @@
 ﻿using DoAnTGVL.Class;
 using DoAnTGVL.DAO;
+using DoAnTGVL.UControls;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,13 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace DoAnTGVL.BUS
 {
     public class BUSDanhGiaTho
     {
-        string solutionFilePath = FindSolutionFile();
+        
         private string image = "";
+        
         DAODanhGia dAODanhGia = new DAODanhGia();   
 
         public string Image { get => image; set => image = value; }
@@ -40,7 +43,7 @@ namespace DoAnTGVL.BUS
                 System.IO.File.Copy(source, destination);
             }
         }
-        static string FindSolutionFile()
+        public string FindSolutionFile()
         {
             DirectoryInfo directoryInfo = new DirectoryInfo(Directory.GetCurrentDirectory());
 
@@ -63,6 +66,20 @@ namespace DoAnTGVL.BUS
                 dAODanhGia.Add(danhGia, Image);
             else
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+        }
+
+        public void CreateWrapDanhGia(Tho tho, User user, ChiTietTho chiTietTho)
+        {
+            UserControl userControl=new UserControl();
+            List<DanhGia> DSDanhGia = dAODanhGia.ReadDanhGia(tho, user);
+            foreach (DanhGia dg in DSDanhGia)
+            {
+
+                userControl = new UCDanhGia(dg);
+                userControl.Height = 400;
+                userControl.Width = 800;
+                chiTietTho.WpanelDanhGia.Children.Add(userControl);
+            }
         }
     }
 }

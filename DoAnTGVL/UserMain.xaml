@@ -42,7 +42,8 @@
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
         <Grid x:Name="gridMainWin" HorizontalAlignment="Right" Width="1450" >
-            
+           
+
         </Grid>
         <Grid x:Name="gridMainmenu" Width="50" HorizontalAlignment="Left" MouseLeave="gridMainmenu_MouseLeave">
             <Border BorderBrush="#CCCCCC" BorderThickness="1" Background="#FFFFFF" CornerRadius="5" HorizontalAlignment="Left" >

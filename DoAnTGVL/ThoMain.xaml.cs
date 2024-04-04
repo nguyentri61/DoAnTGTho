@@ -35,6 +35,8 @@ namespace DoAnTGVL
         } 
         public void MnuLogout_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
             Close();
         }
         public void mnuSuaCV_Click(object sender, RoutedEventArgs e)
