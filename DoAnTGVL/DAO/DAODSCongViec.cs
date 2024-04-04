@@ -60,9 +60,15 @@ namespace DoAnTGVL.DAO
             return dbConection.ReadDatabaseCongViec(query);
         }
 
-        public List<CongViec> FilterCongViec(FilterDSCongViec filterDSCongViec, int iduser)
+        public List<CongViec> ReadAllDSThueTho(int id)
         {
-            string query = string.Format("Select * From DSCongViec Where IDTho = {0} ", iduser);
+            string query = string.Format("Select * From DSCongViec Where IDUser = {0}", id);
+            return dbConection.ReadDatabaseCongViec(query);
+        }
+
+        public List<CongViec> FilterCongViec(FilterDSCongViec filterDSCongViec, string idrole ,int id)
+        {
+            string query = string.Format("Select * From DSCongViec Where {0} = {1} ", idrole, id);
             bool conditionAppended = false;
             if (!filterDSCongViec.checkemp())
             {

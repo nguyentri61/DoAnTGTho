@@ -49,22 +49,22 @@ namespace DoAnTGVL.UControls
 
         private void chboxDaHoanThanh_Click(object sender, RoutedEventArgs e)
         {
-            lsvDSCV.ItemsSource = buschitietcv.FilterCV(filterDSCongViec, tho.Id);
+            lsvDSCV.ItemsSource = buschitietcv.FilterCV(filterDSCongViec, "IDTho" ,tho.Id);
         }
 
         private void chboxDangThucHien_Click(object sender, RoutedEventArgs e)
         {
-            lsvDSCV.ItemsSource = buschitietcv.FilterCV(filterDSCongViec, tho.Id);
+            lsvDSCV.ItemsSource = buschitietcv.FilterCV(filterDSCongViec, "IDTho", tho.Id);
         }
 
         private void chboxChuaThucHien_Click(object sender, RoutedEventArgs e)
         {
-            lsvDSCV.ItemsSource = buschitietcv.FilterCV(filterDSCongViec, tho.Id);
+            lsvDSCV.ItemsSource = buschitietcv.FilterCV(filterDSCongViec, "IDTho", tho.Id);
         }
 
         private void txbTimKiem_KeyUp(object sender, KeyEventArgs e)
         {
-            lsvDSCV.ItemsSource = buschitietcv.FilterCV(filterDSCongViec, tho.Id);
+            lsvDSCV.ItemsSource = buschitietcv.FilterCV(filterDSCongViec, "IDTho", tho.Id);
         }
 
         private void btn_Xoa(object sender, RoutedEventArgs e)

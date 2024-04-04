@@ -24,5 +24,7 @@ namespace DoAnTGVL.BUS
                 user.DSYeuThich.Remove(tho.Id);
             }
         }
+
+
     }
 }

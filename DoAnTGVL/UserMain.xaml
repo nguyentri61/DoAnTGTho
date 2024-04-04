@@ -102,7 +102,7 @@
                                         </materialDesign:PackIcon>
                                     </MenuItem.Icon>
                                 </MenuItem>
-                                <MenuItem Header="Lịch sử thuê"  Width="200"  FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True">
+                                <MenuItem Header="Lịch sử thuê"  Width="200"  FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="btnLichSuThue_Click">
                                     <MenuItem.Icon>
                                         <materialDesign:PackIcon Width="26" Height="25" Kind="History"  Margin="-7,-6,0,0"  >
                                             <materialDesign:PackIcon.Foreground>

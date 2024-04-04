@@ -89,5 +89,12 @@ namespace DoAnTGVL
             danhGiaTho.ShowDialog();
             this.Show();
         }
+
+        private void btnLichSuThue_Click(object sender, RoutedEventArgs e)
+        {
+            gridMainWin.Children.Clear();
+            CurUC = new UCDSLichSuThueTho(user);
+            gridMainWin.Children.Add(CurUC);
+        }
     }
 }

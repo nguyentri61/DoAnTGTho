@@ -31,5 +31,7 @@ namespace DoAnTGVL.BUS
                 uCThueTho.WpanelDanhS.Children.Add(userControl);
             }
         }
+
+
     }   
 }
