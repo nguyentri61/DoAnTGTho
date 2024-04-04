@@ -18,7 +18,9 @@ namespace DoAnTGVL.Class
         private DateTime dateThue;
         private string ghiChu = "";
         private string trangThai="";
-
+        private string chiTietSua = "";
+        private int chiPhi ;
+        private List<string> image=new List<string> ();
         public int ID { get => iD; set => iD = value; }
         public int IDTho { get => iDTho; set => iDTho = value; }
         public int IDUser { get => iDUser; set => iDUser = value; }
@@ -29,6 +31,9 @@ namespace DoAnTGVL.Class
         public string TrangThai { get => trangThai; set => trangThai = value; }
         public string MoTa { get => moTa; set => moTa = value; }
         public string GhiChu { get => ghiChu; set => ghiChu = value; }
+        public string ChiTietSua { get => chiTietSua; set => chiTietSua = value; }
+        public int ChiPhi { get => chiPhi; set => chiPhi = value; }
+        public List<string> Image { get => image; set => image = value; }
 
         public CongViec()
         {

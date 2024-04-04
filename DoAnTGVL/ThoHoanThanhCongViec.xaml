@@ -48,7 +48,7 @@ VerticalAlignment="Top" HorizontalAlignment="Center">
                         <Grid Height="200" Margin="0,15,0,0">
                             <Grid Height="200"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 5 0 0">
                                 <GroupBox Header="Các chi tiết đã hoàn thành lắp đặt, sửa chữa" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="180" Width="600" HorizontalAlignment="Center">
-                                    <TextBox Margin="3,3,3,3" Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" TextWrapping="Wrap"/>
+                                    <TextBox Margin="3,3,3,3" Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" TextWrapping="Wrap" Text="{Binding ChiTietSua, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                                 </GroupBox>
                             </Grid>
 
@@ -56,7 +56,7 @@ VerticalAlignment="Top" HorizontalAlignment="Center">
 
                         <Grid Height="60" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 15 0 0">
                             <GroupBox Header="Tổng giá tiền" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="50" Width="600">
-                                <TextBox Margin="3,3,3,3" Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" />
+                                <TextBox Margin="3,3,3,3" Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" Text="{Binding ChiPhi, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                             </GroupBox>
                         </Grid>
 
@@ -85,7 +85,7 @@ VerticalAlignment="Top" HorizontalAlignment="Center">
 
                 </Grid>
                 <Button x:Name="ComfirmClick" Width="150" Height="40" Background="#478C10" Content="Hoàn thành" FontSize="18"
-          HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,502,0,0" >
+          HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,502,0,0" Click="ComfirmClick_Click" >
                     <Button.Clip>
                         <RectangleGeometry Rect="0,0,150,40" RadiusX="10" RadiusY="10"/>
                     </Button.Clip>

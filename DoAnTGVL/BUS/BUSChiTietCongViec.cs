@@ -1,7 +1,9 @@
 ﻿using DoAnTGVL.Class;
 using DoAnTGVL.DAO;
+using DoAnTGVL.UControls;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +13,11 @@ namespace DoAnTGVL.BUS
 {
     public class BUSChiTietCongViec
     {
+        private string image = "";
+
+        DAODanhGia dAODanhGia = new DAODanhGia();
+
+        public string Image { get => image; set => image = value; }
         DAODSCongViec dAODSCongViec= new DAODSCongViec();
         DAOBaiDang dAOBaiDang = new DAOBaiDang();   
         public void Them(BaiDang baiDang, Tho tho)
@@ -49,6 +56,54 @@ namespace DoAnTGVL.BUS
         public List<CongViec> FilterCV(FilterDSCongViec filterDSCongViec, string idrole ,int idtho)
         {
             return dAODSCongViec.FilterCongViec(filterDSCongViec, idrole ,idtho);
+        }
+
+        public void AddImage(string source)
+        {
+            string fileName = System.IO.Path.GetFileName(source);
+            string destinationFolder = "ImageCongViec";
+            string path = System.IO.Path.GetFullPath(destinationFolder);
+            string folder_path = path.Substring(0, path.IndexOf("bin"));
+            string destination = System.IO.Path.Combine(folder_path, destinationFolder, fileName);
+            if (!System.IO.File.Exists(destination))
+            {
+                System.IO.File.Copy(source, destination);
+                Image += fileName + " "; 
+            }
+            else
+            {
+                string fileNameWithoutExtension = System.IO.Path.GetFileNameWithoutExtension(fileName);
+                string fileExtension = System.IO.Path.GetExtension(fileName);
+                string newFileName = fileNameWithoutExtension + "_" + Guid.NewGuid().ToString().Substring(0, 8) + fileExtension;
+                Image += newFileName + " ";
+                destination = System.IO.Path.Combine(folder_path, destinationFolder, newFileName);
+                System.IO.File.Copy(source, destination);
+            }
+            
+        }
+        public string FindSolutionFile()
+        {
+            DirectoryInfo directoryInfo = new DirectoryInfo(Directory.GetCurrentDirectory());
+
+            while (directoryInfo != null)
+            {
+                FileInfo[] files = directoryInfo.GetFiles("*.sln");
+                if (files.Length > 0)
+                {
+                    return directoryInfo.FullName;
+                }
+                directoryInfo = directoryInfo.Parent;
+            }
+
+            return null;
+        }
+
+        public void Add(CongViec congviec)
+        {
+            if (congviec.ChiTietSua != "" && congviec.ChiPhi != null)
+                dAODSCongViec.Add(congviec, Image);
+            else
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
         }
     }
 }

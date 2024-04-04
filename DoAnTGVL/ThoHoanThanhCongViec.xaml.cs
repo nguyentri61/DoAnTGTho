@@ -1,4 +1,5 @@
 ﻿using DoAnTGVL.BUS;
+using DoAnTGVL.Class;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -21,8 +22,12 @@ namespace DoAnTGVL
     /// </summary>
     public partial class ThoHoanThanhCongViec : Window
     {
-        public ThoHoanThanhCongViec()
+        CongViec congviec;
+        BUSChiTietCongViec buschitietcv = new BUSChiTietCongViec();
+        public ThoHoanThanhCongViec(CongViec congviec)
         {
+            this.congviec=congviec;
+            DataContext = congviec;
             InitializeComponent();
         }
 
@@ -39,13 +44,19 @@ namespace DoAnTGVL
                 clickedImage.Source = btmap;
                 clickedImage.Height = 108;
                 clickedImage.Width = 108;
-                //bUSDanhGiaTho.AddImage(openFileDialog.FileName);
+                buschitietcv.AddImage(openFileDialog.FileName);
             }
         }
 
         private void btn_Huy_Click(object sender, RoutedEventArgs e)
         {
             Close();    
+        }
+
+        private void ComfirmClick_Click(object sender, RoutedEventArgs e)
+        {
+            buschitietcv.Add(congviec);
+            Close();
         }
     }
 }
