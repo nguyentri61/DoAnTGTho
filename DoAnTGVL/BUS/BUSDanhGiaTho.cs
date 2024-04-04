@@ -31,6 +31,7 @@ namespace DoAnTGVL.BUS
             if (!System.IO.File.Exists(destination))
             {
                 System.IO.File.Copy(source, destination);
+                Image += fileName + " ";
             }
             else
             {

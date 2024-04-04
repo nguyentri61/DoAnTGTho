@@ -49,7 +49,7 @@ namespace DoAnTGVL
                 congviec.TrangThai = selectedListBoxItemContent;
             if(congviec.TrangThai == "Đã hoàn thành")
             {
-                ThoHoanThanhCongViec thtcv = new ThoHoanThanhCongViec();
+                ThoHoanThanhCongViec thtcv = new ThoHoanThanhCongViec(congviec);
                 thtcv.ShowDialog();
             }
 

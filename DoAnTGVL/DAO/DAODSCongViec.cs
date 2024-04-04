@@ -127,5 +127,11 @@ namespace DoAnTGVL.DAO
             
             return dbConection.ReadDatabaseCongViec(query);
         }
+
+        public void Add(CongViec congviec, string image)
+        {
+            string query = string.Format("UPDATE DSCongViec  SET ChiTietSua = N'{0}', ChiPhi = {1}, Image = '{2}' WHERE ID={3}", congviec.ChiTietSua, congviec.ChiPhi, image, congviec.ID);
+            dbConection.Process(query);
+        }
     }
 }
