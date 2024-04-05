@@ -21,7 +21,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
-                <TextBlock Text="{Binding Path= TieuDe}" TextWrapping="Wrap" Foreground="#001E00" FontSize="20" FontWeight="DemiBold">
+                <TextBlock Text="{Binding Path= TieuDe, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Foreground="#001E00" FontSize="20" FontWeight="DemiBold">
 
                 </TextBlock>
             </Grid>
@@ -37,7 +37,7 @@
                 </Grid.ColumnDefinitions>
 
                 <WrapPanel Grid.Column="0" Orientation="Vertical">
-                    <TextBlock Text="{Binding Path= KhuVuc}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"></TextBlock>
+                    <TextBlock x:Name="khuvucText" Text="{Binding Path= KhuVuc, UpdateSourceTrigger=PropertyChanged}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"></TextBlock>
                     <TextBlock Text="Khu Vực" Margin="0 2 0 0"
                            Foreground="#9AAA97" FontSize="12">
 
@@ -93,6 +93,12 @@
                     </Button.Clip>
 
                 </Button>
+                <WrapPanel Margin="75,0,0,0" HorizontalAlignment="Center" Orientation="Vertical" VerticalAlignment="Bottom">
+                    <TextBlock Text="{Binding TrangThai}"  FontSize="15"  HorizontalAlignment="Center"/>
+                    <TextBlock Text="Tình trạng" Margin="0 0 0 0" HorizontalAlignment="Center"
+Foreground="#9AAA97" FontSize="12"/>
+
+                </WrapPanel>
             </Grid>
 
         </Grid>

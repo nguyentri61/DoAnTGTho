@@ -10,24 +10,23 @@
     
     <Grid>
 
-        <TabControl>
-            <TabItem Header="Đã hoàn thành">
-                <local:UCDSThue Width="300" Height="300" Margin="0,137,0,215">
-                    
-                </local:UCDSThue>
+        <TabControl x:Name="TabTrangThai">
+            <TabItem x:Name="Tabdht" Header="Đã hoàn thành" Loaded="Tab_Loaded">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                    <StackPanel x:Name="staHoanThanh"></StackPanel>
+                </ScrollViewer>
+            </TabItem>
 
+            <TabItem Header="Đang thực hiện" >
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" HorizontalAlignment="Center" >
+                    
+                </ScrollViewer>
             </TabItem>
-            
-            <TabItem Header="Đang thực hiện">
-                <TextBlock
-                      Margin="8"
-                      Text="PrimaryLight Tab 2" />
-            </TabItem>
-            
-            <TabItem Header="Chưa thực hiện">
-                <TextBlock
-                  Margin="8"
-                  Text="PrimaryLight Tab 2" />
+
+            <TabItem Header="Chưa thực hiện" >
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+
+                </ScrollViewer>
             </TabItem>
 
         </TabControl>

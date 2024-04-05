@@ -195,3 +195,7 @@ D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\DoAnTGVL.sourcelink.jso
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\DoAnTGVL.csproj.Up2Date
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\DoAnTGVL.genruntimeconfig.cache
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\ref\DoAnTGVL.dll
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSThue.g.cs
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSThueTho.g.cs
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSThue.baml
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSThueTho.baml
