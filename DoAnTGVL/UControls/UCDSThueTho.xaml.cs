@@ -36,19 +36,43 @@ namespace DoAnTGVL.UControls
         private void Tab_Loaded(object sender, RoutedEventArgs e)
         {
             UserControl userControl;
-            congviecList =buschitietcv.LoadDSThueTho(user.Id);
-            
+
+            //Tab Chưa thực hiện
+            congviecList =buschitietcv.LoadDSThueTho(user.Id, "Chưa thực hiện");
             foreach (CongViec congViec in congviecList)
             {
                 userControl = new UCDSThue(congViec);
-                userControl.Width = 620;
-                userControl.Height = 370;
+                userControl.Width = 1200;
+                userControl.Height = 170;
+                userControl.Margin = new Thickness(10);
+                // Thêm UserControl vào WrapPanel
+                staChuaThucHien.Children.Add(userControl);
+            }
+
+            //Tab Đang thực hiện
+            congviecList = buschitietcv.LoadDSThueTho(user.Id, "Đang thực hiện");
+            foreach (CongViec congViec in congviecList)
+            {
+                userControl = new UCDSThue(congViec);
+                userControl.Width = 1200;
+                userControl.Height = 170;
+                userControl.Margin = new Thickness(10);
+                // Thêm UserControl vào WrapPanel
+                staDangThucHien.Children.Add(userControl);
+            }
+
+
+            //Tab Đã hoàn thành
+            congviecList = buschitietcv.LoadDSThueTho(user.Id, "Đã hoàn thành");
+            foreach (CongViec congViec in congviecList)
+            {
+                userControl = new UCDSThue(congViec);
+                userControl.Width = 1200;
+                userControl.Height = 170;
                 userControl.Margin = new Thickness(10);
                 // Thêm UserControl vào WrapPanel
                 staHoanThanh.Children.Add(userControl);
             }
         }
-
-       
     }
 }

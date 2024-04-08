@@ -6,101 +6,57 @@
              xmlns:local="clr-namespace:DoAnTGVL.UControls"
              mc:Ignorable="d" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-         d:DesignHeight="370" d:DesignWidth="620">
+         d:DesignHeight="170" d:DesignWidth="1200">
 
     <Border CornerRadius="24" Background="White" BorderThickness="2" BorderBrush="#D5E0D5">
-        <Grid Background="Transparent" Margin="20">
+        <Grid Background="Transparent" Margin="15">
 
             <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
-                <TextBlock Text="{Binding Path= TieuDe, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Foreground="#001E00" FontSize="20" FontWeight="DemiBold">
-
-                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" Text="{Binding Path= TieuDe, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Foreground="#001E00" FontSize="20" FontWeight="DemiBold"/>
+                <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2" HorizontalAlignment="Right">
+                    <Grid Width="130" Height="40">
+                        <TextBlock Text="{Binding Path=LinhVuc}" FontWeight="DemiBold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55"/>
+                    </Grid>
+                </Border>
             </Grid>
 
-            <WrapPanel Grid.Row="1" Orientation="Horizontal" >
-
-            </WrapPanel>
-
-            <Grid Grid.Row="2" Margin="0 20 0 0">
+            <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
                 <WrapPanel Grid.Column="0" Orientation="Vertical">
-                    <TextBlock x:Name="khuvucText" Text="{Binding Path= KhuVuc, UpdateSourceTrigger=PropertyChanged}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"></TextBlock>
-                    <TextBlock Text="Khu Vực" Margin="0 2 0 0"
-                           Foreground="#9AAA97" FontSize="12">
-
-                    </TextBlock>
-
+                    <TextBlock x:Name="khuvucText" Text="{Binding Path= KhuVuc}" Foreground="#001E00" FontSize="20" FontWeight="DemiBold"/>
+                    <TextBlock Text="Khu Vực" Margin="0 2 0 0" Foreground="#9AAA97" FontSize="15"/>
                 </WrapPanel>
 
                 <WrapPanel Grid.Column="1" Orientation="Vertical">
-                    <TextBlock Text="{Binding Path=KinhNghiem}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"></TextBlock>
-                    <TextBlock Text="Kinh Nghiệm" Margin="0 2 0 0"
-                        Foreground="#9AAA97" FontSize="12">
+                    <TextBlock Text="{Binding DateThue, StringFormat={}{0:MM/dd/yyy}}" Foreground="#001E00" FontSize="20" FontWeight="DemiBold"/>
+                    <TextBlock Text="Ngày cần thuê" Margin="0 2 0 0" Foreground="#9AAA97" FontSize="15"/>
+                </WrapPanel>
 
-                    </TextBlock>
-
+                <WrapPanel Grid.Column="2" Orientation="Vertical">
+                    <TextBlock Text="{Binding TrangThai}" FontSize="20" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+                    <TextBlock Text="Tình trạng" Margin="0 2 0 0" HorizontalAlignment="Center" Foreground="#9AAA97" FontSize="15"/>
                 </WrapPanel>
             </Grid>
 
-            <Grid Grid.Row="3">
-                <TextBlock Text="{Binding Path= MoTa}"
-                       FontSize="15" TextWrapping="Wrap" Foreground="#001E00" FontWeight="DemiBold"
-                       Margin="0 20 0 0"
-                       ></TextBlock>
-
-            </Grid>
-
-            <Grid Grid.Row="4">
-                <WrapPanel Orientation="Horizontal" Margin="0 20 0 0">
-
-                    <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2">
-                        <Grid Width="97" Height="30">
-                            <TextBlock Text="{Binding Path=LinhVuc}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" 
-                            
-                            ></TextBlock>
-                        </Grid>
-                    </Border>
-                    <WrapPanel Margin="185,0,0,0" HorizontalAlignment="Left" Orientation="Vertical">
-                        <TextBlock Text="{Binding DateThue ,StringFormat={}{0:MM/dd/yyy}}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"/>
-                        <TextBlock Text="Ngày cần thuê" Margin="0 2 0 0"
-           Foreground="#9AAA97" FontSize="12"/>
-
-                    </WrapPanel>
-
-
-                </WrapPanel>
-            </Grid>
-
-            <Grid Grid.Row="5">
-                <Button Margin="0 10 0 0" Width="150" Height="40" HorizontalAlignment="Left"
-                    Content="Xem chi tiết" FontSize="15">
-
+            <Grid Grid.Row="2">
+                <Button Width="150" Height="35" HorizontalAlignment="Right" Click="btn_XemChiTiet_Click"
+                        Content="Xem chi tiết" FontSize="15">
                     <Button.Clip>
-                        <RectangleGeometry Rect="0,0,150,40" RadiusX="10" RadiusY="10"/>
+                        <RectangleGeometry Rect="0,0,150,35" RadiusX="10" RadiusY="10"/>
                     </Button.Clip>
-
                 </Button>
-                <WrapPanel Margin="75,0,0,0" HorizontalAlignment="Center" Orientation="Vertical" VerticalAlignment="Bottom">
-                    <TextBlock Text="{Binding TrangThai}"  FontSize="15"  HorizontalAlignment="Center"/>
-                    <TextBlock Text="Tình trạng" Margin="0 0 0 0" HorizontalAlignment="Center"
-Foreground="#9AAA97" FontSize="12"/>
-
-                </WrapPanel>
             </Grid>
-
         </Grid>
     </Border>
 </UserControl>

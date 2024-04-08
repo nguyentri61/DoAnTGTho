@@ -29,21 +29,9 @@ namespace DoAnTGVL
             this.user = user;
             this.DataContext = congviec;
             if (congviec.TrangThai == "Chưa thực hiện")
-            {
                 cthlstItem.IsSelected = true;
-                btnHuy.Visibility = Visibility.Hidden;
-            }
             else if (congviec.TrangThai == "Đang thực hiện")
-            {
                 dthlstItem.IsSelected = true;
-                btnHuy.Visibility = Visibility.Hidden;
-            }
-            else
-            {
-                btn_OK.Content = "Xem Sản Phẩm";
-                btnHuy.Visibility = Visibility.Visible;
-            }
-
         }
 
         private void btnHuy_Click(object sender, RoutedEventArgs e)
