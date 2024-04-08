@@ -44,7 +44,7 @@
                     <RadioButton x:Name="rdbUser"
                         Content="Khách" Margin="0,0,20,0"
                             Style="{StaticResource MaterialDesignRadioButton}" />
-                    <RadioButton x:Name="rdbTho"
+                    <RadioButton x:Name="rdbTho" IsChecked="False"
                         Content="Thợ" 
                              Style="{StaticResource MaterialDesignRadioButton}" />
                 </StackPanel>
@@ -61,7 +61,7 @@
                     materialDesign:HintAssist.Hint="Tên đăng nhập" Text="{Binding Path=LogName , UpdateSourceTrigger=PropertyChanged}">
                 </TextBox>
 
-                <PasswordBox  materialDesign:HintAssist.Hint="Mật khẩu"  x:Name="txbMatKhau"
+                <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Mật khẩu"  
                       HorizontalAlignment="Center" VerticalAlignment="Top"
                       Margin="0,176,0,0" Height="26" Width="130"
                       materialDesign:TextFieldAssist.HasClearButton="True"

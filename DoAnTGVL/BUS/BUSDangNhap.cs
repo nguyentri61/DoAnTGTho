@@ -3,6 +3,7 @@ using DoAnTGVL.DAO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,10 +12,13 @@ namespace DoAnTGVL.BUS
 {
     class BUSDangNhap
     {
-        public Window Login(int id, bool isUser)
+        TaiKhoan taikhoan;
+        public Window Login(TaiKhoan taiKhoan)
         {
-            if(isUser)
+            this.taikhoan = taiKhoan;
+            if(!taikhoan.Role)
             {
+                Dao
                 DAOUser daouser = new DAOUser();
                 DAOYeuThich dAOYeuThich = new DAOYeuThich();
                 User user=daouser.ReadDBToSLUser(id);

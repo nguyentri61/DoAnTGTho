@@ -39,9 +39,11 @@ namespace DoAnTGVL
         public void click_DangNhap(object sender, RoutedEventArgs e)
         {
             this.Hide();
+            taikhoan.Pass = passBox.Password;
+            taikhoan.Role = (bool)rdbTho.IsChecked;
             Window window;
             BUSDangNhap busDangNhap=new BUSDangNhap();
-            window = busDangNhap.Login(1, (bool)rdbUser.IsChecked);
+            window = busDangNhap.Login(taikhoan);
             window.ShowDialog();    
 
         }

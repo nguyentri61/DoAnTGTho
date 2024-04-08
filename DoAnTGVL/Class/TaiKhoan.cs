@@ -11,13 +11,13 @@ namespace DoAnTGVL.Class
     public class TaiKhoan : INotifyPropertyChanged
     {
         private int id=0;
-        private string role="";
+        private bool role=true;
         private string logName="";
         private string pass = "";
 
         public TaiKhoan() { }   
 
-        public TaiKhoan(int id, string role, string lognamme, string pass)
+        public TaiKhoan(int id, bool role, string lognamme, string pass)
         {
             this.id = id;
             this.role = role;
@@ -26,7 +26,7 @@ namespace DoAnTGVL.Class
         }
 
         public int Id { get => id; set => id = value; }
-        public string Role { get => role; set => role = value; }
+        public bool Role { get => role; set => role = value; }
         public string LogName {
             get { return logName; }
             set
