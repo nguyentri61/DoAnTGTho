@@ -81,5 +81,10 @@ namespace DoAnTGVL.DAO
             }
             return dbConection.ReadDatabase(query);
         }
+        public Tho ReadDBToSLTho(int id)
+        {
+            string query = string.Format("Select * From Tho Where Id = {0}", id);
+            return dbConection.ReadDatabaseTho(query);
+        }
     }
 }

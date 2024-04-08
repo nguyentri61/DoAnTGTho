@@ -287,5 +287,60 @@ namespace DoAnTGVL.DAO
             }
             return DSDanhGia;
         }
+
+        public int ReadId(string sqlStr)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.connstring);
+            int Id = 0;
+            using (conn)
+            {
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+                try
+                {
+                    conn.Open();
+                    SqlDataReader dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        Id = (int)dataReader[0];
+                        return Id;
+                    }
+                    dataReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            return Id;
+        }
+
+        public Tho ReadDatabaseTho(string query)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.connstring);
+            Tho tho = null;
+            using (conn)
+            {
+                SqlCommand command = new SqlCommand(query, conn);
+                try
+                {
+                    conn.Open();
+                    SqlDataReader dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        tho = new((int)dataReader[0], dataReader[1].ToString(), dataReader[2].ToString(), dataReader[3].ToString(),
+                    (DateTime)dataReader[4], dataReader[5].ToString(), dataReader[6].ToString(), dataReader[7].ToString(), dataReader[8].ToString(), (int)dataReader[9], Convert.ToSingle(dataReader[10]));
+
+                    }
+                    dataReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            return tho;
+        }
     }
 }

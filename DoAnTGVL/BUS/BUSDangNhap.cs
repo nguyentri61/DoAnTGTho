@@ -13,21 +13,42 @@ namespace DoAnTGVL.BUS
     class BUSDangNhap
     {
         TaiKhoan taikhoan;
+        DAOTaiKhoan dAOTaiKhoan=new DAOTaiKhoan();
+        
         public Window Login(TaiKhoan taiKhoan)
         {
             this.taikhoan = taiKhoan;
-            if(taikhoan.Role)
+            if (taiKhoan.CheckEmpty())
             {
-                
-                DAOUser daouser = new DAOUser();
-                DAOYeuThich dAOYeuThich = new DAOYeuThich();
-                User user=daouser.ReadDBToSLUser(1);
-                
-                user.DSYeuThich=dAOYeuThich.ReadDBYeuThich(1);
-                return new UserMain(user);
+                int id = dAOTaiKhoan.CheckAcc(taiKhoan);
+                if (id != 0)
+                {
+                    if (taikhoan.Role == 0)
+                    {
+                        DAOUser daouser = new DAOUser();
+                        DAOYeuThich dAOYeuThich = new DAOYeuThich();
+                        User user = daouser.ReadDBToSLUser(id);
+                        user.DSYeuThich = dAOYeuThich.ReadDBYeuThich(id);
+                        return new UserMain(user);
+                    }
+                    else
+                    {
+                        DAOTho dAOtho = new DAOTho();
+                        Tho tho = dAOtho.ReadDBToSLTho(id);
+                        return new ThoMain(tho);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Sai Tài Khoản, vui lòng nhập lại");
+                    return null;
+                }
             }
-            Tho tho = new Tho(1, "Nguyễn Ngọc Hoàng", "099900134386", "08765678542", DateTime.Today, "Quận 1", "Điện lạnh", "Sửa máy lạnh", "1 - 2 năm", 500000, 4);
-            return new ThoMain(tho);
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ ");
+                return null;
+            }
         }
     }
 }

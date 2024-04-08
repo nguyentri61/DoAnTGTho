@@ -24,6 +24,7 @@ namespace DoAnTGVL
     /// </summary>
     public partial class MainWindow : Window
     {
+        Window window;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connstring);
         TaiKhoan taikhoan= new TaiKhoan();
         BUSTaiKhoan bUSTaiKhoan = new BUSTaiKhoan();
@@ -38,13 +39,16 @@ namespace DoAnTGVL
         }
         public void click_DangNhap(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            
             taikhoan.Pass = passBox.Password;
-            taikhoan.Role = (bool)rdbTho.IsChecked;
-            Window window;
+            taikhoan.Role = ((bool)rdbTho.IsChecked) ? 1 : 0;
             BUSDangNhap busDangNhap=new BUSDangNhap();
             window = busDangNhap.Login(taikhoan);
-            window.ShowDialog();    
+            if (window != null)
+            {
+                this.Hide();
+                window.ShowDialog();
+            }
 
         }
         private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)

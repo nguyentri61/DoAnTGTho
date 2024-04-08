@@ -1,9 +1,9 @@
-﻿CREATE TABLE [dbo].[TaiKhoan]
-(
-	[Id] INT NOT NULL , 
-    [Role] NVARCHAR(50) NOT NULL,
-    [LogName] NVARCHAR(50) NULL , 
-	[Pass] NVARCHAR(50) NULL , 
-    PRIMARY KEY ([Id], [Role]),
-    CONSTRAINT UK_LogName UNIQUE ([LogName])
+﻿CREATE TABLE [dbo].[TaiKhoan] (
+    [Id]      INT           NOT NULL,
+    [Role]    BIT           NOT NULL,
+    [LogName] NVARCHAR (50) NULL,
+    [Pass]    NVARCHAR (50) NULL,
+    CONSTRAINT [PK_TaiKhoan] PRIMARY KEY CLUSTERED ([Role] ASC, [Id] ASC),
+    CONSTRAINT [UK_LogName] UNIQUE NONCLUSTERED ([LogName] ASC)
 );
+
