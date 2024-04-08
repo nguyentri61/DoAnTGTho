@@ -16,14 +16,14 @@ namespace DoAnTGVL.BUS
         public Window Login(TaiKhoan taiKhoan)
         {
             this.taikhoan = taiKhoan;
-            if(!taikhoan.Role)
+            if(taikhoan.Role)
             {
-                Dao
+                
                 DAOUser daouser = new DAOUser();
                 DAOYeuThich dAOYeuThich = new DAOYeuThich();
-                User user=daouser.ReadDBToSLUser(id);
+                User user=daouser.ReadDBToSLUser(1);
                 
-                user.DSYeuThich=dAOYeuThich.ReadDBYeuThich(id);
+                user.DSYeuThich=dAOYeuThich.ReadDBYeuThich(1);
                 return new UserMain(user);
             }
             Tho tho = new Tho(1, "Nguyễn Ngọc Hoàng", "099900134386", "08765678542", DateTime.Today, "Quận 1", "Điện lạnh", "Sửa máy lạnh", "1 - 2 năm", 500000, 4);

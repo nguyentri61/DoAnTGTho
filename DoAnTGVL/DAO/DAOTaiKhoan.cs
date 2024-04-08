@@ -11,11 +11,11 @@ namespace DoAnTGVL.DAO
     class DAOTaiKhoan
     {
         DbConection dbConection = new DbConection();
-        public int Checkcheck(TaiKhoan taiKhoan)
-        {
-            string query = string.Format("Select * TaiKhoan where TaiKhoan.Role = 0 and TaiKhoan='{0}' and Pass='{1}'", taiKhoan.LogName, taiKhoan.Pass);
-            return dbConection.Readid(query);
+        //public int Checkcheck(TaiKhoan taiKhoan)
+        //{
+        //    string query = string.Format("Select * TaiKhoan where TaiKhoan.Role = 0 and TaiKhoan='{0}' and Pass='{1}'", taiKhoan.LogName, taiKhoan.Pass);
+        //    //return dbConection.Readid(query);
 
-        }
+        //}
     }
 }

@@ -22,11 +22,18 @@ namespace DoAnTGVL.UControls
     public partial class UCDSThue : UserControl
     {
         CongViec congviec;
+        User user;
         public UCDSThue(CongViec congviec)
         {
             this.congviec = congviec;
             InitializeComponent();
             this.DataContext = congviec;
+        }
+
+        private void btn_XemChiTiet_Click(object sender, RoutedEventArgs e)
+        {
+            ChiTietLichSuThueTho chiTiet = new ChiTietLichSuThueTho(congviec, user);
+            chiTiet.Show();
         }
     }
 }
