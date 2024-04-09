@@ -44,8 +44,6 @@ namespace DoAnTGVL
             
         }
 
-        
-
         private void calenNgayThue_Loaded(object sender, RoutedEventArgs e)
         {
             List<DateTime> dates = bUSXacNhan.Load_Calender(tho.Id);
@@ -59,7 +57,7 @@ namespace DoAnTGVL
         private void btn_Xacnhan_Click(object sender, RoutedEventArgs e)
         {
             bUSXacNhan.Them(congViec);
-            
+            this.Close();
         }
     }
 }

@@ -134,6 +134,22 @@
                                         </materialDesign:PackIcon>
                                     </MenuItem.Icon>
                                 </MenuItem>
+
+                                <MenuItem Header="Lượt đánh giá"  Width="200" FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="mnLuotDGia_Click">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon Width="26" Height="24" Kind="RateReview"  Margin="-6,0,0,0" VerticalAlignment="Center"  >
+                                            <materialDesign:PackIcon.Foreground>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="Black"/>
+                                                    <GradientStop Color="#FFD371F0" Offset="1"/>
+                                                    <GradientStop Color="#FF512B5C" Offset="0.387"/>
+                                                    <GradientStop Color="#FF4F2A5A" Offset="0.501"/>
+                                                </LinearGradientBrush>
+                                            </materialDesign:PackIcon.Foreground>
+                                        </materialDesign:PackIcon>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
                                 <MenuItem Header="Thống kê công việc"  Width="200"   FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="mnuViecLam_Click">
                                     <MenuItem.Icon>
                                         <materialDesign:PackIcon Width="26" Height="24" Kind="ListStatus"  Margin="-6,0,0,0" VerticalAlignment="Center"  >
@@ -148,7 +164,6 @@
                                         </materialDesign:PackIcon>
                                     </MenuItem.Icon>
                                 </MenuItem>
-
 
                                 <MenuItem x:Name="mnuLogout"  Width="200"   Header="Đăng xuất" FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Margin="0,300" Click="MnuLogout_Click">
                                     <MenuItem.Icon>

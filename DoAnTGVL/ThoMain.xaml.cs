@@ -27,6 +27,7 @@ namespace DoAnTGVL
         private UserControl PreUC = new UCHome();
         private UserControl CurUC = new UCHome();
         Tho tho;
+        User user;
         public ThoMain(Tho tho)
         {
             this.tho= tho;
@@ -95,6 +96,13 @@ namespace DoAnTGVL
         private void mnuDSVL_Click(object sender, RoutedEventArgs e)
         {
             CurUC = new UCDSCongViecTho(tho);
+            gridMainWin.Children.Clear();
+            gridMainWin.Children.Add(CurUC);
+        }
+
+        private void mnLuotDGia_Click(object sender, RoutedEventArgs e)
+        {
+            CurUC = new UCDSDanhGiaTho(tho, user);
             gridMainWin.Children.Clear();
             gridMainWin.Children.Add(CurUC);
         }

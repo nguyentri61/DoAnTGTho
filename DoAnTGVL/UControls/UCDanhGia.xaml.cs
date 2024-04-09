@@ -47,8 +47,8 @@ namespace DoAnTGVL.UControls
                 // Tạo một Image và đặt BitmapImage làm nguồn
                 Image image = new Image();
                 image.Source = bitmapImage;
-                image.Width = 200;
-                image.Height = 200;
+                image.Width = 150;
+                image.Height = 150;
                 image.Margin = new Thickness(5);
                 stackPanel.Children.Add(image);
             }

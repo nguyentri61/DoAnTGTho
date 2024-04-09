@@ -52,6 +52,9 @@
     <Compile Update="UControls\UCDSCongViecTho.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UControls\UCDSDanhGiaTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UControls\UCDSThue.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -142,6 +145,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCDSCongViecTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCDSDanhGiaTho.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCDSThue.xaml">

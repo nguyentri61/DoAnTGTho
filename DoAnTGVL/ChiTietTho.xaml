@@ -116,17 +116,17 @@
             </StackPanel>
 
         </Grid>
-        <Grid Grid.Row="1">
-            <TextBlock Text="Đánh giá :" Foreground="#5E6D55" Margin="0 0 0 0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"  />
-        </Grid>
-        <Grid Grid.Row="2">
-            
+        
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <Grid Background="#D5E0D5" Height="1 "/>
+            <TextBlock Text="Đánh giá :" Foreground="#5E6D55" Margin="20 5 0 0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"  />
+        </StackPanel>
+        
+        <Grid Grid.Row="2" Margin="0 5 0 0">
             <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" >
                 <Grid Width="auto" >
 
-
-                    <WrapPanel x:Name="WpanelDanhGia" HorizontalAlignment="Center" VerticalAlignment="Center"   />
-
+                    <WrapPanel x:Name="WpanelDanhGia" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
                 </Grid>
             </ScrollViewer>

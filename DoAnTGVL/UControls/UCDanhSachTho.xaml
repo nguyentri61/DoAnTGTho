@@ -32,7 +32,7 @@
             ToolTip="MaterialDesignFlatPrimaryToggleButton" Margin="0,2,0,2" Click="ToggleButton_Click" />
 
                 </Grid>
-                <Ellipse Grid.Row="1" Width="110" Margin="0 0 0 0">
+                <Ellipse Grid.Row="1" Width="110">
                     <Ellipse.Fill>
                         <ImageBrush ImageSource="/image/man.jpg"/>
                     </Ellipse.Fill>

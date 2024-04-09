@@ -77,9 +77,27 @@ namespace DoAnTGVL.BUS
             {
 
                 userControl = new UCDanhGia(dg);
-                userControl.Height = 400;
-                userControl.Width = 800;
+                userControl.Height = 300;
+                userControl.Width = 1000;
+                userControl.Margin = new Thickness(0, 5, 0, 0);
+
                 chiTietTho.WpanelDanhGia.Children.Add(userControl);
+            }
+        }
+
+        public void CreateWrapDanhGia(Tho tho, User user, UCDSDanhGiaTho dsdgtho)
+        {
+            UserControl userControl = new UserControl();
+            List<DanhGia> DSDanhGia = dAODanhGia.ReadDanhGia(tho, user);
+            foreach (DanhGia dg in DSDanhGia)
+            {
+
+                userControl = new UCDanhGia(dg);
+                userControl.Height = 300;
+                userControl.Width = 1000;
+                userControl.Margin = new Thickness(0, 5, 0, 0);
+
+                dsdgtho.WpanelDanhS.Children.Add(userControl);
             }
         }
     }
