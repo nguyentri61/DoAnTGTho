@@ -32,12 +32,12 @@
                 <!--Chuyên môn-->
                 <StackPanel Orientation="Vertical" Margin="50 0 0 0">
                     <TextBlock  Text="Dịch vụ" FontWeight="Light" FontSize="15" />
-                    <TextBlock  Text="{Binding NgayThue, StringFormat={}{0:MM/dd/yyy}}" FontWeight="DemiBold" FontSize="15" />
+                    <TextBlock  Text="{Binding LinhVuc}" FontWeight="DemiBold" FontSize="15" />
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Margin="50 0 0 0">
                     <TextBlock x:Name="txtDichVu" Text="Giá thuê" FontWeight="Light" FontSize="15"  />
-                    <TextBlock  Text="{Binding NgayThue, StringFormat={}{0:MM/dd/yyy}}" FontWeight="DemiBold" FontSize="15" />
+                    <TextBlock  Text="{Binding GiaThue}" FontWeight="DemiBold" FontSize="15" />
                 </StackPanel>
 
             </StackPanel>

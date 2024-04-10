@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +17,8 @@ namespace DoAnTGVL.Class
         private string moTaDanhGia="";
         private string tieuDeCViec= "Cần thuê thợ điện tử chuyên nghiệp cho dự án mới";
         private List<string> imageDG= new List<string>();
+        private string linhVuc;
+        private int giaTien;
 
         public DanhGia(int iDCongViec, int danhGiaCV, string moTaDanhGia)
         {
@@ -32,6 +35,9 @@ namespace DoAnTGVL.Class
         public string TenUser { get => tenUser; set => tenUser = value; }
         public DateTime NgayThue { get => ngayThue; set => ngayThue = value; }
         public int GiaThue { get => giaThue; set => giaThue = value; }
+        public string LinhVuc { get => linhVuc; set => linhVuc = value; }
+        public int GiaTien { get => giaTien; set => giaTien = value; }
+
         public void GetSource(string input)
         {
             

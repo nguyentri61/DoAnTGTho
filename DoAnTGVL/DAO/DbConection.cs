@@ -276,6 +276,8 @@ namespace DoAnTGVL.DAO
                         temp.GetSource(dataReader[2].ToString());
                         temp.NgayThue= dataReader.GetDateTime(3);
                         temp.DanhGiaCV= dataReader.GetInt32(4);
+                        temp.LinhVuc = dataReader[5].ToString();
+                        temp.GiaThue = dataReader.GetInt32(6); 
                         DSDanhGia.Add(temp);
                     }
                     dataReader.Close();

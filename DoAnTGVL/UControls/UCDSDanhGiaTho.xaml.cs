@@ -3,6 +3,7 @@ using DoAnTGVL.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,6 +25,7 @@ namespace DoAnTGVL.UControls
     {
         Tho tho;
         User user;
+        FilterDanhGia filterDanhGia=new FilterDanhGia();
         BUSDanhGiaTho bUSDanhGiaTho = new BUSDanhGiaTho();
         public UCDSDanhGiaTho(Tho tho, User user)
         {
@@ -31,7 +33,17 @@ namespace DoAnTGVL.UControls
             this.DataContext = tho;
             this.user = user;
             this.tho = tho;
-            bUSDanhGiaTho.CreateWrapDanhGia(tho, user, this);
+            DataContext = filterDanhGia;
+            bUSDanhGiaTho.CreateWrapDanhGia(tho,filterDanhGia, this);
+        }
+
+        private void ListBoxItem_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is ListBoxItem listBoxItem)
+            {
+                filterDanhGia.DanhGia = listBoxItem.Content.ToString();
+            }
+
         }
     }
 }

@@ -19,10 +19,15 @@ namespace DoAnTGVL.DAO
            MessageBox.Show("Thành công"); 
         }
 
-        public List<DanhGia> ReadDanhGia(Tho tho, User user)
+        public List<DanhGia> ReadDanhGia(Tho tho)
         {
-            string sqlStr = string.Format("Select[User].HoTen,DanhGia.MoTaDanhGia,DanhGia.Image, DSCongViec.DateThue, DanhGia.DanhGia From DanhGia, DSCongViec, [User] Where DanhGia.IDCongViec=DSCongViec.ID and DSCongViec.IDUser=[User].ID and DSCongViec.IDTho={0}", tho.Id);
+            string sqlStr = string.Format("Select[User].HoTen,DanhGia.MoTaDanhGia,DanhGia.Image, DSCongViec.DateThue, DanhGia.DanhGia, DSCongViec.LinhVuc, DSCongViec.ChiPhi From DanhGia, DSCongViec, [User] Where DanhGia.IDCongViec=DSCongViec.ID and DSCongViec.IDUser=[User].ID and DSCongViec.IDTho={0}", tho.Id);
             return dbConection.ReadDatabaseDanhGia(sqlStr); 
+        }
+        public List<DanhGia> ReadDanhGia(Tho tho, FilterDanhGia filterDanhGia)
+        {
+            string sqlStr = string.Format("Select[User].HoTen,DanhGia.MoTaDanhGia,DanhGia.Image, DSCongViec.DateThue, DanhGia.DanhGia, DSCongViec.LinhVuc, DSCongViec.ChiPhi From DanhGia, DSCongViec, [User] Where DanhGia.IDCongViec=DSCongViec.ID and DSCongViec.IDUser=[User].ID and DSCongViec.IDTho={0}", tho.Id);
+            return dbConection.ReadDatabaseDanhGia(sqlStr);
         }
     }
 }

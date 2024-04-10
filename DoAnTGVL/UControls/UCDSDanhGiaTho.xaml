@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1300"
              Style="{StaticResource UC_Style}">
-  
+
     <Grid Height="auto" Width="auto">
         <Grid.RowDefinitions>
             <RowDefinition Height="120"></RowDefinition>
@@ -35,10 +35,10 @@
                                               Value="4.5" />
 
                 </StackPanel>
-                
+
             </materialDesign:ColorZone>
 
-            <Grid Grid.Column="1">
+            <Grid Grid.Column="1" Background="#FFF4F4F4">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -50,31 +50,30 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                         <ListBox FontSize="20" VerticalAlignment="Center"
                           x:Name="RadioButtonGroupChoiceChip"
                           Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}">
-                            <ListBoxItem  Margin="60 0 0 0" Content="Tất cả" IsSelected="True"/>
-                            <ListBoxItem  Margin="30 0 0 0" Content="5 Sao"/>
-                            <ListBoxItem  Margin="30 0 0 0" Content="4 Sao"/>
-                            <ListBoxItem  Margin="30 0 0 0" Content="3 Sao"/>
-                            <ListBoxItem  Margin="30 0 0 0" Content="2 Sao"/>
-                            <ListBoxItem  Margin="30 0 0 0" Content="1 Sao"/>
+                            <ListBoxItem  Margin="60 0 0 0" Content="Tất cả" IsSelected="True" />
+                            <ListBoxItem  Margin="30 0 0 0" Content="5 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown"  />
+                            <ListBoxItem  Margin="30 0 0 0" Content="4 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown" />
+                            <ListBoxItem  Margin="30 0 0 0" Content="3 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown" />
+                            <ListBoxItem  Margin="30 0 0 0" Content="2 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown" />
+                            <ListBoxItem  Margin="30 0 0 0" Content="1 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown" />
 
 
                         </ListBox>
 
                     </StackPanel>
+
                 </materialDesign:ColorZone>
 
-                <materialDesign:ColorZone Grid.Row="1" Height="60"
-                Mode="PrimaryLight" Background="#FFF4F4F4">
-
-                    <StackPanel Orientation="Horizontal">
-                        <ListBox FontSize="20" VerticalAlignment="Center"
-                      Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}">
-                            <ListBoxItem  Margin="60 0 0 0" Content="Có bình luận"/>
-                            <ListBoxItem  Margin="30 0 0 0" Content="Có hình ảnh"/>
-                        </ListBox>
-                    </StackPanel>
-                </materialDesign:ColorZone>
+                <CheckBox 
+                Content="Có hình ảnh"
+                    FontSize="20"
+                Style="{StaticResource MaterialDesignCheckBox}" 
+                Height="30" Grid.Row="1"
+                    IsChecked="{Binding CoAnh}"
+                    Margin="60,0,0,0"
+/>
             </Grid>
+
         </Grid>
 
 
@@ -83,6 +82,7 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
             <Grid   x:Name="gridPage" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
                 <ScrollViewer VerticalScrollBarVisibility="Auto" >
                     <Grid Width="auto" Background="White" >
+
 
                         <WrapPanel x:Name="WpanelDanhS" HorizontalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="1" Margin="0,0,0,0"   />
 

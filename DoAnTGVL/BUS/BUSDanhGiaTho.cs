@@ -72,7 +72,7 @@ namespace DoAnTGVL.BUS
         public void CreateWrapDanhGia(Tho tho, User user, ChiTietTho chiTietTho)
         {
             UserControl userControl=new UserControl();
-            List<DanhGia> DSDanhGia = dAODanhGia.ReadDanhGia(tho, user);
+            List<DanhGia> DSDanhGia = dAODanhGia.ReadDanhGia(tho);
             foreach (DanhGia dg in DSDanhGia)
             {
 
@@ -85,10 +85,10 @@ namespace DoAnTGVL.BUS
             }
         }
 
-        public void CreateWrapDanhGia(Tho tho, User user, UCDSDanhGiaTho dsdgtho)
+        public void CreateWrapDanhGia(Tho tho,FilterDanhGia filterDanhGia, UCDSDanhGiaTho dsdgtho)
         {
             UserControl userControl = new UserControl();
-            List<DanhGia> DSDanhGia = dAODanhGia.ReadDanhGia(tho, user);
+            List<DanhGia> DSDanhGia = dAODanhGia.ReadDanhGia(tho);
             foreach (DanhGia dg in DSDanhGia)
             {
 

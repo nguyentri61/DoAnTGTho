@@ -197,3 +197,5 @@ C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSThueTho.baml
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSDanhGiaTho.g.cs
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSDanhGiaTho.baml
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSDanhGiaTho.g.cs
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGVL\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSDanhGiaTho.baml
