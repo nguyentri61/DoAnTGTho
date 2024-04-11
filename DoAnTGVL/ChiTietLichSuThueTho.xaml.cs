@@ -39,15 +39,29 @@ namespace DoAnTGVL
             else
             {
                 UCThoPhanHoi uCThoPhanHoi = new UCThoPhanHoi(congviec);
-                uCThoPhanHoi.Height = 320;
-                uCThoPhanHoi.Width = 760;
+                uCThoPhanHoi.Height = 300;
+                uCThoPhanHoi.Width = 720;
                 WpanelPhanHoi.Children.Add(uCThoPhanHoi);
+
+                btn_OK.Content = "Đánh giá";
             }
         }
 
         private void btnHuy_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void btnOK_Click(object sender, RoutedEventArgs e)
+        {
+            if (congviec.TrangThai == "Đã hoàn thành")
+            {
+                DanhGiaTho danhGiaTho = new DanhGiaTho();
+                this.Hide();
+                danhGiaTho.ShowDialog();
+            }
+            else
+                Close();
         }
     }
 }

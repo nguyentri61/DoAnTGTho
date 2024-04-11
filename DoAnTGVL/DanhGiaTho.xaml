@@ -35,7 +35,7 @@
                 <RowDefinition Height="60"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" FontSize="30" FontWeight="Bold" Text="Đánh giá"
+            <TextBlock Grid.Row="0" FontSize="30" FontWeight="Bold" Text="Đánh giá thợ"
        Foreground="#FF8C00FC" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             <Grid Grid.Row="1">
                 <Grid  Width="700" Height="450" Background="White"
@@ -46,23 +46,21 @@
                     <StackPanel Orientation="Vertical">
 
                         <Grid Height="60" Margin="0,5,0,0">
-
-                            <Grid Height="60" Width="552" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25 5 0 0">
-                                <GroupBox Header="Tiêu đề" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="50">
+                            <Grid Height="60" Width="600" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 5 0 0">
+                                <GroupBox Header="Tiêu đề" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="50" >
                                     <TextBox Margin="3,3,3,3" Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" Text="{Binding TieuDeCViec}"/>
                                 </GroupBox>
                             </Grid>
-
-
                         </Grid>
-                        <materialDesign:RatingBar Margin="90,35,0,0"
+                        
+                        <materialDesign:RatingBar Margin="50,35,0,0"
                             x:Name="BasicRatingBarWithPreview"
                             IsPreviewValueEnabled="True"
                             Max="5"
                             Min="1"
                             Value="{Binding DanhGiaCV, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                         <Grid Height="150" Margin="0,15,0,0">
-                            <Grid Height="150" Width="552" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25 5 0 0">
+                            <Grid Height="150" Width="600" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 5 0 0">
                                 <GroupBox Header="Đánh giá chi tiết" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="140">
                                     <TextBox Margin="3,3,3,3" Foreground="#707070" Background="White" BorderThickness="0" FontSize="15" Style="{DynamicResource d}" Text="{Binding MoTaDanhGia, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
                                 </GroupBox>
@@ -70,9 +68,9 @@
 
                         </Grid>
 
-                        <Grid Height="150" Width="700">
+                        <Grid Height="150" Width="600">
                             <!-- Đặt một Border để tạo khung viền cho WrapPanel -->
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Margin="0,30,0,0">
+                            <Border BorderBrush="#707070" BorderThickness="1" CornerRadius="4" HorizontalAlignment="Center" Margin="0,30,0,0">
                                 <!-- WrapPanel để bọc các phần tử con -->
                                 <WrapPanel>
                                     <!-- Các phần tử con -->

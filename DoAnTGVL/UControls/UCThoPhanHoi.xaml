@@ -6,7 +6,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DoAnTGVL.UControls"
              mc:Ignorable="d" 
-                      d:DesignHeight="300" d:DesignWidth="1000">
+                      d:DesignHeight="300" d:DesignWidth="720">
     <Border BorderBrush="#D5E0D5" BorderThickness="2" Background="White" >
 
         <StackPanel Margin="10" Orientation="Vertical">
@@ -24,18 +24,12 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Margin="50 0 0 0">
-                    <TextBlock  Text="Ngày thuê" FontWeight="Light" FontSize="15" />
+                    <TextBlock  Text="Ngày hoàn thành" FontWeight="Light" FontSize="15" />
                     <TextBlock  Text="{Binding DateThue, StringFormat={}{0:MM/dd/yyy}}" FontWeight="DemiBold" FontSize="15" />
                 </StackPanel>
 
-                <!--Chuyên môn-->
                 <StackPanel Orientation="Vertical" Margin="50 0 0 0">
-                    <TextBlock  Text="Dịch vụ" FontWeight="Light" FontSize="15" />
-                    <TextBlock  Text="{Binding LinhVuc}" FontWeight="DemiBold" FontSize="15" />
-                </StackPanel>
-
-                <StackPanel Orientation="Vertical" Margin="50 0 0 0">
-                    <TextBlock x:Name="txtDichVu" Text="Giá thuê" FontWeight="Light" FontSize="15"  />
+                    <TextBlock x:Name="txtDichVu" Text="Tổng chi phí" FontWeight="Light" FontSize="15"  />
                     <TextBlock  Text="{Binding ChiPhi}" FontWeight="DemiBold" FontSize="15" />
                 </StackPanel>
 

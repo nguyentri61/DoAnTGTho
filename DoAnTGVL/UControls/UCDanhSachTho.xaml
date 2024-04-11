@@ -44,8 +44,8 @@
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             
                             <TextBlock x:Name="txtDanhGia" Text="{Binding Path= DanhGia}" FontWeight="DemiBold" FontSize="16" Foreground="#5E6D55" ></TextBlock>
-                            <materialDesign:PackIcon  Kind="Star" VerticalAlignment="Center" Foreground="#14A800" />
                             <TextBlock Text="/5" FontSize="16" Foreground="#5E6D55" ></TextBlock>
+                            <materialDesign:PackIcon  Kind="Star" VerticalAlignment="Center" Foreground="#14A800" />
                             <TextBlock Text=" | " FontSize="16" Foreground="#5E6D55"></TextBlock>
                             
                             <TextBlock x:Name="txtKinhNghiem" Text="{Binding Path= Kinhnghiem }" FontWeight="DemiBold" FontSize="16" Foreground="#5E6D55" HorizontalAlignment="Center"/>
@@ -63,10 +63,10 @@
                         </Button.Clip>
                     </Button>
 
-                    <ToggleButton HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="50" Height="50" Content="{materialDesign:PackIcon Kind=Heart,Size=20}"
+                    <ToggleButton HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="35" Height="35" Content="{materialDesign:PackIcon Kind=Heart,Size=25}"
                             IsChecked="{Binding Path= DcYeuThich }"  
                             Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"
-                            ToolTip="MaterialDesignFlatPrimaryToggleButton" Click="ToggleButton_Click" Margin="0,0,-4,-4" />
+                            ToolTip="MaterialDesignFlatPrimaryToggleButton" Click="ToggleButton_Click" Margin="0,0,1,2" />
                 </Grid>
             </Grid>
         </Grid>

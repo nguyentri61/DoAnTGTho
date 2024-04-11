@@ -91,7 +91,6 @@ namespace DoAnTGVL.BUS
             dsdgtho.WpanelDanhS.Children.Clear();
             foreach (DanhGia dg in DSDanhGia)
             {
-
                 userControl = new UCDanhGia(dg);
                 userControl.Height = 300;
                 userControl.Width = 1000;

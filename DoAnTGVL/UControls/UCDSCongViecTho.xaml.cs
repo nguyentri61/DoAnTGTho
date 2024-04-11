@@ -74,7 +74,7 @@ namespace DoAnTGVL.UControls
 
             // Sử dụng chỉ mục index ở đây cho mục đích của bạn
             MessageBox.Show($"Chỉ mục của hàng: {index}");
-            var thongbao = new ShowDialogCustom("Bạn có thật sự muốn Công việc này? ", ShowDialogCustom.YesNo);
+            var thongbao = new ShowDialogCustom("Bạn có thật sự muốn Xóa công việc này? ", ShowDialogCustom.YesNo);
 
             if (thongbao.ShowDialog() == true)
             {

@@ -55,7 +55,7 @@ namespace DoAnTGVL
 
             else
             {
-                var thongbao = new ShowDialogCustom("Bạn có thật sự muốn cập nhật Tình trạng Công việc này? ", ShowDialogCustom.YesNo);
+                var thongbao = new ShowDialogCustom("Bạn có thật sự muốn cập nhật Tình trạng của Công việc này? ", ShowDialogCustom.YesNo);
 
                 if (thongbao.ShowDialog() == true)
                 {
@@ -74,7 +74,6 @@ namespace DoAnTGVL
             if (listBox.SelectedItem != null)
             {
                 selectedListBoxItemContent = ((ListBoxItem)listBox.SelectedItem).Content.ToString();
-                // Now selectedListBoxItemContent holds the content of the selected ListBoxItem
             }
         }
     }
