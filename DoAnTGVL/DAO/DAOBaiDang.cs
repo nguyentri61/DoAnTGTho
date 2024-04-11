@@ -25,7 +25,7 @@ namespace DoAnTGVL.DAO
                     , "100", baidang.TieuDe, baidang.LinhVuc, baidang.KhuVuc, baidang.MoTa, baidang.DateThue.Date.ToShortDateString(), baidang.KinhNghiem, baidang.YeuCau, baidang.GhiChu);
             dbConection.Process(sqlStr);
         }
-        public List<BaiDang> FilterBaiDang(FilterBaiDang filterBaiDang)
+        public List<BaiDang> FilterBaiDang(FilterBaiDang filterBaiDang, Tho tho)
         {
             string query = "Select * From BaiDang";
             bool exist = false;
@@ -51,7 +51,9 @@ namespace DoAnTGVL.DAO
                         query += " and";
                     query += string.Format(" TieuDe like N'%{0}%'", filterBaiDang.Ten);
                 }
-            }           
+            }
+            query += string.Format(" ORDER BY (CASE WHEN LinhVuc = N'{0}' THEN 0 ELSE 1 END), LinhVuc", tho.LinhVuc);
+            MessageBox.Show(query);
             return dbConection.ReadDatabaseBaiDang(query);
         }
 

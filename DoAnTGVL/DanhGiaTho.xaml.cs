@@ -41,7 +41,6 @@ namespace DoAnTGVL
             if (openFileDialog.ShowDialog() == true)
             {
                 BitmapImage btmap = new BitmapImage(new Uri(openFileDialog.FileName));
-                //solutionFilePath + "\\DoAnTGVL\\ImageDanhGia\\cv1anh1_4d9f8ff0.jpg", UriKind.Absolute
                 clickedImage.Source = btmap;
                 clickedImage.Height = 108;
                 clickedImage.Width = 108;

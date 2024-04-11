@@ -31,8 +31,8 @@ namespace DoAnTGVL.DAO
             string danhgia = filterDanhGia.GetDanhGia();
             if (danhgia != "")
                 sqlStr += string.Format(" and DanhGia.DanhGia  = {0}", danhgia);
-            if(filterDanhGia.CoAnh ==true)
-                sqlStr += string.Format(" and DanhGia.Image  is not null");
+            if(filterDanhGia.CoAnh == true)
+                sqlStr += string.Format(" and DanhGia.Image  !=''");
             return dbConection.ReadDatabaseDanhGia(sqlStr);
         }
     }

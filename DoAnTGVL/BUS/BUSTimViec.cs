@@ -18,12 +18,12 @@ namespace DoAnTGVL.BUS
         public void CreateWrapBaiDang(FilterBaiDang filterBaiDang, UCTimViec uctimviec)
         {
             uctimviec.WpanelDanhS.Children.Clear();
-            List<BaiDang> DSbaiDang = dAOBaiDang.FilterBaiDang(filterBaiDang);
+            List<BaiDang> DSbaiDang = dAOBaiDang.FilterBaiDang(filterBaiDang, uctimviec.tho);
             UserControl userControl;
 
             foreach (BaiDang baidang in DSbaiDang)
             {
-                userControl = new UCDanhSachCongViec(baidang, uctimviec.tho);
+                userControl = new UCDanhSachCongViec(baidang);
                 userControl.Width = 620;
                 userControl.Height = 370;
                 userControl.Margin = new Thickness(10);

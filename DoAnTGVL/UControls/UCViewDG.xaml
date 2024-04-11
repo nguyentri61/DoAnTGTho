@@ -71,16 +71,16 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                                 <WrapPanel 
                                     VerticalAlignment="Top" Grid.ColumnSpan="2" >
                                     <!-- Nội dung của StackPanel -->
-                                    <local:UCDanhGia Margin="10,10,10,10" HorizontalAlignment="Left" />
+                                    <!--<local:UCDanhGia Margin="10,10,10,10" HorizontalAlignment="Left" />
 
                                     <local:UCDanhGia Margin="60,10,10,10" HorizontalAlignment="Right"/>
 
-                                    <!-- ... thêm nhiều items khác ... -->
+                                    --><!-- ... thêm nhiều items khác ... -->
                                 
-                                    <!-- Nội dung của StackPanel -->
+                                    <!-- Nội dung của StackPanel --><!--
                                     <local:UCDanhGia Margin="10,10,10,10" HorizontalAlignment="Left"/>
 
-                                    <local:UCDanhGia  Margin="60,10,10,10" HorizontalAlignment="Right"/>
+                                    <local:UCDanhGia  Margin="60,10,10,10" HorizontalAlignment="Right"/>-->
                                     <!-- ... thêm nhiều items khác ... -->
                                 </WrapPanel>
                             </Grid>
