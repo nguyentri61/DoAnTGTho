@@ -43,7 +43,12 @@ namespace DoAnTGVL.UControls
             {
                 filterDanhGia.DanhGia = listBoxItem.Content.ToString();
             }
+            bUSDanhGiaTho.CreateWrapDanhGia(tho, filterDanhGia, this);
+        }
 
+        private void CheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            bUSDanhGiaTho.CreateWrapDanhGia(tho, filterDanhGia, this);
         }
     }
 }

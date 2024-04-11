@@ -88,7 +88,8 @@ namespace DoAnTGVL.BUS
         public void CreateWrapDanhGia(Tho tho,FilterDanhGia filterDanhGia, UCDSDanhGiaTho dsdgtho)
         {
             UserControl userControl = new UserControl();
-            List<DanhGia> DSDanhGia = dAODanhGia.ReadDanhGia(tho);
+            List<DanhGia> DSDanhGia = dAODanhGia.ReadDanhGia(tho, filterDanhGia);
+            dsdgtho.WpanelDanhS.Children.Clear();
             foreach (DanhGia dg in DSDanhGia)
             {
 

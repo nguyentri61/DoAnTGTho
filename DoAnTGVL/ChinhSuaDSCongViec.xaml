@@ -126,12 +126,14 @@
                   x:Name="RadioButtonGroupChoiceChip"
                   Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}">
 
-                    <ListBoxItem x:Name="dhtlstItem" Margin="10 0 0 0" 
-                    Content="Đã hoàn thành" IsSelected="True"/>
+                    <ListBoxItem x:Name="cthlstItem" Margin="10 0 0 0" 
+
+Content="Chưa thực hiện" />
                     <ListBoxItem x:Name="dthlstItem" Margin="30 0 30 0"
                     Content="Đang thực hiện"/>
-                    <ListBoxItem x:Name="cthlstItem"
-                    Content="Chưa thực hiện" />
+
+                    <ListBoxItem x:Name="dhtlstItem" 
+Content="Đã hoàn thành" IsSelected="True"/>
 
                 </ListBox>
             </Grid>

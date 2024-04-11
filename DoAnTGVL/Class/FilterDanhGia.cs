@@ -9,8 +9,8 @@ namespace DoAnTGVL.Class
     public class FilterDanhGia
     {
         private float aveDanhGia;
-        private string danhGia;
-        private bool coAnh=true;
+        private string danhGia="";
+        private bool coAnh=false;
 
         public float AveDanhGia { get => aveDanhGia; set => aveDanhGia = value; }
         public string DanhGia { get => danhGia; set => danhGia = value; }
@@ -18,17 +18,15 @@ namespace DoAnTGVL.Class
 
         public string GetDanhGia()
         {
-            if (danhGia.Contains("Sao"))
+            if (danhGia != "")
             {
-                // Loại bỏ chữ "Sao" và các khoảng trắng
-                return danhGia.Replace("Sao", "").Trim();
+                if (danhGia.Contains("Sao"))
+                {
+                    // Loại bỏ chữ "Sao" và các khoảng trắng
+                    return danhGia.Replace("Sao", "").Trim();
+                }
             }
-            else 
-            {
-                // Trả về chuỗi trống nếu là "Tất cả"
-                return "";
-            }
-
+            return "";
         }
     }
 }

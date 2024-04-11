@@ -26,7 +26,13 @@ namespace DoAnTGVL.DAO
         }
         public List<DanhGia> ReadDanhGia(Tho tho, FilterDanhGia filterDanhGia)
         {
+            
             string sqlStr = string.Format("Select[User].HoTen,DanhGia.MoTaDanhGia,DanhGia.Image, DSCongViec.DateThue, DanhGia.DanhGia, DSCongViec.LinhVuc, DSCongViec.ChiPhi From DanhGia, DSCongViec, [User] Where DanhGia.IDCongViec=DSCongViec.ID and DSCongViec.IDUser=[User].ID and DSCongViec.IDTho={0}", tho.Id);
+            string danhgia = filterDanhGia.GetDanhGia();
+            if (danhgia != "")
+                sqlStr += string.Format(" and DanhGia.DanhGia  = {0}", danhgia);
+            if(filterDanhGia.CoAnh ==true)
+                sqlStr += string.Format(" and DanhGia.Image  is not null");
             return dbConection.ReadDatabaseDanhGia(sqlStr);
         }
     }

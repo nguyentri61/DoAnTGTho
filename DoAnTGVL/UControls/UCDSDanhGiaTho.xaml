@@ -50,7 +50,7 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                         <ListBox FontSize="20" VerticalAlignment="Center"
                           x:Name="RadioButtonGroupChoiceChip"
                           Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}">
-                            <ListBoxItem  Margin="60 0 0 0" Content="Tất cả" IsSelected="True" />
+                            <ListBoxItem  Margin="60 0 0 0" Content="Tất cả" IsSelected="True" PreviewMouseDown="ListBoxItem_PreviewMouseDown" />
                             <ListBoxItem  Margin="30 0 0 0" Content="5 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown"  />
                             <ListBoxItem  Margin="30 0 0 0" Content="4 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown" />
                             <ListBoxItem  Margin="30 0 0 0" Content="3 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown" />
@@ -70,7 +70,7 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                 Style="{StaticResource MaterialDesignCheckBox}" 
                 Height="30" Grid.Row="1"
                     IsChecked="{Binding CoAnh}"
-                    Margin="60,0,0,0"
+                    Margin="60,0,0,0" Click="CheckBox_Click"
 />
             </Grid>
 
