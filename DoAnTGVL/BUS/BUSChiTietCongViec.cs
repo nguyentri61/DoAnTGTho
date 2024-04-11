@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace DoAnTGVL.BUS
 {
@@ -104,6 +105,19 @@ namespace DoAnTGVL.BUS
                 dAODSCongViec.Add(congviec, Image);
             else
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+        }
+
+        public void CreateWrapPhanHoi(Tho tho, User user, ChiTietLichSuThueTho ctlstt)
+        {
+            UserControl userControl = new UserControl();
+            List<DanhGia> DSDanhGia = dAODanhGia.ReadDanhGia(tho);
+            foreach (DanhGia dg in DSDanhGia)
+            {
+                userControl = new UCDanhGia(dg);
+                userControl.Height = 300;
+                userControl.Width = 1000;
+                ctlstt.WpanelPhanHoi.Children.Add(userControl);
+            }
         }
     }
 }

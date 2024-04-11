@@ -22,8 +22,9 @@ namespace DoAnTGVL
     /// </summary>
     public partial class ThoHoanThanhCongViec : Window
     {
-        CongViec congviec;
         BUSChiTietCongViec buschitietcv = new BUSChiTietCongViec();
+        DanhGia danhGia = new DanhGia();
+        CongViec congviec;
         public ThoHoanThanhCongViec(CongViec congviec)
         {
             this.congviec=congviec;

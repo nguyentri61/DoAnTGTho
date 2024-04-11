@@ -75,7 +75,6 @@ namespace DoAnTGVL.BUS
             List<DanhGia> DSDanhGia = dAODanhGia.ReadDanhGia(tho);
             foreach (DanhGia dg in DSDanhGia)
             {
-
                 userControl = new UCDanhGia(dg);
                 userControl.Height = 300;
                 userControl.Width = 1000;

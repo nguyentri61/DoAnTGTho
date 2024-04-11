@@ -1,4 +1,5 @@
-﻿using DoAnTGVL.Class;
+﻿using DoAnTGVL.BUS;
+using DoAnTGVL.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,12 +23,14 @@ namespace DoAnTGVL
     {
         CongViec congviec;
         User user;
+        BUSDanhGiaTho bUSDanhGiaTho = new BUSDanhGiaTho();
         public ChiTietLichSuThueTho(CongViec congviec, User user)
         {
             InitializeComponent();
             this.congviec = congviec;
             this.user = user;
             this.DataContext = congviec;
+
             if (congviec.TrangThai == "Chưa thực hiện")
                 cthlstItem.IsSelected = true;
             else if (congviec.TrangThai == "Đang thực hiện")

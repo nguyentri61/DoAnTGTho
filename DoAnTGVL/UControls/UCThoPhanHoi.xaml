@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="DoAnTGVL.UControls.UCThoPhanHoi"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DoAnTGVL.UControls"
+             mc:Ignorable="d" 
+                      d:DesignHeight="300" d:DesignWidth="1000">
+    <Border BorderBrush="#D5E0D5" BorderThickness="2" Background="White" >
+
+        <StackPanel Margin="10" Orientation="Vertical">
+
+            <StackPanel Orientation="Horizontal" >
+
+                <Ellipse Width="50" Height="50">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/image/man.jpg" Stretch="Uniform"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+
+                <StackPanel Orientation="Vertical" Margin="10 0 0 0">
+                    <TextBlock  Text="{Binding TenTho}" FontWeight="DemiBold" FontSize="15"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="50 0 0 0">
+                    <TextBlock  Text="Ngày thuê" FontWeight="Light" FontSize="15" />
+                    <TextBlock  Text="{Binding DateThue, StringFormat={}{0:MM/dd/yyy}}" FontWeight="DemiBold" FontSize="15" />
+                </StackPanel>
+
+                <!--Chuyên môn-->
+                <StackPanel Orientation="Vertical" Margin="50 0 0 0">
+                    <TextBlock  Text="Dịch vụ" FontWeight="Light" FontSize="15" />
+                    <TextBlock  Text="{Binding LinhVuc}" FontWeight="DemiBold" FontSize="15" />
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="50 0 0 0">
+                    <TextBlock x:Name="txtDichVu" Text="Giá thuê" FontWeight="Light" FontSize="15"  />
+                    <TextBlock  Text="{Binding ChiPhi}" FontWeight="DemiBold" FontSize="15" />
+                </StackPanel>
+
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock x:Name="txtNoiDung"  Text="{Binding ChiTietSua, UpdateSourceTrigger=PropertyChanged}" Margin="50 20 0 0" FontSize="20" FontWeight="Light" TextWrapping="Wrap"/>
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" Height="auto" >
+                    <WrapPanel x:Name="ImagePanel"  Width="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 20 0 0">
+
+                    </WrapPanel>
+                </ScrollViewer>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

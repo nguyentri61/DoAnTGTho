@@ -124,7 +124,7 @@
         
         <Grid Grid.Row="2" Margin="0 5 0 0">
             <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" >
-                <Grid Width="auto" >
+                <Grid Width="auto">
 
                     <WrapPanel x:Name="WpanelDanhGia" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 

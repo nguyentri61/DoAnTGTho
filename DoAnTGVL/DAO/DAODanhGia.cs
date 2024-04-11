@@ -24,6 +24,7 @@ namespace DoAnTGVL.DAO
             string sqlStr = string.Format("Select[User].HoTen,DanhGia.MoTaDanhGia,DanhGia.Image, DSCongViec.DateThue, DanhGia.DanhGia, DSCongViec.LinhVuc, DSCongViec.ChiPhi From DanhGia, DSCongViec, [User] Where DanhGia.IDCongViec=DSCongViec.ID and DSCongViec.IDUser=[User].ID and DSCongViec.IDTho={0}", tho.Id);
             return dbConection.ReadDatabaseDanhGia(sqlStr); 
         }
+
         public List<DanhGia> ReadDanhGia(Tho tho, FilterDanhGia filterDanhGia)
         {
             

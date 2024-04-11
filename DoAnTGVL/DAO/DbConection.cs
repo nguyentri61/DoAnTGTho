@@ -187,7 +187,9 @@ namespace DoAnTGVL.DAO
                         data.KhuVuc = dataReader.GetString(7);
                         data.DateThue = dataReader.GetDateTime(8);
                         data.TrangThai = dataReader.GetString(9);
-
+                        data.ChiTietSua = dataReader.GetString(10);
+                        data.ChiPhi = dataReader.GetInt32("ChiPhi");
+                        //data.Image = dataReader.GetString(12);
                         // Set other properties if needed
                         DSCongViec.Add(data);
 
