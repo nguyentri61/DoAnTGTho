@@ -25,7 +25,7 @@ namespace DoAnTGVL.BUS
                 tho.CheckDcYeuThich(user.DSYeuThich); 
                 userControl = new UCDanhSachTho(tho,uCThueTho.user);
                 userControl.Width = 280;
-                userControl.Height = 450;
+                userControl.Height = 400;
                 userControl.Margin = new Thickness(10);
                 // Thêm UserControl vào WrapPanel
                 uCThueTho.WpanelDanhS.Children.Add(userControl);

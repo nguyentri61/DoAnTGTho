@@ -7,32 +7,24 @@
              mc:Ignorable="d" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              
-             d:DesignHeight="440" d:DesignWidth="275">
+             d:DesignHeight="400" d:DesignWidth="275">
     <Border CornerRadius="24" Background="White" BorderThickness="2" BorderBrush="#D5E0D5">
         <Grid Background="Transparent" Margin="0,0,-2,-2">
-            <Grid Margin="20">
+            <Grid Margin="18">
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
                     <RowDefinition Height="120"></RowDefinition>
                     <RowDefinition Height="80"></RowDefinition>
-                    <RowDefinition Height="120"></RowDefinition>
+                    <RowDefinition ></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0">
-
-                    <!--<TextBlock x:Name="txtKhucVuc"  Text="{Binding Path= Khuvuc }"  Foreground="#5E6D55" FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Left" Height="30" Margin="150,0,0,0" VerticalAlignment="Center" Grid.Column="1">-->
-                    <TextBlock x:Name="txtKhucVuc"  Text="Quận 1"  Foreground="#5E6D55" FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Left" Height="30" Margin="150,0,0,0" VerticalAlignment="Center" Grid.Column="1">
-                    </TextBlock>
-                    <ToggleButton HorizontalAlignment="Left"  Width="25" Height="25"
-                     Content="{materialDesign:PackIcon Kind=Heart,Size=20}"
-                        IsChecked="{Binding Path= DcYeuThich }"  
-                        Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"
-            ToolTip="MaterialDesignFlatPrimaryToggleButton" Margin="0,2,0,2" Click="ToggleButton_Click" />
-
+                    <TextBlock x:Name="txtChuyenMon" Text="{Binding Path= ChuyenMon }" Foreground="#5E6D55" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Grid>
-                <Ellipse Grid.Row="1" Width="110">
+
+                <Ellipse Grid.Row="1" Width="110" Margin="0 5 0 0">
                     <Ellipse.Fill>
                         <ImageBrush ImageSource="/image/man.jpg"/>
                     </Ellipse.Fill>
@@ -40,60 +32,43 @@
 
                 <Grid Grid.Row="2">
                     <StackPanel Orientation="Vertical">
+                        <TextBlock x:Name="txtLinhVuc" Text="{Binding Path= LinhVuc }" Width="auto" Foreground="#5E6D55" FontSize="20" Margin="0 8 0 0" FontWeight="Black" HorizontalAlignment="Center" FontFamily="Yu Gothic UI Semibold"/>
 
-
-
-
-                        <TextBlock x:Name="txtLinhVuc" Text="{Binding Path= LinhVuc }" Width="auto" Height="auto" FontSize="25" Margin="0 5 0 0" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Yu Gothic UI Semibold">
-                        <!--<TextBlock x:Name="txtLinhVuc" Text="Điện tử" Width="auto" Height="auto" FontSize="25" Margin="0 5 0 0" FontWeight="Black" HorizontalAlignment="Center" FontFamily="Yu Gothic UI Semibold">-->
-                        </TextBlock>
-                        <TextBlock x:Name="txtChuyenMon" TextWrapping="WrapWithOverflow" Text="{Binding Path= ChuyenMon }" Foreground="#5E6D55" Margin="0 5 0 0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30"  >
-                        <!--<TextBlock x:Name="txtChuyenMon" TextWrapping="WrapWithOverflow" Text="Sửa tivi" Foreground="#5E6D55" Margin="0 5 0 0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30"  >-->
-                        </TextBlock>
-
-
+                        <TextBlock x:Name="txtKhuVuc" Text="{Binding Path= Khuvuc }" FontSize="20" FontWeight="DemiBold" Margin="0 5 0 0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
                     </StackPanel>
 
                 </Grid>
 
                 <Grid Grid.Row="3">
-                    <StackPanel>
-                        <WrapPanel HorizontalAlignment="Center" Margin="-5,0,0,0">
-                            <materialDesign:PackIcon  Kind="Star"  Height="25" Width="25" Foreground="#14A800" />
-                            <TextBlock x:Name="txtDanhGia"   Text="{Binding Path= DanhGia }" FontSize="20" Foreground="#5E6D55" ></TextBlock>
-                            <TextBlock   Text="/5" FontSize="20" Foreground="#5E6D55" ></TextBlock>
-                        </WrapPanel>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            
+                            <TextBlock x:Name="txtDanhGia" Text="{Binding Path= DanhGia}" FontWeight="DemiBold" FontSize="16" Foreground="#5E6D55" ></TextBlock>
+                            <materialDesign:PackIcon  Kind="Star" VerticalAlignment="Center" Foreground="#14A800" />
+                            <TextBlock Text="/5" FontSize="16" Foreground="#5E6D55" ></TextBlock>
+                            <TextBlock Text=" | " FontSize="16" Foreground="#5E6D55"></TextBlock>
+                            
+                            <TextBlock x:Name="txtKinhNghiem" Text="{Binding Path= Kinhnghiem }" FontWeight="DemiBold" FontSize="16" Foreground="#5E6D55" HorizontalAlignment="Center"/>
+                            <TextBlock Text=" kinh nghiệm" FontSize="16" Foreground="#5E6D55"></TextBlock>
+                        </StackPanel>
 
-                        <TextBlock x:Name="txtKinhNghiem" Margin="0,5,0,0" Text="{Binding Path= Kinhnghiem }" FontSize="18" Foreground="#5E6D55" HorizontalAlignment="Center">
-                        <!--<TextBlock x:Name="txtKinhNghiem" Margin="0,5,0,0" Text="Trên 1 năm" FontSize="18" Foreground="#5E6D55" HorizontalAlignment="Center">-->
-                        </TextBlock>
-                        <TextBlock x:Name="txtName" Text="{Binding Path= HoTen }" Width="auto" Height="auto" Foreground="#001E00" FontSize="25" FontWeight="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 0" FontFamily="Yu Gothic UI SemiBold">
-                        <!--<TextBlock x:Name="txtName" Text="Huuynh Viet Dan" Width="auto" Height="auto" Foreground="#001E00" FontSize="22" FontWeight="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 5 0 0" FontFamily="Yu Gothic UI SemiBold">-->
-                        </TextBlock>
-
-
-
-
-
-
+                        <TextBlock x:Name="txtName" Text="{Binding Path= HoTen }" Foreground="#001E00" FontSize="20" FontWeight="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 0" FontFamily="Yu Gothic UI SemiBold"/>
                     </StackPanel>
-
-
                 </Grid>
 
                 <Grid Grid.Row="4">
-                    
-                    <Button Content="Xem chi tiết" FontSize="18" Margin=" 0 0 0 0" Height="40" Width="150" Click="btnXemChiTiet_Click" Background="#FF8C00FC" Grid.ColumnSpan="2">
-
+                    <Button Content="Xem chi tiết" VerticalAlignment="Bottom" FontSize="18" Height="40" Width="150" Click="btnXemChiTiet_Click" Background="#FF8C00FC">
                         <Button.Clip>
                             <RectangleGeometry Rect="0,0,150,40" RadiusX="10" RadiusY="10"/>
                         </Button.Clip>
                     </Button>
-                </Grid>
 
+                    <ToggleButton HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="50" Height="50" Content="{materialDesign:PackIcon Kind=Heart,Size=20}"
+                            IsChecked="{Binding Path= DcYeuThich }"  
+                            Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"
+                            ToolTip="MaterialDesignFlatPrimaryToggleButton" Click="ToggleButton_Click" Margin="0,0,-4,-4" />
+                </Grid>
             </Grid>
         </Grid>
     </Border>
-
-
 </UserControl>
