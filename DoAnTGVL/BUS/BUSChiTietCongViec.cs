@@ -19,11 +19,11 @@ namespace DoAnTGVL.BUS
         DAODanhGia dAODanhGia = new DAODanhGia();
 
         public string Image { get => image; set => image = value; }
-        DAODSCongViec dAODSCongViec= new DAODSCongViec();
-        DAOBaiDang dAOBaiDang = new DAOBaiDang();   
+        DAODSCongViec dAODSCongViec = new DAODSCongViec();
+        DAOBaiDang dAOBaiDang = new DAOBaiDang();
         public void Them(BaiDang baiDang, Tho tho)
         {
-            if(dAODSCongViec.CheckNgayBan(baiDang.DateThue,tho.Id))
+            if (dAODSCongViec.CheckNgayBan(baiDang.DateThue, tho.Id))
             {
                 dAODSCongViec.ThoThem(baiDang, tho);
                 dAOBaiDang.XoaBaiDang(baiDang);
@@ -31,7 +31,7 @@ namespace DoAnTGVL.BUS
             else
             {
                 MessageBox.Show("Ngày đó bạn bận!!!");
-            }    
+            }
         }
 
         public void Xoa(CongViec cv)
@@ -54,9 +54,9 @@ namespace DoAnTGVL.BUS
             return dAODSCongViec.ReadAllDSThueTho(id, trangthai);
         }
 
-        public List<CongViec> FilterCV(FilterDSCongViec filterDSCongViec, string idrole ,int idtho)
+        public List<CongViec> FilterCV(FilterDSCongViec filterDSCongViec, string idrole, int idtho)
         {
-            return dAODSCongViec.FilterCongViec(filterDSCongViec, idrole ,idtho);
+            return dAODSCongViec.FilterCongViec(filterDSCongViec, idrole, idtho);
         }
 
         public void AddImage(string source)
@@ -69,7 +69,7 @@ namespace DoAnTGVL.BUS
             if (!System.IO.File.Exists(destination))
             {
                 System.IO.File.Copy(source, destination);
-                Image += fileName + " "; 
+                Image += fileName + " ";
             }
             else
             {
@@ -80,7 +80,7 @@ namespace DoAnTGVL.BUS
                 destination = System.IO.Path.Combine(folder_path, destinationFolder, newFileName);
                 System.IO.File.Copy(source, destination);
             }
-            
+
         }
         public string FindSolutionFile()
         {

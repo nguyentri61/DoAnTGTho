@@ -1,5 +1,6 @@
 ﻿using DoAnTGVL.BUS;
 using DoAnTGVL.Class;
+using DoAnTGVL.UControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +36,13 @@ namespace DoAnTGVL
                 cthlstItem.IsSelected = true;
             else if (congviec.TrangThai == "Đang thực hiện")
                 dthlstItem.IsSelected = true;
+            else
+            {
+                UCThoPhanHoi uCThoPhanHoi = new UCThoPhanHoi(congviec);
+                uCThoPhanHoi.Height = 320;
+                uCThoPhanHoi.Width = 760;
+                WpanelPhanHoi.Children.Add(uCThoPhanHoi);
+            }
         }
 
         private void btnHuy_Click(object sender, RoutedEventArgs e)
