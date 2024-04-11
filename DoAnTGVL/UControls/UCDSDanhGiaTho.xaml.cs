@@ -50,5 +50,7 @@ namespace DoAnTGVL.UControls
         {
             bUSDanhGiaTho.CreateWrapDanhGia(tho, filterDanhGia, this);
         }
+
+        
     }
 }

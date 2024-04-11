@@ -27,11 +27,9 @@
             </Grid>
 
             <WrapPanel Grid.Row="1" Orientation="Horizontal" >
-                <TextBlock Text="Mr.Tris" Foreground="#9AAA97" FontSize="15">
-                    
-                </TextBlock>
                 
-                <TextBlock Text="-" Margin="5 0 5 0" Foreground="#9AAA97" FontSize="15"></TextBlock>
+                
+               
 
                 <TextBlock Text="Đăng tải 2 ngày trước" Foreground="#9AAA97" FontSize="15"></TextBlock>
                 
