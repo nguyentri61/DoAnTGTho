@@ -9,11 +9,11 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Title="DialogCustoms" Height="150" Width="400"
-        Background="White">
+        Background="Transparent">
     <Window.Clip>
         <RectangleGeometry Rect="0,0,400,150" RadiusX="10" RadiusY="10"/>
     </Window.Clip>
-    <Border BorderThickness="1" BorderBrush="#FF807D7D" CornerRadius="10">
+    <Border>
         <Grid>
             <Grid.Background>
                 <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
@@ -26,7 +26,7 @@
                 <RowDefinition Height="50"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
-                <TextBlock x:Name="txblMess" FontSize="12" TextAlignment="Center" VerticalAlignment="Center" FontWeight="DemiBold" TextWrapping="WrapWithOverflow"></TextBlock>
+                <TextBlock x:Name="txblMess" FontSize="18" TextAlignment="Center" VerticalAlignment="Center" FontWeight="DemiBold" TextWrapping="WrapWithOverflow"></TextBlock>
             </Grid>
             <Grid Grid.Row="1">
                 <Button x:Name="btnYes" Width="70" Height="30" Background="#FF49886C" Content="Yes"

@@ -65,7 +65,7 @@ namespace DoAnTGVL.BUS
             if (danhGia.MoTaDanhGia != "" && danhGia.DanhGiaCV != 0)
                 dAODanhGia.Add(danhGia,idCV, Image);
             else
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                new ShowDialogCustom("Vui lòng nhập đầy đủ thông tin!", ShowDialogCustom.OK).Show();
         }
 
         public void CreateWrapDanhGia(Tho tho, User user, ChiTietTho chiTietTho)

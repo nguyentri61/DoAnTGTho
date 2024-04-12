@@ -72,8 +72,6 @@ namespace DoAnTGVL.UControls
             var congviec = (sender as Button).DataContext as CongViec;
             int index = lsvDSCV.Items.IndexOf((sender as Button).DataContext);
 
-            // Sử dụng chỉ mục index ở đây cho mục đích của bạn
-            MessageBox.Show($"Chỉ mục của hàng: {index}");
             var thongbao = new ShowDialogCustom("Bạn có thật sự muốn Xóa công việc này? ", ShowDialogCustom.YesNo);
 
             if (thongbao.ShowDialog() == true)

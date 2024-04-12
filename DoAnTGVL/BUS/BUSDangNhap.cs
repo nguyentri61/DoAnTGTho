@@ -40,13 +40,13 @@ namespace DoAnTGVL.BUS
                 }
                 else
                 {
-                    MessageBox.Show("Sai Tài Khoản, vui lòng nhập lại");
+                    new ShowDialogCustom("Sai tài khoản, vui lòng nhập lại", ShowDialogCustom.OK).Show();
                     return null;
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ ");
+                new ShowDialogCustom("Vui lòng nhập đầy đủ!", ShowDialogCustom.OK).Show();
                 return null;
             }
         }

@@ -30,7 +30,7 @@ namespace DoAnTGVL.BUS
             }
             else
             {
-                MessageBox.Show("Ngày đó bạn bận!!!");
+                new ShowDialogCustom("Bạn đã có công việc khác vào ngày này!", ShowDialogCustom.OK).Show();
             }
         }
 
@@ -104,7 +104,7 @@ namespace DoAnTGVL.BUS
             if (congviec.ChiTietSua != "" && congviec.ChiPhi != null)
                 dAODSCongViec.Add(congviec, Image);
             else
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                new ShowDialogCustom("Vui lòng nhập đầy đủ thông tin", ShowDialogCustom.OK).Show();
         }
 
         public void CreateWrapPhanHoi(Tho tho, User user, ChiTietLichSuThueTho ctlstt)

@@ -23,7 +23,7 @@ namespace DoAnTGVL.BUS
                 dAODScongViec.Them(congviec);
             else
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                new ShowDialogCustom("Vui lòng nhập đầy đủ thông tin!", ShowDialogCustom.OK).Show();
             } 
                 
         }

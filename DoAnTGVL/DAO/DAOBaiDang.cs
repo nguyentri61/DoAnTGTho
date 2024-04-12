@@ -53,7 +53,6 @@ namespace DoAnTGVL.DAO
                 }
             }
             query += string.Format(" ORDER BY (CASE WHEN LinhVuc = N'{0}' THEN 0 ELSE 1 END), LinhVuc", tho.LinhVuc);
-            MessageBox.Show(query);
             return dbConection.ReadDatabaseBaiDang(query);
         }
 

@@ -45,13 +45,13 @@ namespace DoAnTGVL
             {
                 DAOBaiDang dAOBaiDang = new DAOBaiDang();
                 dAOBaiDang.Them(baiDang);
-                MessageBox.Show("Thêm thành công");
+                new ShowDialogCustom("Thêm thành công", ShowDialogCustom.OK).Show();
                 this.Close();
 
             }
             catch
             {
-                MessageBox.Show("Vui long dien day du thong tin");
+                new ShowDialogCustom("Vui lòng nhập đầy đủ thông tin!", ShowDialogCustom.OK).Show();
             }
         }
     }
