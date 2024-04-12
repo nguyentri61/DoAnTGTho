@@ -30,16 +30,15 @@ namespace DoAnTGVL.BUS
             string destination = System.IO.Path.Combine(folder_path, destinationFolder, fileName);
             if (!System.IO.File.Exists(destination))
             {
-                System.IO.File.Copy(source, destination);
-                Image += fileName + " ";
+                Image += fileName + "  ";
+                System.IO.File.Copy(source, destination);               
             }
             else
             {
                 string fileNameWithoutExtension = System.IO.Path.GetFileNameWithoutExtension(fileName);
                 string fileExtension = System.IO.Path.GetExtension(fileName);
                 string newFileName = fileNameWithoutExtension + "_" + Guid.NewGuid().ToString().Substring(0, 8) + fileExtension;
-                Image += newFileName + " ";
-                
+                Image += newFileName + "  ";               
                 destination = System.IO.Path.Combine(folder_path, destinationFolder, newFileName);
                 System.IO.File.Copy(source, destination);
             }
@@ -61,10 +60,10 @@ namespace DoAnTGVL.BUS
             return null;
         }
 
-        public void AddData(DanhGia danhGia)
+        public void AddData(DanhGia danhGia,int idCV)
         {
             if (danhGia.MoTaDanhGia != "" && danhGia.DanhGiaCV != 0)
-                dAODanhGia.Add(danhGia, Image);
+                dAODanhGia.Add(danhGia,idCV, Image);
             else
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
         }

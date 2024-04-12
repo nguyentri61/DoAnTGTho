@@ -41,7 +41,7 @@ namespace DoAnTGVL.Class
         public void GetSource(string input)
         {
             
-            string[] words = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] words = input.Split(new string[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (string word in words)
             {

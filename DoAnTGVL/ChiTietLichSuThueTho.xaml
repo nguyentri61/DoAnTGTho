@@ -25,17 +25,20 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition ></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="23*"/>
+                    <ColumnDefinition Width="15*"/>
+                </Grid.ColumnDefinitions>
                 <TextBlock Text="{Binding Path= TieuDe}"
                        TextWrapping="Wrap" 
-                       Foreground="#001E00" FontSize="25" FontWeight="DemiBold">
+                       Foreground="#001E00" FontSize="25" FontWeight="DemiBold" Grid.ColumnSpan="2">
 
                 </TextBlock>
             </Grid>
@@ -57,25 +60,9 @@
 
             <Grid Grid.Row="2">
 
-                <StackPanel Grid.Column="0" Orientation="Vertical" Margin="0 20 0 0">
-                    <TextBlock Text="Ghi chú:" Foreground="#001E00" FontSize="20" FontWeight="DemiBold"></TextBlock>
-                    <TextBlock Text="{Binding Path= GhiChu}"
-           TextWrapping="Wrap"
-           Foreground="#001E00" FontSize="15" FontWeight="Regular"
-            Margin="0 10 0 0"
-           ></TextBlock>
-
-                </StackPanel>
-
-
-            </Grid>
-
-
-            <Grid Grid.Row="3">
-
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Margin="0 10 0 0">
                     <TextBlock  Text="Lĩnh Vực:"
@@ -91,14 +78,14 @@
                 <StackPanel Grid.Row="1" Orientation="Horizontal" >
 
                     <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2">
-                        <Grid Width="97" Height="30">
-                            <TextBlock Text="{Binding Path= LinhVuc}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55"  FontWeight="SemiBold" 
+                        <Grid Width="97" Height="20">
+                            <TextBlock Text="{Binding Path= LinhVuc}"  VerticalAlignment="Center"  HorizontalAlignment="Center" Foreground="#5E6D55"  FontWeight="SemiBold" 
                     
                     ></TextBlock>
                         </Grid>
                     </Border>
-                    <Border Margin="250 0 0 0" CornerRadius="19" Background="#F2F7F2" BorderThickness="2">
-                        <Grid Width="150" Height="30">
+                    <Border Margin="230 0 0 0" CornerRadius="19" Background="#F2F7F2" BorderThickness="2">
+                        <Grid Width="150" Height="20">
                             <TextBlock Text="{Binding DateThue ,StringFormat={}{0:MM/dd/yyy}}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" FontWeight="SemiBold" 
     
     ></TextBlock>
@@ -110,7 +97,7 @@
             </Grid>
 
 
-            <Grid Grid.Row="4">
+            <Grid Grid.Row="3">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -129,30 +116,26 @@
 
                         <ListBoxItem x:Name="cthlstItem" Margin="10 0 0 0" 
 
-Content="Chưa thực hiện" />
-                        <ListBoxItem x:Name="dthlstItem" Margin="30 0 30 0"
-                    Content="Đang thực hiện"/>
-
-                        <ListBoxItem x:Name="dhtlstItem" 
-Content="Đã hoàn thành" IsSelected="True"/>
+                    Content="{Binding TrangThai}"  />
+                       
 
                     </ListBox>
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="5" Margin="0 5 0 20">
+            <Grid x:Name="grdPhanHoi" Grid.Row="4" Margin="0 5 0 20">
                 <StackPanel Orientation="Vertical">
                     <TextBlock Text="Phản hồi từ Thợ:"  Foreground="#001E00" FontSize="20" FontWeight="DemiBold" Margin="0 0 0 10"/>
-                    <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" >
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Height="auto" >
                         <Grid>
                             <WrapPanel x:Name="WpanelPhanHoi" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
                     </ScrollViewer>
                 </StackPanel>
-                
+
             </Grid>
 
-            <Grid Grid.Row="6">
+            <Grid Grid.Row="5">
                 <Button x:Name="btn_OK" Width="250" Height="50" Content="OK" FontSize="20" HorizontalAlignment="Center" Click="btnOK_Click">
                     <Button.Clip>
                         <RectangleGeometry Rect="0,0,250,50" RadiusX="10" RadiusY="10"/>
@@ -160,15 +143,15 @@ Content="Đã hoàn thành" IsSelected="True"/>
                 </Button>
 
                 <Button  Width="89" Height="50" Background="#9D9999" Content="Hủy" Click="btnHuy_Click" x:Name="btnHuy" HorizontalAlignment="Right">
-                     <Button.Clip>
+                    <Button.Clip>
                         <RectangleGeometry Rect="0,0,89,50" RadiusX="10" RadiusY="10"/>
-                     </Button.Clip>
+                    </Button.Clip>
                 </Button>
             </Grid>
-                
+
         </Grid>
 
     </ScrollViewer>
-    
-    
+
+
 </Window>

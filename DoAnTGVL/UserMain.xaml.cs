@@ -86,10 +86,7 @@ namespace DoAnTGVL
         }
         private void MnuDanhGia_Click(object sender, RoutedEventArgs e)
         {
-            DanhGiaTho danhGiaTho = new DanhGiaTho();
-            this.Hide();
-            danhGiaTho.ShowDialog();
-            this.Show();
+            
         }
 
         private void btnLichSuThue_Click(object sender, RoutedEventArgs e)

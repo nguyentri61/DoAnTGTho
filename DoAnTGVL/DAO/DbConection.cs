@@ -189,7 +189,7 @@ namespace DoAnTGVL.DAO
                         data.TrangThai = dataReader.GetString(9);
                         data.ChiTietSua = dataReader.GetString(10);
                         data.ChiPhi = dataReader.GetInt32("ChiPhi");
-                        //data.Image = dataReader.GetString(12);
+                        data.GetSource(dataReader.GetString(12));
                         // Set other properties if needed
                         DSCongViec.Add(data);
 

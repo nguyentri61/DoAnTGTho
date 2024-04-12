@@ -27,10 +27,12 @@ namespace DoAnTGVL
     {
         BUSDanhGiaTho bUSDanhGiaTho = new BUSDanhGiaTho();
         DanhGia danhGia = new DanhGia();
-        public DanhGiaTho()
+        CongViec congviec;
+        public DanhGiaTho(CongViec congviec)
         {
             InitializeComponent();
-            this.DataContext = danhGia;
+            this.DataContext = danhGia;   
+            this.congviec = congviec;
         }
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -50,7 +52,7 @@ namespace DoAnTGVL
 
         private void ComfirmClick_Click(object sender, RoutedEventArgs e)
         {           
-            bUSDanhGiaTho.AddData(danhGia);
+            bUSDanhGiaTho.AddData(danhGia, congviec.ID);
             this.Close(); 
         }
 

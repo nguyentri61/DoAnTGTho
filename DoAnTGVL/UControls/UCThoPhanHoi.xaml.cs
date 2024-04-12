@@ -39,7 +39,7 @@ namespace DoAnTGVL.UControls
             {
                 string solutionFilePath = buschitietcongviec.FindSolutionFile();
 
-                BitmapImage bitmapImage = new BitmapImage(new Uri(solutionFilePath + "\\DoAnTGVL\\ImageDanhGia\\" + source, UriKind.Absolute));
+                BitmapImage bitmapImage = new BitmapImage(new Uri(solutionFilePath + "\\DoAnTGVL\\ImageCongViec\\" + source, UriKind.Absolute));
 
                 // Tạo một Image và đặt BitmapImage làm nguồn
                 Image image = new Image();

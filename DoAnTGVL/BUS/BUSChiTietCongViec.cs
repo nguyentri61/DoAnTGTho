@@ -69,14 +69,14 @@ namespace DoAnTGVL.BUS
             if (!System.IO.File.Exists(destination))
             {
                 System.IO.File.Copy(source, destination);
-                Image += fileName + " ";
+                Image += fileName + "  ";
             }
             else
             {
                 string fileNameWithoutExtension = System.IO.Path.GetFileNameWithoutExtension(fileName);
                 string fileExtension = System.IO.Path.GetExtension(fileName);
                 string newFileName = fileNameWithoutExtension + "_" + Guid.NewGuid().ToString().Substring(0, 8) + fileExtension;
-                Image += newFileName + " ";
+                Image += newFileName + "  ";
                 destination = System.IO.Path.Combine(folder_path, destinationFolder, newFileName);
                 System.IO.File.Copy(source, destination);
             }

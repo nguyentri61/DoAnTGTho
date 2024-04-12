@@ -32,17 +32,13 @@ namespace DoAnTGVL
             this.user = user;
             this.DataContext = congviec;
 
-            if (congviec.TrangThai == "Chưa thực hiện")
-                cthlstItem.IsSelected = true;
-            else if (congviec.TrangThai == "Đang thực hiện")
-                dthlstItem.IsSelected = true;
-            else
+            
+            if(congviec.TrangThai== "Đã hoàn thành")
             {
                 UCThoPhanHoi uCThoPhanHoi = new UCThoPhanHoi(congviec);
+                uCThoPhanHoi.Width = 740;
                 uCThoPhanHoi.Height = 300;
-                uCThoPhanHoi.Width = 720;
                 WpanelPhanHoi.Children.Add(uCThoPhanHoi);
-
                 btn_OK.Content = "Đánh giá";
             }
         }
@@ -56,7 +52,7 @@ namespace DoAnTGVL
         {
             if (congviec.TrangThai == "Đã hoàn thành")
             {
-                DanhGiaTho danhGiaTho = new DanhGiaTho();
+                DanhGiaTho danhGiaTho = new DanhGiaTho(congviec);
                 this.Hide();
                 danhGiaTho.ShowDialog();
             }

@@ -30,7 +30,11 @@
 
                 <StackPanel Orientation="Vertical" Margin="50 0 0 0">
                     <TextBlock x:Name="txtDichVu" Text="Tổng chi phí" FontWeight="Light" FontSize="15"  />
-                    <TextBlock  Text="{Binding ChiPhi}" FontWeight="DemiBold" FontSize="15" />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  Text="{Binding ChiPhi, StringFormat=N0}" FontWeight="DemiBold" FontSize="15" />
+                        <TextBlock Text=" VNĐ" FontWeight="DemiBold" FontSize="10"></TextBlock>
+                    </StackPanel>
+                    
                 </StackPanel>
 
             </StackPanel>
