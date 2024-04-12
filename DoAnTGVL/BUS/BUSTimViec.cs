@@ -23,7 +23,7 @@ namespace DoAnTGVL.BUS
 
             foreach (BaiDang baidang in DSbaiDang)
             {
-                userControl = new UCDanhSachCongViec(baidang);
+                userControl = new UCDanhSachCongViec(baidang,uctimviec.tho);
                 userControl.Width = 620;
                 userControl.Height = 370;
                 userControl.Margin = new Thickness(10);

@@ -23,9 +23,10 @@ namespace DoAnTGVL.UControls
     {
         BaiDang baidang;
         Tho tho;
-        public UCDanhSachCongViec(BaiDang baidang )
+        public UCDanhSachCongViec(BaiDang baidang,Tho tho )
         {
             this.baidang = baidang;
+            this.tho=tho;
             InitializeComponent();
             this.DataContext = baidang;
         }
