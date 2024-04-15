@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="DoAnTGVL.UControls.UCTBaoThue"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DoAnTGVL.UControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="600">
+    <Grid>
+        <Border CornerRadius="24" Background="White" BorderThickness="2" BorderBrush="#D5E0D5">
+            <Grid>
+                <TextBlock Text="{Binding Path= TieuDe}" Margin="20,20,20,0" TextWrapping="Wrap" Foreground="#001E00" FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Center">
+
+                </TextBlock>
+                <WrapPanel Grid.Column="0" Margin="10 80 0 0 " Orientation="Vertical">
+                    <TextBlock Text="{Binding Path= KhuVuc}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"></TextBlock>
+                    <TextBlock Text="Khu Vực" Margin="0 2 0 0"
+           Foreground="#9AAA97" FontSize="12">
+
+                    </TextBlock>
+
+                </WrapPanel>
+                <WrapPanel Grid.Column="0" Margin="110 80 0 0 " Orientation="Vertical" HorizontalAlignment="Center">
+                    <TextBlock Text="{Binding Path= NgayThue}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"></TextBlock>
+                    <TextBlock Text="Ngày thuê" Margin="0 2 0 0"
+Foreground="#9AAA97" FontSize="12">
+
+                    </TextBlock>
+
+                </WrapPanel>
+                <WrapPanel Grid.Column="0" Margin="0 160 0 0 " Orientation="Horizontal" HorizontalAlignment="Center" >
+                    <Button x:Name="huy_Button" Width="89" Height="40" Background="#9D9999" Content="Hủy"
+HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="35,20,46,26" Click="huy_Button_Click">
+                        <Button.Clip>
+                            <RectangleGeometry Rect="0,0,89,40" RadiusX="10" RadiusY="10"/>
+                        </Button.Clip>
+                    </Button>
+                    <Button
+    
+                    Content="Nhận việc"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                             Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                            ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Margin="50,20,0,0" Height="49" Width="143" />
+                    <Button  Width="89" Height="40" Background="#9D9999" Content="Chi Tiết"
+HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="90,20,46,26" Click="huy_Button_Click">
+                        <Button.Clip>
+                            <RectangleGeometry Rect="0,0,89,40" RadiusX="10" RadiusY="10"/>
+                        </Button.Clip>
+                    </Button>
+                </WrapPanel>
+            </Grid>
+
+
+        </Border>
+        
+    </Grid>
+</UserControl>
