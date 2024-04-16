@@ -37,6 +37,9 @@
     <Compile Update="ThoMain.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ThongBaoThue.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UControls\UCDanhGia.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -133,6 +136,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ThongBaoThue.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCDanhGia.xaml">

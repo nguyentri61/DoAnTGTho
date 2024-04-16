@@ -55,6 +55,12 @@ namespace DoAnTGVL.UControls
             filterBaiDang.reset();
             this.Content = new UCTimViec(tho);
         }
+
+        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window thongbaoThue = new ThongBaoThue(tho);
+            thongbaoThue.Show();
+        }
     }
 
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnTGVL.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,12 @@ namespace DoAnTGVL.UControls
     /// </summary>
     public partial class UCTBaoThue : UserControl
     {
-        public UCTBaoThue()
+        public UCTBaoThue(CongViec congviec)
         {
+            this.DataContext = congviec;
             InitializeComponent();
         }
+
+        
     }
 }
