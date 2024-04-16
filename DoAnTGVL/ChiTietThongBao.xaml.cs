@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnTGVL.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,19 +11,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DoAnTGVL.UControls
+namespace DoAnTGVL
 {
     /// <summary>
-    /// Interaction logic for UCViewDG.xaml
+    /// Interaction logic for ChiTietThongBao.xaml
     /// </summary>
-    public partial class UCViewDG : UserControl
+    public partial class ChiTietThongBao : Window
     {
-        public UCViewDG()
+        CongViec congviec;
+        public ChiTietThongBao(CongViec congviec)
         {
             InitializeComponent();
+            this.congviec = congviec;
+            this.DataContext = congviec;
+        }
+
+        private void btnOK_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

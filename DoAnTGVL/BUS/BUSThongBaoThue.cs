@@ -22,9 +22,9 @@ namespace DoAnTGVL.BUS
             foreach (CongViec congViec in congViecs)
             {
                 userControl = new UCTBaoThue(congViec,tho);
-                userControl.Height = 250;
+                userControl.Height = 180;
                 userControl.Width = 600;
-                userControl.Margin = new Thickness(35);
+                userControl.Margin = new Thickness(10);
                 thongBaoThue.wrapTbao.Children.Add(userControl);
             }
         }

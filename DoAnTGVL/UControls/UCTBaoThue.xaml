@@ -6,32 +6,26 @@
              xmlns:local="clr-namespace:DoAnTGVL.UControls"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="250" d:DesignWidth="600">
+             d:DesignHeight="180" d:DesignWidth="600">
     <Grid>
-        <Border CornerRadius="24" Background="White" BorderThickness="2" BorderBrush="#D5E0D5">
-            <Grid>
-                <TextBlock Text="{Binding Path= TieuDe}" Margin="20,20,20,0" TextWrapping="Wrap" Foreground="#001E00" FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Center">
+        <Border Background="White" BorderThickness="2" BorderBrush="#D5E0D5">
+            <Grid Margin="8">
+                <TextBlock Text="{Binding Path= TieuDe}" TextWrapping="Wrap" Foreground="#001E00" FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                <StackPanel Margin="0 50 0 0 " Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical" Margin="50 0 0 0">
+                        <TextBlock Text="{Binding Path= KhuVuc}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"/>
+                        <TextBlock Text="Khu Vực" Margin="0 2 0 0" Foreground="#9AAA97" FontSize="12"/>
+                    </StackPanel>
 
-                </TextBlock>
-                <WrapPanel Grid.Column="0" Margin="10 80 0 0 " Orientation="Vertical">
-                    <TextBlock Text="{Binding Path= KhuVuc}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"></TextBlock>
-                    <TextBlock Text="Khu Vực" Margin="0 2 0 0"
-           Foreground="#9AAA97" FontSize="12">
+                    <StackPanel Orientation="Vertical" Margin="200 0 0 0">
+                        <TextBlock Text="{Binding Path= DateThue, StringFormat={}{0:MM/dd/yyy}}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"/>
+                        <TextBlock Text="Ngày thuê" Margin="0 2 0 0" Foreground="#9AAA97" FontSize="12"/>
+                    </StackPanel>
+                </StackPanel>
 
-                    </TextBlock>
-
-                </WrapPanel>
-                <WrapPanel Grid.Column="0" Margin="110 80 0 0 " Orientation="Vertical" HorizontalAlignment="Center">
-                    <TextBlock Text="{Binding Path= DateThue, StringFormat={}{0:MM/dd/yyy}}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"></TextBlock>
-                    <TextBlock Text="Ngày thuê" Margin="0 2 0 0"
-Foreground="#9AAA97" FontSize="12">
-
-                    </TextBlock>
-
-                </WrapPanel>
-                <WrapPanel Grid.Column="0"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                    <Button  Width="89" Height="40" Background="#9D9999" Content="Chi Tiết"
-HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="50,20,46,26"  >
+                <Grid>
+                    <Button  Width="89" Height="40" Background="#9D9999" Content="Chi Tiết" 
+                             VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="btn_chitiet_click">
                         <Button.Clip>
                             <RectangleGeometry Rect="0,0,89,40" RadiusX="10" RadiusY="10"/>
                         </Button.Clip>
@@ -41,19 +35,21 @@ HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="50,20,46,26"  >
                     Content="Nhận việc"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                              Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                            ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Margin="42,20,0,0" Height="49" Width="143" Click="nvButton_Click"  />
-                    
-                    <Button  Width="89" Height="40" Background="#9D9999" Content="Hủy"
-HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="90,20,46,26" Click="Huy_Click" >
+                            ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" VerticalAlignment="Bottom" Height="40" Width="143" Click="nvButton_Click">
+
+                        <Button.Clip>
+                            <RectangleGeometry Rect="0,0,143,40" RadiusX="10" RadiusY="10"/>
+                        </Button.Clip>
+
+                    </Button>
+
+                    <Button  Width="89" Height="40" Background="#9D9999" Content="Hủy" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Huy_Click" >
                         <Button.Clip>
                             <RectangleGeometry Rect="0,0,89,40" RadiusX="10" RadiusY="10"/>
                         </Button.Clip>
                     </Button>
-                </WrapPanel>
+                </Grid>
             </Grid>
-
-
         </Border>
-        
     </Grid>
 </UserControl>

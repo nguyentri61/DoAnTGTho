@@ -48,13 +48,6 @@ namespace DoAnTGVL
             PreUC = CurUC;
             gridMainWin.Children.Add(CurUC);
         }
-        public void mnuViewwDG_Click(object sender, RoutedEventArgs e)
-        {
-            CurUC = new UCViewDG();
-            gridMainWin.Children.Remove(PreUC);
-            PreUC = CurUC;
-            gridMainWin.Children.Add(CurUC);
-        }
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
         {
             ButtonCloseMenu.Visibility = Visibility.Visible;

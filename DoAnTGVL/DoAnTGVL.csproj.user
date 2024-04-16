@@ -19,6 +19,9 @@
     <Compile Update="ChiTietTho.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ChiTietThongBao.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="DangBai.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -79,9 +82,6 @@
     <Compile Update="UControls\UCTimViec.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UControls\UCViewDG.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="UControls\UserPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -106,6 +106,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ChiTietTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChiTietThongBao.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="DangBai.xaml">
@@ -178,9 +181,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCTimViec.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UControls\UCViewDG.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UserPopup.xaml">

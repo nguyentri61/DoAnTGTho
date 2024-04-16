@@ -58,5 +58,11 @@ namespace DoAnTGVL.UControls
                 parentWindow.Close();
             }
         }
+
+        private void btn_chitiet_click(object sender, RoutedEventArgs e)
+        {
+            ChiTietThongBao chitietthongbao = new ChiTietThongBao(congviec);
+            chitietthongbao.Show();
+        }
     }
 }
