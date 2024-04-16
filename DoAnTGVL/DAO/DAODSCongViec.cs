@@ -44,7 +44,7 @@ namespace DoAnTGVL.DAO
         public void ThoThem(BaiDang baiDang, Tho tho)
         {
             string sqlString = string.Format("INSERT INTO DSCongViec ( IDTho, IDUser, TieuDe, MoTa, GhiChu,LinhVuc, KhuVuc, DateThue, TrangThai) VALUES ({0}, {1}, N'{2}', N'{3}',N'{4}',N'{5}',N'{6}','{7}', N'{8}')", tho.Id, baiDang.IDUser,
-              baiDang.TieuDe, baiDang.MoTa, baiDang.GhiChu,baiDang.LinhVuc, baiDang.KhuVuc, baiDang.DateThue, "Chưa thực hiện");
+              baiDang.TieuDe, baiDang.MoTa, baiDang.GhiChu,baiDang.LinhVuc, baiDang.KhuVuc, baiDang.DateThue, "Chờ xác nhận");
             dbConection.Process(sqlString);
             new ShowDialogCustom("Nhận việc thành công", ShowDialogCustom.OK).Show();
         }

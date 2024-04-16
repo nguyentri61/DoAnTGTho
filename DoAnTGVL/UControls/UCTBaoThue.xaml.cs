@@ -1,4 +1,5 @@
-﻿using DoAnTGVL.Class;
+﻿using DoAnTGVL.BUS;
+using DoAnTGVL.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,12 +22,41 @@ namespace DoAnTGVL.UControls
     /// </summary>
     public partial class UCTBaoThue : UserControl
     {
-        public UCTBaoThue(CongViec congviec)
+        BUSThongBaoThue bUSThongBaoThue = new BUSThongBaoThue();
+        CongViec congviec;
+        Tho tho;
+        public UCTBaoThue(CongViec congviec, Tho tho)
         {
             this.DataContext = congviec;
+            this.congviec = congviec; 
+            this.tho = tho;
             InitializeComponent();
         }
 
-        
+        private void nvButton_Click(object sender, RoutedEventArgs e)
+        {
+            bUSThongBaoThue.NhanViec(congviec, tho);
+            Window parentWindow = Window.GetWindow(this);
+
+            // Kiểm tra xem cửa sổ cha có tồn tại không
+            if (parentWindow != null)
+            {
+                // Đóng cửa sổ cha
+                parentWindow.Close();
+            }
+        }
+
+        private void Huy_Click(object sender, RoutedEventArgs e)
+        {
+            bUSThongBaoThue.HuyViec(congviec, tho);
+            Window parentWindow = Window.GetWindow(this);
+
+            // Kiểm tra xem cửa sổ cha có tồn tại không
+            if (parentWindow != null)
+            {
+                // Đóng cửa sổ cha
+                parentWindow.Close();
+            }
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace DoAnTGVL.Class
         private string khuVuc;
         private DateTime dateThue;
         private string ghiChu = "";
-        private string trangThai="";
+        private string trangThai="Chờ xác nhận";
         private string chiTietSua = "";
         private int chiPhi ;
         private List<string> image=new List<string> ();

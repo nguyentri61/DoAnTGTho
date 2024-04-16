@@ -21,12 +21,23 @@ namespace DoAnTGVL.BUS
             List<CongViec> congViecs = dAODSCongViec.ReadAllDSThueTho(tho.Id, "Chờ xác nhận");
             foreach (CongViec congViec in congViecs)
             {
-                userControl = new UCTBaoThue(congViec);
+                userControl = new UCTBaoThue(congViec,tho);
                 userControl.Height = 250;
                 userControl.Width = 600;
                 userControl.Margin = new Thickness(35);
                 thongBaoThue.wrapTbao.Children.Add(userControl);
             }
+        }
+
+        internal void HuyViec(CongViec congviec, Tho tho)
+        {
+            dAODSCongViec.XoaDSCongViec(congviec.ID);
+        }
+
+        internal void NhanViec(CongViec congviec, Tho tho)
+        {
+            congviec.TrangThai = "Chưa thưc hiện";
+            dAODSCongViec.SuaDSCongViec(congviec,tho);
         }
     }
 }
