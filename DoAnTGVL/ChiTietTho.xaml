@@ -8,8 +8,7 @@
         mc:Ignorable="d"
         Height="800" Width="1100"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="SingleBorderWindow"
-       >
+        WindowStyle="SingleBorderWindow">
     <Window.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
@@ -20,91 +19,45 @@
             </BeginStoryboard>
         </EventTrigger>
     </Window.Triggers>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="225"></RowDefinition>
-            <RowDefinition Height="30 "></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" >
 
+        <Grid Grid.Row="0" >
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="500"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Ellipse Grid.Row="0" Grid.Column="0" Width="134" HorizontalAlignment="Center" Margin="0,8,0,79">
+
+            <Ellipse Grid.Row="0" Width="150" Height="170" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.557,0.71">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/image/man.jpg"/>
                 </Ellipse.Fill>
-
-
             </Ellipse>
-            <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10">
 
-                <TextBlock Text="{Binding Path= HoTen }" Width="auto" Height="auto" Foreground="#001E00" FontSize="25" FontWeight="Black" HorizontalAlignment="Center" Margin="0 20 0 0" FontFamily="Yu Gothic UI Semibold">
+            <Grid Grid.Column="1">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                    <TextBlock Text="{Binding Path = HoTen}" Foreground="#001E00" FontSize="35" FontWeight="Black" Margin="0 27.5 0 0"/>
 
-                </TextBlock>
+                    <StackPanel Orientation="Horizontal" Margin="0 20 0 0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                        <materialDesign:PackIcon Kind="LocationCheckOutline" Height="40" Width="40" Foreground="#5E6D55" Margin="-7 0 0 0"/>
+                        <TextBlock Text="{Binding Path = Khuvuc}" FontSize="30" Foreground="#5E6D55" FontWeight="DemiBold"/>
+                    </StackPanel>
 
-                <TextBlock Text="{Binding Path= LinhVuc }" Width="auto" Height="auto" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" FontFamily="Yu Gothic UI Light">
-                </TextBlock>
+                    <StackPanel Orientation="Horizontal" Margin="0 20 0 0" VerticalAlignment="Center">
+                        <TextBlock Text="Giá thuê: " Foreground="#5E6D55" FontSize="30" FontWeight="DemiBold"/>
+                        <TextBlock Text="{Binding Path= GiaTien}" FontSize="30" Foreground="#5E6D55" FontWeight="DemiBold"/>
+                        <TextBlock Text="đ" Margin="2 0 0 0" FontSize="30" Foreground="#5E6D55" FontWeight="DemiBold"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
 
-            </StackPanel>
-            <StackPanel Grid.Column="1" HorizontalAlignment="Center">
-                <WrapPanel HorizontalAlignment="Left" >
-                    <TextBlock Text="Đánh giá      : " Foreground="#5E6D55"  FontSize="20" FontWeight="Bold" VerticalAlignment="Center" Height="30"  >
 
-                    </TextBlock>
-                    <TextBlock x:Name="txtDanhGia"   Text="{Binding Path= DanhGia }" FontSize="20" Foreground="#5E6D55" ></TextBlock>
-                    <TextBlock   Text="/5" FontSize="20" Foreground="#5E6D55" ></TextBlock>
-                  
-                    <materialDesign:PackIcon Kind="Star"  Height="25" Width="25" Foreground="#14A800" HorizontalAlignment="Center" Margin="0 0 0 0"/>
-                </WrapPanel>
-                <WrapPanel Margin="0,20,0,0" HorizontalAlignment="Left">
-                    <TextBlock Text="Hoàn thành : " Foreground="#5E6D55" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30"  >
-
-                    </TextBlock>
-
-                    <TextBlock Text="100%" FontSize="20" Foreground="#5E6D55" ></TextBlock>
-                </WrapPanel>
-                <WrapPanel Margin="0,20,0,0" HorizontalAlignment="Left">
-                    <TextBlock Text="Khu vực       : " Foreground="#5E6D55" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30"  >
-
-                    </TextBlock>
-
-                    <TextBlock Text="{Binding Path= Khuvuc }" FontSize="20" Foreground="#5E6D55" ></TextBlock>
-                </WrapPanel>
-
-                <WrapPanel Margin="0,20,0,0" HorizontalAlignment="Left">
-                    <TextBlock Text="Giá tiền        : " Foreground="#5E6D55" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30"  >
-
-                    </TextBlock>
-
-                    <TextBlock Text="{Binding Path= GiaTien }" FontSize="20" Foreground="#5E6D55" ></TextBlock>
-                    <TextBlock Text="đ" Margin="2 0 0 0" FontSize="20" Foreground="#5E6D55" ></TextBlock>
-                </WrapPanel>
-
-            </StackPanel>
             <StackPanel  HorizontalAlignment="Center" Grid.Column="2">
-
-                <WrapPanel >
-                    <TextBlock Text="Kinh nghiệm : " Foreground="#5E6D55" Margin="0 0 0 0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30"  >
-
-                    </TextBlock>
-
-                    <TextBlock Text="{Binding Path= Kinhnghiem }" FontSize="20" Foreground="#5E6D55" ></TextBlock>
-
-                </WrapPanel>
-
-                <WrapPanel Orientation="Horizontal">
-                    <TextBlock Text="Chuyên          : " Foreground="#5E6D55" Margin="0 26 0 0" FontSize="20" FontWeight="Bold" Height="30"  />
-
-                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path= ChuyenMon }" Foreground="#5E6D55" Margin="0 26 0 0" FontSize="20" Height="30"  >
-
-                    </TextBlock>
-
-                </WrapPanel>
-                
                 <Button Height="50" Width="150" Background="#FF8C00FC" Margin="0,20,0,0" Click="Thue_Click">
                     <Button.Clip>
                         <RectangleGeometry Rect="0,0,150,50" RadiusX="10" RadiusY="10" >
@@ -112,26 +65,64 @@
                     </Button.Clip>
                     <TextBlock Text="Thuê" FontSize="25" Foreground="White" ></TextBlock>
                 </Button>
-
             </StackPanel>
 
         </Grid>
-        
-        <StackPanel Grid.Row="1" Orientation="Vertical">
-            <Grid Background="#D5E0D5" Height="1 "/>
-            <TextBlock Text="Đánh giá :" Foreground="#5E6D55" Margin="20 5 0 0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"  />
-        </StackPanel>
-        
-        <Grid Grid.Row="2" Margin="0 5 0 0">
-            <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" >
-                <Grid Width="auto">
 
-                    <WrapPanel x:Name="WpanelDanhGia" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="240"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-                </Grid>
-            </ScrollViewer>
+            <Border Grid.Column="0" BorderBrush="#D5E0D5" BorderThickness="1">
+                <StackPanel Orientation="Vertical">
+                    <WrapPanel HorizontalAlignment="Left" >
+                        <TextBlock Text="Đánh giá: " Foreground="#5E6D55"  FontSize="20" FontWeight="Bold" VerticalAlignment="Center" Height="30"/>
+                        <TextBlock x:Name="txtDanhGia" Text="{Binding Path= DanhGia }" FontSize="20" Foreground="#5E6D55"/>
+                        <TextBlock   Text="/5" FontSize="20" Foreground="#5E6D55" ></TextBlock>
+                        <materialDesign:PackIcon Kind="Star"  Height="25" Width="25" Foreground="#14A800" />
+                    </WrapPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Lĩnh vực :" Foreground="#5E6D55" FontSize="20" FontWeight="Bold" Height="30"/>
+                        <TextBlock Text="{Binding Path= LinhVuc }" FontSize="22" FontWeight="Bold" />
+                    </StackPanel>
+
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock Text="Chuyên: " Foreground="#5E6D55" FontSize="20" FontWeight="Bold" Height="30"/>
+                        <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path= ChuyenMon }" Foreground="#5E6D55" Margin="0 26 0 0" FontSize="20" Height="30"/>
+                    </WrapPanel>
+
+                    <WrapPanel Orientation="Horizontal">
+                        <TextBlock Text="Kinh nghiệm :" Foreground="#5E6D55" FontSize="20" FontWeight="Bold" Height="30"/>
+                        <TextBlock Text="{Binding Path= Kinhnghiem }" FontSize="20" Foreground="#5E6D55"/>
+                    </WrapPanel>
+                </StackPanel>
+            </Border>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" BorderBrush="#D5E0D5" BorderThickness="1">
+                    <TextBlock Text="Lịch sử đánh giá" Foreground="#001E00" FontSize="30" FontWeight="Bold"/>
+                </Border>
+
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" >
+                    <Border BorderBrush="#D5E0D5" BorderThickness="1">
+                        <StackPanel Orientation="Vertical">
+                            <Grid Width="auto">
+                                <WrapPanel x:Name="WpanelDanhGia" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                </ScrollViewer>
+            </Grid>
+            
+            
         </Grid>
-
-
     </Grid>
 </Window>

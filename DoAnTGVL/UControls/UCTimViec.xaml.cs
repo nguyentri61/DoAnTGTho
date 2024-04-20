@@ -25,6 +25,7 @@ namespace DoAnTGVL.UControls
     {
         BUSTimViec bustimviec = new BUSTimViec();
         FilterBaiDang filterBaiDang=new FilterBaiDang();
+        BUSThongBaoThue bUSThongBaoThue = new BUSThongBaoThue();
         public Tho tho;
         public UCTimViec(Tho tho)
         {
