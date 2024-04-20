@@ -11,6 +11,13 @@
     <Grid>
 
         <TabControl x:Name="TabTrangThai">
+
+            <TabItem x:Name="Tabcxn" Header="Chờ xác nhận" Loaded="Tab_Loaded" Foreground="BlanchedAlmond">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                    <StackPanel x:Name="staChoXacNhan"></StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
             <TabItem x:Name="Tabcth" Header="Chưa thực hiện" Loaded="Tab_Loaded">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" HorizontalAlignment="Center">
                     <StackPanel x:Name="staChuaThucHien"></StackPanel>

@@ -37,6 +37,18 @@ namespace DoAnTGVL.UControls
         {
             UserControl userControl;
 
+            //Tab chờ xác nhận
+            congviecList = buschitietcv.LoadDSThueTho(user.Id, "Chờ xác nhận");
+            foreach (CongViec congViec in congviecList)
+            {
+                userControl = new UCDSThue(congViec);
+                userControl.Width = 1200;
+                userControl.Height = 170;
+                userControl.Margin = new Thickness(10);
+                // Thêm UserControl vào WrapPanel
+                staChoXacNhan.Children.Add(userControl);
+            }
+
             //Tab Chưa thực hiện
             congviecList =buschitietcv.LoadDSThueTho(user.Id, "Chưa thực hiện");
             foreach (CongViec congViec in congviecList)
