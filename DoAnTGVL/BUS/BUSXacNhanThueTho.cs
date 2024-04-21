@@ -13,9 +13,12 @@ namespace DoAnTGVL.BUS
     public class BUSXacNhanThueTho
     {
         DAODSCongViec dAODScongViec = new DAODSCongViec();
+        DAONgayBan dAONgayBan = new DAONgayBan();
         public List<DateTime> Load_Calender( int id)
         {
-           return dAODScongViec.TimNgayBan(id);
+            List<DateTime> ngaybans = dAODScongViec.TimNgayBan(id);
+            ngaybans.AddRange(dAONgayBan.TimNgayBan(id));
+            return ngaybans;
         }
         public void Them(CongViec congviec)
         {

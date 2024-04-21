@@ -142,6 +142,34 @@ namespace DoAnTGVL.DAO
             }
             return NgayBan;
         }
+        public List<DateTime> ReadDatabaseNgayBanTho(string query)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.connstring);
+            List<DateTime> NgayBan = new List<DateTime>();
+            using (conn)
+            {
+                SqlCommand command = new SqlCommand(query, conn);
+                try
+                {
+                    conn.Open();
+                    SqlDataReader dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        DateTime tenp = ((DateTime)dataReader[1]).Date;
+
+                        NgayBan.Add(tenp);
+
+                    }
+                    dataReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            return NgayBan;
+        }
         public bool CheckExist(string query)
         {
             SqlConnection conn = new SqlConnection(Properties.Settings.Default.connstring);            

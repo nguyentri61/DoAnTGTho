@@ -92,5 +92,11 @@ namespace DoAnTGVL.UControls
             buschitietcv.Sua(congviec, tho);
             LoadDataIntoListView();
         }
+
+        private void ngayBanbutton_Click(object sender, RoutedEventArgs e)
+        {
+            LichBan lichban = new LichBan(tho);
+            lichban.Show();
+        }
     }
 }

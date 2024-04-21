@@ -28,6 +28,9 @@
     <Compile Update="DanhGiaTho.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="LichBan.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ProfileTho.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -115,6 +118,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="DanhGiaTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LichBan.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ProfileTho.xaml">
