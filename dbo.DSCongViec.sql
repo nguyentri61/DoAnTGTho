@@ -9,8 +9,14 @@
     [KhuVuc]     NVARCHAR (50)  NULL,
     [DateThue]   DATETIME       NULL,
     [TrangThai ] NVARCHAR (50)  NULL,
+    [ChiTietSua] NVARCHAR (MAX) DEFAULT ('') NULL,
+    [ChiPhi]     INT            DEFAULT ((0)) NULL,
+    [Image]      NVARCHAR (MAX) DEFAULT ('') NULL,
+    [IDBaiDang]  INT            DEFAULT ((0)) NULL,
     PRIMARY KEY CLUSTERED ([ID] ASC)
 );
+
+
 
 
 DBCC CHECKIDENT ('[DSCongViec]', RESEED, 0);
