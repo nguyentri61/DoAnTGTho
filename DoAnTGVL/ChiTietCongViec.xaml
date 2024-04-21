@@ -113,9 +113,7 @@
                 </Border>
                 <Border Margin="250 0 0 0" CornerRadius="19" Background="#F2F7F2" BorderThickness="2">
                     <Grid Width="150" Height="30">
-                        <TextBlock Text="{Binding DateThue ,StringFormat={}{0:MM/dd/yyy}}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" FontWeight="SemiBold" 
-    
-    ></TextBlock>
+                        <TextBlock Text="{Binding DateThue ,StringFormat={}{0:MM/dd/yyy}}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" FontWeight="SemiBold"/>
                     </Grid>
                 </Border>
 

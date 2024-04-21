@@ -40,11 +40,11 @@
 
             <Grid Grid.Column="1" Background="#FFF4F4F4">
                 <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="5*"></RowDefinition>
+                    <RowDefinition Height="4*"></RowDefinition>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
-                <materialDesign:ColorZone Grid.Row="0" Height="60"
-Mode="PrimaryLight" Background="#FFF4F4F4">
+                <materialDesign:ColorZone Height="60" Mode="PrimaryLight" Background="#FFF4F4F4" VerticalAlignment="Center">
 
                     <StackPanel  Orientation="Horizontal">
                         <ListBox FontSize="20" VerticalAlignment="Center"
@@ -56,8 +56,6 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                             <ListBoxItem  Margin="30 0 0 0" Content="3 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown" />
                             <ListBoxItem  Margin="30 0 0 0" Content="2 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown" />
                             <ListBoxItem  Margin="30 0 0 0" Content="1 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown" />
-
-
                         </ListBox>
 
                     </StackPanel>
@@ -70,7 +68,7 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                 Style="{StaticResource MaterialDesignCheckBox}" 
                 Height="30" Grid.Row="1"
                     IsChecked="{Binding CoAnh}"
-                    Margin="60,0,0,0" Click="CheckBox_Click"
+                    Margin="60,15,0,3" Click="CheckBox_Click"
 />
             </Grid>
 
@@ -81,12 +79,11 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
             <!--nửa phải để hiện thị phòng-->
             <Grid   x:Name="gridPage" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
                 <ScrollViewer VerticalScrollBarVisibility="Auto" >
-                    <Grid Width="auto" Background="White" >
-
-
-                        <WrapPanel x:Name="WpanelDanhS" HorizontalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="1" Margin="0,0,0,0"   />
-
-                    </Grid>
+                    <Border BorderThickness="1 0 1 0" BorderBrush="#D5E0D5" Width="auto">
+                        <Grid Width="auto" Background="White" >
+                            <WrapPanel x:Name="WpanelDanhS" HorizontalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="1" Margin="0,0,0,0"/>
+                        </Grid>
+                    </Border>
                 </ScrollViewer>
             </Grid>
         </Grid>

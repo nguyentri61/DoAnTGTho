@@ -8,7 +8,8 @@
         mc:Ignorable="d"
         Height="800" Width="1100"
         WindowStartupLocation="CenterScreen"
-        WindowStyle="SingleBorderWindow">
+        AllowsTransparency="True" 
+        WindowStyle="None">
     <Window.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
@@ -20,109 +21,140 @@
         </EventTrigger>
     </Window.Triggers>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="225"></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
+    <Window.Clip>
+        <RectangleGeometry Rect="0,0,1100,800" RadiusX="20" RadiusY="20">
+        </RectangleGeometry>
+    </Window.Clip>
 
-        <Grid Grid.Row="0" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"></ColumnDefinition>
-                <ColumnDefinition Width="500"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+    <Border CornerRadius="20" BorderThickness="2" BorderBrush="#D5E0D5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="225"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
 
-            <Ellipse Grid.Row="0" Width="150" Height="170" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.557,0.71">
-                <Ellipse.Fill>
-                    <ImageBrush ImageSource="/image/man.jpg"/>
-                </Ellipse.Fill>
-            </Ellipse>
+            <Grid Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="500"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="1">
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
-                    <TextBlock Text="{Binding Path = HoTen}" Foreground="#001E00" FontSize="35" FontWeight="Black" Margin="0 27.5 0 0"/>
+                <Ellipse Grid.Row="0" Width="150" Height="170" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.557,0.71">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/image/man.jpg"/>
+                    </Ellipse.Fill>
+                </Ellipse>
 
-                    <StackPanel Orientation="Horizontal" Margin="0 20 0 0" VerticalAlignment="Center" HorizontalAlignment="Left">
-                        <materialDesign:PackIcon Kind="LocationCheckOutline" Height="40" Width="40" Foreground="#5E6D55" Margin="-7 0 0 0"/>
-                        <TextBlock Text="{Binding Path = Khuvuc}" FontSize="30" Foreground="#5E6D55" FontWeight="DemiBold"/>
+                <Grid Grid.Column="1">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                        <TextBlock Text="{Binding Path = HoTen}" Foreground="#001E00" FontSize="35" FontWeight="Black" Margin="0 27.5 0 0"/>
+
+                        <StackPanel Orientation="Horizontal" Margin="0 20 0 0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <materialDesign:PackIcon Kind="LocationCheckOutline" Height="40" Width="40" Foreground="#5E6D55" Margin="-7 0 0 0"/>
+                            <TextBlock Text="{Binding Path = Khuvuc}" FontSize="30" Foreground="#5E6D55" FontWeight="DemiBold"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0 20 0 0" VerticalAlignment="Center">
+                            <TextBlock Text="Giá thuê: " Foreground="#5E6D55" FontSize="30" FontWeight="DemiBold"/>
+                            <TextBlock Text="{Binding Path= GiaTien}" FontSize="30" Foreground="#5E6D55" FontWeight="DemiBold"/>
+                            <TextBlock Text="đ" Margin="2 0 0 0" FontSize="30" Foreground="#5E6D55" FontWeight="DemiBold"/>
+                        </StackPanel>
                     </StackPanel>
+                </Grid>
 
-                    <StackPanel Orientation="Horizontal" Margin="0 20 0 0" VerticalAlignment="Center">
-                        <TextBlock Text="Giá thuê: " Foreground="#5E6D55" FontSize="30" FontWeight="DemiBold"/>
-                        <TextBlock Text="{Binding Path= GiaTien}" FontSize="30" Foreground="#5E6D55" FontWeight="DemiBold"/>
-                        <TextBlock Text="đ" Margin="2 0 0 0" FontSize="30" Foreground="#5E6D55" FontWeight="DemiBold"/>
-                    </StackPanel>
-                </StackPanel>
+
+                <Grid Grid.Column="2">
+                    <Button Background="Transparent" BorderBrush="Transparent" Width="50" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 5 10 0" Click="btn_close_Click">
+                        <materialDesign:PackIcon Kind="Close" Height="30" Width="30" Foreground="#5E6D55" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Button>
+                    <Button x:Name="btnThue" Height="50" Width="150" Background="#FF8C00FC" VerticalAlignment="Center" HorizontalAlignment="Left" Click="Thue_Click" Margin="200,0,0,0">
+                        <Button.Clip>
+                            <RectangleGeometry Rect="0,0,150,50" RadiusX="10" RadiusY="10" >
+                            </RectangleGeometry>
+                        </Button.Clip>
+                        <TextBlock Text="Thuê" FontSize="25" Foreground="White" ></TextBlock>
+                    </Button>
+                </Grid>
+
             </Grid>
 
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="240"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
 
-            <StackPanel  HorizontalAlignment="Center" Grid.Column="2">
-                <Button x:Name="btnThue" Height="50" Width="150" Background="#FF8C00FC" Margin="0,20,0,0" Click="Thue_Click">
-                    <Button.Clip>
-                        <RectangleGeometry Rect="0,0,150,50" RadiusX="10" RadiusY="10" >
-                        </RectangleGeometry>
-                    </Button.Clip>
-                    <TextBlock Text="Thuê" FontSize="25" Foreground="White" ></TextBlock>
-                </Button>
-            </StackPanel>
+                <Border Grid.Column="0" BorderBrush="#D5E0D5" BorderThickness="1">
+                    <StackPanel Orientation="Vertical" Margin="0 20 0 0">
+                        <Border BorderBrush="#D5E0D5" BorderThickness="0 0 0 1">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 20">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding Path= DanhGia}" FontSize="20" Margin="0 0 5 0" />
+                                    <TextBlock Text="trên 5" FontSize="15" VerticalAlignment="Bottom" Margin="0 0 0 1"/>
+                                </StackPanel>
 
-        </Grid>
+                                <materialDesign:RatingBar x:Name="BasicRatingBarFractionalPreview" IsPreviewValueEnabled="True" IsReadOnly="True"
+                                  Max="5"
+                                  Min="0"
+                                  ValueIncrements="0.25"
+                                  Value="{Binding Path=DanhGia}" />
+                            </StackPanel>
 
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="240"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+                        </Border>
 
-            <Border Grid.Column="0" BorderBrush="#D5E0D5" BorderThickness="1">
-                <StackPanel Orientation="Vertical">
-                    <WrapPanel HorizontalAlignment="Left" >
-                        <TextBlock Text="Đánh giá: " Foreground="#5E6D55"  FontSize="20" FontWeight="Bold" VerticalAlignment="Center" Height="30"/>
-                        <TextBlock x:Name="txtDanhGia" Text="{Binding Path= DanhGia }" FontSize="20" Foreground="#5E6D55"/>
-                        <TextBlock   Text="/5" FontSize="20" Foreground="#5E6D55" ></TextBlock>
-                        <materialDesign:PackIcon Kind="Star"  Height="25" Width="25" Foreground="#14A800" />
-                    </WrapPanel>
+                        <Border BorderBrush="#D5E0D5" BorderThickness="0 0 0 1">
+                            <StackPanel Orientation="Vertical" Margin="5 20 0 20">
+                                <TextBlock Text="Lĩnh vực :" Foreground="#5E6D55" FontSize="20" FontWeight="Bold" Height="30"/>
+                                <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2" Width="200" Height="40">
+                                    <TextBlock Text="{Binding Path= LinhVuc}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" FontSize="20" FontWeight="SemiBold"/>
+                                </Border>
+                            </StackPanel>
+                        </Border>
 
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Lĩnh vực :" Foreground="#5E6D55" FontSize="20" FontWeight="Bold" Height="30"/>
-                        <TextBlock Text="{Binding Path= LinhVuc }" FontSize="22" FontWeight="Bold" />
+                        <Border BorderBrush="#D5E0D5" BorderThickness="0 0 0 1">
+                            <StackPanel Orientation="Vertical" Margin="5 20 0 20">
+                                <TextBlock Text="Chuyên môn :" Foreground="#5E6D55" FontSize="20" FontWeight="Bold" Height="30"/>
+                                <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2" Width="200" Height="40">
+                                    <TextBlock Text="{Binding Path= ChuyenMon}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" FontSize="20" FontWeight="SemiBold"/>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+
+                        <Border BorderBrush="#D5E0D5" BorderThickness="0 0 0 1">
+                            <StackPanel Orientation="Vertical" Margin="5 20 0 20">
+                                <TextBlock Text="Kinh nghiệm :" Foreground="#5E6D55" FontSize="20" FontWeight="Bold" Height="30"/>
+                                <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2" Width="220" Height="40">
+                                    <TextBlock Text="{Binding Path= Kinhnghiem}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" FontSize="20" FontWeight="SemiBold"/>
+                                </Border>
+                            </StackPanel>
+                        </Border>
                     </StackPanel>
-
-                    <WrapPanel Orientation="Horizontal">
-                        <TextBlock Text="Chuyên: " Foreground="#5E6D55" FontSize="20" FontWeight="Bold" Height="30"/>
-                        <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Path= ChuyenMon }" Foreground="#5E6D55" Margin="0 26 0 0" FontSize="20" Height="30"/>
-                    </WrapPanel>
-
-                    <WrapPanel Orientation="Horizontal">
-                        <TextBlock Text="Kinh nghiệm :" Foreground="#5E6D55" FontSize="20" FontWeight="Bold" Height="30"/>
-                        <TextBlock Text="{Binding Path= Kinhnghiem }" FontSize="20" Foreground="#5E6D55"/>
-                    </WrapPanel>
-                </StackPanel>
-            </Border>
-
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-
-                <Border Grid.Row="0" BorderBrush="#D5E0D5" BorderThickness="1">
-                    <TextBlock Text="Lịch sử đánh giá" Foreground="#001E00" FontSize="30" FontWeight="Bold"/>
                 </Border>
 
-                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" >
-                    <Border BorderBrush="#D5E0D5" BorderThickness="1">
-                        <StackPanel Orientation="Vertical">
-                            <Grid Width="auto">
-                                <WrapPanel x:Name="WpanelDanhGia" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Grid>
-                        </StackPanel>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0" BorderBrush="#D5E0D5" BorderThickness="0 1 1 1">
+                        <TextBlock Text="Lịch sử đánh giá" Foreground="#5E6D55" FontSize="25" FontWeight="Bold" Margin="10 5 0 5"/>
                     </Border>
-                </ScrollViewer>
+
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" >
+                        <Border BorderBrush="#D5E0D5" BorderThickness="0 0 0 1">
+                            <StackPanel Orientation="Vertical">
+                                <Grid Width="auto">
+                                    <WrapPanel x:Name="WpanelDanhGia" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </ScrollViewer>
+                </Grid>
+
+
             </Grid>
-            
-            
         </Grid>
-    </Grid>
+    </Border>
 </Window>

@@ -44,5 +44,10 @@ namespace DoAnTGVL
             xacnhan.ShowDialog();
             this.Show();
         }
+
+        private void btn_close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

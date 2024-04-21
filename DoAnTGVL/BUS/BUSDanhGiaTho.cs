@@ -76,7 +76,7 @@ namespace DoAnTGVL.BUS
             {
                 userControl = new UCDanhGia(dg);
                 userControl.Height = 300;
-                userControl.Width = 1000;
+                userControl.Width = 900;
                 //userControl.Margin = new Thickness(0, 5, 0, 0);
 
                 chiTietTho.WpanelDanhGia.Children.Add(userControl);
