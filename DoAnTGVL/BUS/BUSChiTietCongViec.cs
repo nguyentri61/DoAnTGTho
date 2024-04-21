@@ -26,7 +26,6 @@ namespace DoAnTGVL.BUS
             if (dAODSCongViec.CheckNgayBan(baiDang.DateThue, tho.Id))
             {
                 dAODSCongViec.ThoThem(baiDang, tho);
-                dAOBaiDang.XoaBaiDang(baiDang);
             }
             else
             {

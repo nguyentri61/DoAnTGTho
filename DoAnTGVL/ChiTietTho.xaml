@@ -58,7 +58,7 @@
 
 
             <StackPanel  HorizontalAlignment="Center" Grid.Column="2">
-                <Button Height="50" Width="150" Background="#FF8C00FC" Margin="0,20,0,0" Click="Thue_Click">
+                <Button x:Name="btnThue" Height="50" Width="150" Background="#FF8C00FC" Margin="0,20,0,0" Click="Thue_Click">
                     <Button.Clip>
                         <RectangleGeometry Rect="0,0,150,50" RadiusX="10" RadiusY="10" >
                         </RectangleGeometry>

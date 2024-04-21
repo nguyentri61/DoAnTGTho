@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoAnTGVL"
         mc:Ignorable="d"
-        Title="ThongBaoThue" Height="450" Width="635">
+        Title="" Height="450" Width="635">
     <Grid>
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <WrapPanel x:Name="wrapTbao">

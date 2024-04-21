@@ -43,6 +43,9 @@
     <Compile Update="ThoMain.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ThongBaoNhanTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ThongBaoThue.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -71,6 +74,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UControls\UCSuaCV.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCTBaoNhanViec.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UControls\UCTBaoThue.xaml.cs">
@@ -147,6 +153,9 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ThongBaoNhanTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ThongBaoThue.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -175,6 +184,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCSuaCV.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCTBaoNhanViec.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCTBaoThue.xaml">

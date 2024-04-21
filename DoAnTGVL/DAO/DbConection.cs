@@ -218,6 +218,7 @@ namespace DoAnTGVL.DAO
                         data.ChiTietSua = dataReader.GetString(10);
                         data.ChiPhi = dataReader.GetInt32("ChiPhi");
                         data.GetSource(dataReader.GetString(12));
+                        data.IDBaiDang= dataReader.GetInt32("IDBaiDang");
                         // Set other properties if needed
                         DSCongViec.Add(data);
 

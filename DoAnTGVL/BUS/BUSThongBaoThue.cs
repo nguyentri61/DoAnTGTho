@@ -18,7 +18,7 @@ namespace DoAnTGVL.BUS
         {
             UserControl userControl = new UserControl();
             thongBaoThue.wrapTbao.Children.Clear();
-            List<CongViec> congViecs = dAODSCongViec.ReadAllDSThueTho(tho.Id, "Chờ xác nhận");
+            List<CongViec> congViecs = dAODSCongViec.ReadAllDSCongViec(tho.Id, "Chờ xác nhận");
             foreach (CongViec congViec in congViecs)
             {
                 userControl = new UCTBaoThue(congViec,tho);

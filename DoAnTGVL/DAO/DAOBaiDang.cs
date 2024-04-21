@@ -19,10 +19,10 @@ namespace DoAnTGVL.DAO
             return dbConection.ReadDatabaseBaiDang(query);
         }
 
-        public void Them(BaiDang baidang)
+        public void Them(BaiDang baidang,User user)
         {
-            string sqlStr = string.Format("INSERT INTO BaiDang ( IDUser, TieuDe, LinhVuc, KhuVuc, MoTa, Date, KinhNghiem, YeuCau, GhiChu) VALUES ('{0}', N'{1}', N'{2}', N'{3}', '{4}', N'{5}', N'{6}', N'{7}', N'{8}')"
-                    , "100", baidang.TieuDe, baidang.LinhVuc, baidang.KhuVuc, baidang.MoTa, baidang.DateThue.Date.ToShortDateString(), baidang.KinhNghiem, baidang.YeuCau, baidang.GhiChu);
+            string sqlStr = string.Format("INSERT INTO BaiDang ( IDUser, TieuDe, LinhVuc, KhuVuc, MoTa, Date, KinhNghiem, YeuCau, GhiChu) VALUES ({0}, N'{1}', N'{2}', N'{3}', '{4}', N'{5}', N'{6}', N'{7}', N'{8}')"
+                    , user.Id, baidang.TieuDe, baidang.LinhVuc, baidang.KhuVuc, baidang.MoTa, baidang.DateThue.Date.ToShortDateString(), baidang.KinhNghiem, baidang.YeuCau, baidang.GhiChu);
             dbConection.Process(sqlStr);
         }
         public List<BaiDang> FilterBaiDang(FilterBaiDang filterBaiDang, Tho tho)
@@ -56,9 +56,9 @@ namespace DoAnTGVL.DAO
             return dbConection.ReadDatabaseBaiDang(query);
         }
 
-        public void XoaBaiDang(BaiDang baiDang)
+        public void XoaBaiDang(int ID)
         {
-            string query =string.Format( "Delete  From BaiDang Where ID = {0}",baiDang.ID);
+            string query =string.Format( "Delete  From BaiDang Where ID = {0}",ID);
             dbConection.Process(query);
         }
     }

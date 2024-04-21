@@ -28,8 +28,13 @@
 Mode="PrimaryLight" Background="#FFF4F4F4">
 
                 <StackPanel  Orientation="Horizontal"  >
+                    <ToggleButton
+      materialDesign:ToggleButtonAssist.OnContent="{materialDesign:PackIcon Kind=BellBadge}"
+      Content="{materialDesign:PackIcon Kind=Bell}"
+      Style="{StaticResource MaterialDesignActionToggleButton}"
+      ToolTip="MaterialDesignActionLightToggleButton" Margin="50,0,0,0" Click="ToggleButton_Click" />
                     <Button x:Name="reload_button" Style="{DynamicResource MaterialDesignToolButton}" Click="reload_button_Click">
-                        <materialDesign:PackIcon Kind="Reload" Height="25" Width="35" Margin="50 0 0 0"/>
+                        <materialDesign:PackIcon Kind="Reload" Height="25" Width="35" Margin="10 0 0 0"/>
                     </Button>
                     <Menu Margin="20 0 0 0" Cursor="Hand" VerticalAlignment="Center" FontSize="20"  >
                         <MenuItem Header="Điện nước">
@@ -77,7 +82,7 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
 
                     <!--searchbox-->
                     <materialDesign:ColorZone Mode="Standard" Padding="8 0 8 0"
-        CornerRadius="5" VerticalAlignment="Center" Margin="100,0,0,0"
+        CornerRadius="5" VerticalAlignment="Center" Margin="60,0,0,0"
         materialDesign:ShadowAssist.ShadowDepth="Depth1">
                         <Grid>
                             <Grid.RowDefinitions>
@@ -113,7 +118,7 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                             </RectangleGeometry>
                         </Button.Clip>
                     </Button>
-                    <Button Height="45" Width="150" Background="#FF8C00FC" Margin="20,0,0,0" Click="click_DangBai"
+                    <Button Height="45" Width="150" Background="#FF8C00FC" Margin="0,0,0,0" Click="click_DangBai"
                     >
                         <Button.Clip>
                             <RectangleGeometry Rect="0,0,150,45" RadiusX="10" RadiusY="10" >

@@ -9,7 +9,7 @@
              d:DesignHeight="700" d:DesignWidth="1300">
     
     <Grid>
-
+        
         <TabControl x:Name="TabTrangThai">
 
             <TabItem x:Name="Tabcxn" Header="Chờ xác nhận" Loaded="Tab_Loaded" Foreground="BlanchedAlmond">

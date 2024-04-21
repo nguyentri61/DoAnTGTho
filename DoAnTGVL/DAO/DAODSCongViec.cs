@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace DoAnTGVL.DAO
@@ -43,8 +44,8 @@ namespace DoAnTGVL.DAO
         }
         public void ThoThem(BaiDang baiDang, Tho tho)
         {
-            string sqlString = string.Format("INSERT INTO DSCongViec ( IDTho, IDUser, TieuDe, MoTa, GhiChu,LinhVuc, KhuVuc, DateThue, TrangThai) VALUES ({0}, {1}, N'{2}', N'{3}',N'{4}',N'{5}',N'{6}','{7}', N'{8}')", tho.Id, baiDang.IDUser,
-              baiDang.TieuDe, baiDang.MoTa, baiDang.GhiChu,baiDang.LinhVuc, baiDang.KhuVuc, baiDang.DateThue, "Chờ xác nhận");
+            string sqlString = string.Format("INSERT INTO DSCongViec ( IDTho, IDUser, TieuDe, MoTa, GhiChu,LinhVuc, KhuVuc, DateThue, TrangThai, IDBaiDang) VALUES ({0}, {1}, N'{2}', N'{3}',N'{4}',N'{5}',N'{6}','{7}', N'{8}',{9})", tho.Id, baiDang.IDUser,
+              baiDang.TieuDe, baiDang.MoTa, baiDang.GhiChu,baiDang.LinhVuc, baiDang.KhuVuc, baiDang.DateThue, "Chờ được duyệt",baiDang.ID);
             dbConection.Process(sqlString);
             new ShowDialogCustom("Nhận việc thành công", ShowDialogCustom.OK).Show();
         }
@@ -132,6 +133,18 @@ namespace DoAnTGVL.DAO
         {
             string query = string.Format("UPDATE DSCongViec  SET ChiTietSua = N'{0}', ChiPhi = {1}, Image = '{2}' WHERE ID={3}", congviec.ChiTietSua, congviec.ChiPhi, image, congviec.ID);
             dbConection.Process(query);
+        }
+
+        public List<CongViec> ReadAllDSCongViec(int id, string trangthai)
+        {
+            string query = string.Format("Select * From DSCongViec Where IDTho = {0} and TrangThai = N'{1}'", id, trangthai);
+            return dbConection.ReadDatabaseCongViec(query);
+        }
+
+        internal void XoaTheoBaiDang(CongViec congviec)
+        {
+            string sqlStr = string.Format("DELETE FROM DSCongViec WHERE IDBaiDang = '{0}' and TrangThai = 'Chờ được duyệt'", congviec.IDBaiDang);
+            dbConection.Process(sqlStr);
         }
     }
 }

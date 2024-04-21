@@ -26,10 +26,12 @@ namespace DoAnTGVL
         
         public BaiDang baiDang { get; set; }
         //BaiDang baidang;
-        public DangBai()
+        User user;
+        public DangBai(User user)
         {
             baiDang =new BaiDang();
             InitializeComponent();
+            this.user = user;
             this.DataContext = baiDang;
         }
 
@@ -44,7 +46,7 @@ namespace DoAnTGVL
             try
             {
                 DAOBaiDang dAOBaiDang = new DAOBaiDang();
-                dAOBaiDang.Them(baiDang);
+                dAOBaiDang.Them(baiDang,user);
                 new ShowDialogCustom("Thêm thành công", ShowDialogCustom.OK).Show();
                 this.Close();
 

@@ -62,13 +62,18 @@ namespace DoAnTGVL.UControls
         }
         private void click_DangBai(object sender, RoutedEventArgs e)
         {
-            Window dangbai = new DangBai();
+            Window dangbai = new DangBai(user);
             dangbai.ShowDialog();
         }
 
         private void chboxYeuThich_Click(object sender, RoutedEventArgs e)
         {
             bUSThueTho.CreateWrapThueTho(filterTho, user, this);
+        }
+        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window thongbaoThue = new ThongBaoNhanTho(user);
+            thongbaoThue.Show();
         }
     }
 }
