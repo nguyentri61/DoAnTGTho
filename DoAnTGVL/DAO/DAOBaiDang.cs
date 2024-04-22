@@ -56,6 +56,28 @@ namespace DoAnTGVL.DAO
             return dbConection.ReadDatabaseBaiDang(query);
         }
 
+        public List<BaiDang> FilterBaiDang(FilterBaiDang filterBaiDang, User user)
+        {
+            string query = string.Format("Select * From BaiDang Where IDUser = {0}", user.Id);
+            if (!filterBaiDang.checkemp())
+            {
+                if (filterBaiDang.KhuVuc != "")
+                {
+                    query += string.Format(" and KhuVuc = N'{0}'", filterBaiDang.KhuVuc);
+                }
+                if (filterBaiDang.KinhNghiem != "")
+                {
+                    query += string.Format(" and KinhNghiem = N'{0}'", filterBaiDang.KinhNghiem);
+                }
+
+                if (filterBaiDang.Ten != "")
+                {
+                    query += string.Format(" and TieuDe like N'%{0}%'", filterBaiDang.Ten);
+                }
+            }
+            return dbConection.ReadDatabaseBaiDang(query);
+        }
+
         public void XoaBaiDang(int ID)
         {
             string query =string.Format( "Delete  From BaiDang Where ID = {0}",ID);

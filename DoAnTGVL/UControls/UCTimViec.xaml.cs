@@ -27,6 +27,7 @@ namespace DoAnTGVL.UControls
         FilterBaiDang filterBaiDang=new FilterBaiDang();
         BUSThongBaoThue bUSThongBaoThue = new BUSThongBaoThue();
         public Tho tho;
+        public User user;
         public UCTimViec(Tho tho)
         {
             InitializeComponent();

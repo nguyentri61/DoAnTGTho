@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ChinhSuaBaiDang.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ChinhSuaDSCongViec.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -58,6 +61,9 @@
     <Compile Update="UControls\UCDanhSachTho.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UControls\UCDSBaiDangUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UControls\UCDSCongViecTho.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -71,6 +77,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UControls\UCHome.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCQuanLyBaiDang.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UControls\UCSuaCV.xaml.cs">
@@ -105,6 +114,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ChinhSuaBaiDang.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ChinhSuaDSCongViec.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -168,6 +180,9 @@
     <Page Update="UControls\UCDanhSachTho.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="UControls\UCDSBaiDangUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UControls\UCDSCongViecTho.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -181,6 +196,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCHome.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCQuanLyBaiDang.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCSuaCV.xaml">

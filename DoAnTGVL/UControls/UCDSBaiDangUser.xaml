@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="DoAnTGVL.UControls.UCDSBaiDangUser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DoAnTGVL.UControls"
+             mc:Ignorable="d" 
+                      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         d:DesignHeight="280" d:DesignWidth="620">
+
+    <Grid>
+        <Border CornerRadius="24" Background="White" BorderThickness="2" BorderBrush="#D5E0D5">
+
+            <Grid Background="White" Margin="20">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="20"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{Binding Path= TieuDe}" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="#001E00" FontSize="20" FontWeight="DemiBold"/>
+                    <Grid Grid.Column="1">
+                        <materialDesign:PopupBox
+                              IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                              PlacementMode="BottomAndAlignCentres"
+                              ToolTip="PopupBox, Style MaterialDesignMultiFloatingActionPopupBox"
+                              ToolTipService.Placement="Right" Margin="-8,-22,0,22">
+                            <Border BorderThickness="1" CornerRadius="14">
+                                <StackPanel>
+                                    <Button ToolTip="Xem chi tiết" Click="btn_XemChiTiet_Click">
+                                        <materialDesign:PackIcon Kind="PageNext" FontSize="15"/>
+                                    </Button>
+                                    <Button ToolTip="Sửa" Click="btn_Sua_Click">
+                                        <materialDesign:PackIcon Kind="PencilOutline" FontSize="15"/>
+                                    </Button>
+                                    <Button ToolTip="Xóa">
+                                        <materialDesign:PackIcon Kind="PailRemove" FontSize="15"/>
+                                    </Button>
+                                </StackPanel>
+                            </Border>
+                        </materialDesign:PopupBox>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1" Margin="0 10 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <WrapPanel Grid.Column="0" Orientation="Vertical">
+                        <TextBlock Text="{Binding Path= KhuVuc}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"></TextBlock>
+                        <TextBlock Text="Khu Vực" Margin="0 2 0 0" Foreground="#9AAA97" FontSize="12"/>
+                    </WrapPanel>
+
+                    <WrapPanel Grid.Column="1" Orientation="Vertical">
+                        <TextBlock Text="{Binding Path=KinhNghiem}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"></TextBlock>
+                        <TextBlock Text="Kinh Nghiệm" Margin="0 2 0 0"
+                        Foreground="#9AAA97" FontSize="12">
+
+                        </TextBlock>
+
+                    </WrapPanel>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <TextBlock Text="{Binding Path= MoTa}"
+                       FontSize="15" TextWrapping="Wrap" Foreground="#001E00" FontWeight="DemiBold"
+                       Margin="0 20 0 0"
+                       ></TextBlock>
+
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <WrapPanel Orientation="Horizontal" Margin="0 20 0 0">
+                        <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2">
+                            <Grid Width="97" Height="30">
+                                <TextBlock Text="{Binding Path=LinhVuc}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55"/>
+                            </Grid>
+                        </Border>
+
+                        <WrapPanel Margin="185,0,0,0" HorizontalAlignment="Left" Orientation="Vertical">
+                            <TextBlock Text="{Binding DateThue ,StringFormat={}{0:MM/dd/yyy}}" Foreground="#001E00" FontSize="15" FontWeight="DemiBold"/>
+                            <TextBlock Text="Ngày cần thuê" Margin="0 2 0 0" Foreground="#9AAA97" FontSize="12"/>
+                        </WrapPanel>
+                    </WrapPanel>
+                </Grid>
+            </Grid>
+
+        </Border>
+
+    </Grid>
+</UserControl>

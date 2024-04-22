@@ -8,7 +8,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              d:DesignHeight="370" d:DesignWidth="620">
 
-    <Grid >
+    <Grid>
         <Border CornerRadius="24" Background="White" BorderThickness="2" BorderBrush="#D5E0D5">
 
             <Grid Background="White" Margin="20">

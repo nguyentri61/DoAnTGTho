@@ -25,7 +25,7 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                           Content="{materialDesign:PackIcon Kind=Bell}"
                           Style="{StaticResource MaterialDesignActionToggleButton}"
                           ToolTip="MaterialDesignActionLightToggleButton" Margin="50,0,0,0" Click="ToggleButton_Click" />
-                    
+
                     <Button Style="{DynamicResource MaterialDesignToolButton}" x:Name="btn_reload" Click="btn_reload_Click" Margin="50,0,0,0">
                         <materialDesign:PackIcon Kind="Reload" Height="25" Width="25"  />
                     </Button>
@@ -119,19 +119,7 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                                      Text="{Binding Path = Ten ,UpdateSourceTrigger=PropertyChanged}" KeyUp="txbTimKiem_KeyUp"/>
                         </Grid>
                     </materialDesign:ColorZone>
-                    <!--entersearch-->
-                    <Button Padding="0" Margin="0 0 0 3"
-    Width="55" Height="30"
-    Background="Transparent"
-    BorderThickness="0">
-                        <Button.Clip>
-                            <RectangleGeometry Rect="0,0,60,50" RadiusX="50" RadiusY="60">
-                            </RectangleGeometry>
-                        </Button.Clip>
-                        <materialDesign:PackIcon Kind="Send" Width="30"
-                         Height="30" 
-                         Foreground="Black" Opacity="0.7" />
-                    </Button>
+
                     <Button Height="40" Width="155" Background="#FF8C00FC" Margin="20,0,0,0" Click="btnUploadProfile_Click"
         >
                         <Button.Clip>
@@ -143,24 +131,14 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                 </StackPanel>
             </materialDesign:ColorZone>
 
-
-
-
         </Grid>
         <Grid Grid.Row="1">
 
-            <!--nửa phải để hiện thị phòng-->
+            <!--nửa dưới để hiện thị bài đăng-->
             <Grid   x:Name="gridPage" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
                 <ScrollViewer VerticalScrollBarVisibility="Auto" >
                     <Grid Width="auto" Background="White" >
-                        
-
-
-
-
-                        <WrapPanel x:Name="WpanelDanhS" HorizontalAlignment="Center" Grid.ColumnSpan="1"  Grid.Column="1"   />
-
-
+                        <WrapPanel x:Name="WpanelDanhS" HorizontalAlignment="Center" Grid.ColumnSpan="1"  Grid.Column="1"/>
                     </Grid>
                 </ScrollViewer>
             </Grid>

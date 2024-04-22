@@ -23,10 +23,10 @@ namespace DoAnTGVL.UControls
     {
         BaiDang baidang;
         Tho tho;
-        public UCDanhSachCongViec(BaiDang baidang,Tho tho )
+        public UCDanhSachCongViec(BaiDang baidang,Tho tho)
         {
             this.baidang = baidang;
-            this.tho=tho;
+            this.tho = tho;
             InitializeComponent();
             this.DataContext = baidang;
         }
@@ -34,7 +34,6 @@ namespace DoAnTGVL.UControls
 
         private void btnXemChiTiet_Click(object sender, RoutedEventArgs e)
         {
-
             ChiTietCongViec chiTietCV = new ChiTietCongViec(baidang,tho);
             chiTietCV.Show();
         }

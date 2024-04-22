@@ -95,5 +95,12 @@ namespace DoAnTGVL
             CurUC = new UCDSThueTho(user);
             gridMainWin.Children.Add(CurUC);
         }
+
+        private void btn_QuanLyBaiDang_Click(object sender, RoutedEventArgs e)
+        {
+            gridMainWin.Children.Clear();
+            CurUC = new UCQuanLyBaiDang(user);
+            gridMainWin.Children.Add(CurUC);
+        }
     }
 }

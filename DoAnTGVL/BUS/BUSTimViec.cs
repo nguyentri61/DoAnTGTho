@@ -20,7 +20,6 @@ namespace DoAnTGVL.BUS
             uctimviec.WpanelDanhS.Children.Clear();
             List<BaiDang> DSbaiDang = dAOBaiDang.FilterBaiDang(filterBaiDang, uctimviec.tho);
             UserControl userControl;
-
             foreach (BaiDang baidang in DSbaiDang)
             {
                 userControl = new UCDanhSachCongViec(baidang,uctimviec.tho);
@@ -29,6 +28,23 @@ namespace DoAnTGVL.BUS
                 userControl.Margin = new Thickness(10);
                 // Thêm UserControl vào WrapPanel
                 uctimviec.WpanelDanhS.Children.Add(userControl);
+            }
+        }
+
+        public void CreateWrapBaiDang(FilterBaiDang filterBaiDang, UCQuanLyBaiDang ucquanlybaidang)
+        {
+            ucquanlybaidang.WpanelDanhS.Children.Clear();
+            List<BaiDang> DSbaiDang = dAOBaiDang.FilterBaiDang(filterBaiDang, ucquanlybaidang.user);
+            UserControl userControl;
+
+            foreach (BaiDang baidang in DSbaiDang)
+            {
+                userControl = new UCDSBaiDangUser(baidang, ucquanlybaidang.user);
+                userControl.Width = 620;
+                userControl.Height = 280;
+                userControl.Margin = new Thickness(10);
+                // Thêm UserControl vào WrapPanel
+                ucquanlybaidang.WpanelDanhS.Children.Add(userControl);
             }
         }
     }

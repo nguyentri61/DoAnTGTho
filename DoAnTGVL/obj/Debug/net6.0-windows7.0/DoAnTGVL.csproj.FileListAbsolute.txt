@@ -423,3 +423,9 @@ D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCTBaoNhanVie
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\LichBan.baml
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\ThongBaoNhanTho.baml
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCTBaoNhanViec.baml
+D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCQuanLyBaiDang.g.cs
+D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCQuanLyBaiDang.baml
+D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\ChinhSuaBaiDang.g.cs
+D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSBaiDangUser.g.cs
+D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\ChinhSuaBaiDang.baml
+D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCDSBaiDangUser.baml
