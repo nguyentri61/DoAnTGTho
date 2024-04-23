@@ -40,7 +40,7 @@
                                     <Button ToolTip="Sửa" Click="btn_Sua_Click">
                                         <materialDesign:PackIcon Kind="PencilOutline" FontSize="15"/>
                                     </Button>
-                                    <Button ToolTip="Xóa">
+                                    <Button ToolTip="Xóa" Click="btn_Xoa_Click">
                                         <materialDesign:PackIcon Kind="PailRemove" FontSize="15"/>
                                     </Button>
                                 </StackPanel>

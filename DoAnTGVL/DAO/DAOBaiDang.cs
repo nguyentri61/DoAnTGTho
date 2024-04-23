@@ -10,7 +10,7 @@ using System.Windows;
 
 namespace DoAnTGVL.DAO
 {
-    class DAOBaiDang
+    public class DAOBaiDang
     {
         DbConection dbConection = new DbConection();
         public List<BaiDang> ReadAllBaiDang()
@@ -78,9 +78,16 @@ namespace DoAnTGVL.DAO
             return dbConection.ReadDatabaseBaiDang(query);
         }
 
-        public void XoaBaiDang(int ID)
+        public void XoaBaiDang(int ID) 
         {
             string query =string.Format( "Delete  From BaiDang Where ID = {0}",ID);
+            dbConection.Process(query);
+            new ShowDialogCustom("Thành công", ShowDialogCustom.OK).Show();
+        }
+        public void SuaBaiDang(BaiDang baidang)
+        {
+            string query = string.Format("Update BaiDang SET TieuDe = N'{0}', LinhVuc = N'{1}', KhuVuc = N'{2}', MoTa = N'{3}', KinhNghiem = N'{4}', YeuCau = N'{5}', GhiChu = N'{6}' WHERE ID = '{7}'"
+                    , baidang.TieuDe, baidang.LinhVuc, baidang.KhuVuc, baidang.MoTa, baidang.KinhNghiem, baidang.YeuCau, baidang.GhiChu, baidang.ID);
             dbConection.Process(query);
         }
     }

@@ -29,25 +29,25 @@
 
         <Grid Grid.Row="0">
             <GroupBox Header="Tiêu đề" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="80" >
-                <TextBox Text="{Binding Path= TieuDe}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="25" />
+                <TextBox Text="{Binding Path= TieuDe, Mode=TwoWay}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="25" />
             </GroupBox>
         </Grid>
 
         <Grid Grid.Row="1">
             <GroupBox Header="Mô tả chi tiết" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="100" >
-                <TextBox Text="{Binding Path= MoTa}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
+                <TextBox Text="{Binding Path= MoTa, Mode=TwoWay}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
             </GroupBox>
         </Grid>
 
         <Grid Grid.Row="2">
             <GroupBox Header="Yêu cầu" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="100" >
-                <TextBox Text="{Binding Path= YeuCau}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
+                <TextBox Text="{Binding Path= YeuCau, Mode=TwoWay}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
             </GroupBox>
         </Grid>
 
         <Grid Grid.Row="3">
             <GroupBox Header="Ghi chú" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="100" >
-                <TextBox Text="{Binding Path= MoTa}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
+                <TextBox Text="{Binding Path= MoTa, Mode=TwoWay}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
             </GroupBox>
         </Grid>
 
@@ -71,12 +71,20 @@
 
                 <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2">
                     <Grid Width="97" Height="30">
-                        <TextBox Text="{Binding Path= LinhVuc}" Style="{DynamicResource d}" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55"  FontWeight="SemiBold"/>
+                        <ComboBox BorderThickness="0" BorderBrush="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" FontWeight="SemiBold" Width="98"  SelectedItem="{Binding Path=LinhVuc, Mode=TwoWay}">
+                            <ComboBoxItem Content="Điện nước"/>
+                            <ComboBoxItem Content="Điện Tủ"/>
+                            <ComboBoxItem Content="Bảo Trì"/>
+                            <ComboBoxItem  Content="Sửa Nhà"/>
+                            <ComboBoxItem Content="Gia Su"/>
+                        </ComboBox>
                     </Grid>
                 </Border>
                 <Border Margin="250 0 0 0" CornerRadius="19" Background="#F2F7F2" BorderThickness="2">
                     <Grid Width="150" Height="30">
-                        <TextBlock Text="{Binding DateThue ,StringFormat={}{0:MM/dd/yyy}}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" FontWeight="SemiBold"/>
+                        <DatePicker  Height="30" BorderThickness="0" BorderBrush="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" FontWeight="SemiBold"
+                                     SelectedDate="{Binding DateThue ,StringFormat={}{0:MM/dd/yyy}, Mode=TwoWay}"
+                                     Style="{StaticResource MaterialDesignFloatingHintDatePicker}"/>
                     </Grid>
                 </Border>
 
@@ -85,7 +93,7 @@
         </Grid>
 
         <Grid Grid.Row="5">
-            <Button x:Name="btn_Commfirm" Width="250" Height="50">
+            <Button x:Name="btn_Commfirm" Width="250" Height="50" Click="btn_Sua_CLick">
                 <TextBlock Text="Sửa" FontSize="20"/>
                 <Button.Clip>
                     <RectangleGeometry Rect="0,0,250,50" RadiusX="10" RadiusY="10"/>

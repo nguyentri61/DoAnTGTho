@@ -1,4 +1,5 @@
-﻿using DoAnTGVL.Class;
+﻿using DoAnTGVL.BUS;
+using DoAnTGVL.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace DoAnTGVL
     public partial class ChinhSuaBaiDang : Window
     {
         BaiDang baidang;
+        BUSBaiDang busbaidang = new BUSBaiDang();
         public ChinhSuaBaiDang(BaiDang baidang)
         {
             InitializeComponent();
@@ -31,6 +33,17 @@ namespace DoAnTGVL
         private void btnHuy_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void btn_Sua_CLick(object sender, RoutedEventArgs e)
+        {
+            var thongbao = new ShowDialogCustom("Bạn có thật sự muốn chỉnh sửa Bài Đăng này? ", ShowDialogCustom.YesNo);
+
+            if (thongbao.ShowDialog() == true)
+            {
+                busbaidang.SuaBaiDang(baidang);
+                new ShowDialogCustom("Cập nhật thành công", ShowDialogCustom.OK).Show();
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using DoAnTGVL.Class;
+﻿using DoAnTGVL.BUS;
+using DoAnTGVL.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace DoAnTGVL.UControls
         BaiDang baidang;
         User user;
         Tho tho;
+        BUSBaiDang busbaidang = new BUSBaiDang();
         public UCDSBaiDangUser(BaiDang baidang, User user)
         {
             InitializeComponent();
@@ -42,6 +44,17 @@ namespace DoAnTGVL.UControls
         {
             ChinhSuaBaiDang suaBaiDang = new ChinhSuaBaiDang(baidang);
             suaBaiDang.Show();
+        }
+
+        private void btn_Xoa_Click(object sender, RoutedEventArgs e)
+        {
+            var thongbao = new ShowDialogCustom("Bạn có thật sự muốn Xóa Bài Đăng này? ", ShowDialogCustom.YesNo);
+
+            if (thongbao.ShowDialog() == true)
+            {
+                busbaidang.XoaBaiDang(baidang);
+                new ShowDialogCustom("Xóa thành công", ShowDialogCustom.OK).Show();
+            }
         }
     }
 }
