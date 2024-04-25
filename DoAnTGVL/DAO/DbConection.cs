@@ -10,6 +10,7 @@ using DoAnTGVL.Class;
 using System.Collections;
 using System.Reflection.PortableExecutable;
 using System.Windows.Markup;
+using System.Linq;
 
 namespace DoAnTGVL.DAO
 {
@@ -374,6 +375,62 @@ namespace DoAnTGVL.DAO
                 }
             }
             return tho;
+        }
+
+        public int CountCongViec(string query)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.connstring);
+            int count = 0;
+            using (conn)
+            {
+                SqlCommand command = new SqlCommand(query, conn);               
+                try
+                {
+                    conn.Open();
+                    SqlDataReader dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        count = (int)dataReader[0];
+                        return count ;
+                    }
+                    dataReader.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            return count;
+        }
+
+        internal List<int> GetThuNhap(string query)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.connstring);
+            List<int> thuNhap = Enumerable.Repeat(0, 12).ToList();
+            using (conn)
+            {
+                SqlCommand command = new SqlCommand(query, conn);
+                try
+                {
+                    conn.Open();
+                    SqlDataReader dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        int income = Convert.ToInt32(dataReader["TongChiPhi"]);
+                        int thang = Convert.ToInt32(dataReader["Thang"]);
+                        // Thêm giá trị thu nhập vào danh sách                        
+                        thuNhap[thang-1]+=income;
+                    }
+                    dataReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            return thuNhap;
         }
     }
 }

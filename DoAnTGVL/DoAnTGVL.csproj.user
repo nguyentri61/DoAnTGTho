@@ -91,6 +91,12 @@
     <Compile Update="UControls\UCTBaoThue.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UControls\UCThongKe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCThongKeCV.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UControls\UCThoPhanHoi.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -101,6 +107,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UControls\UserPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCThongKeTN.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserMain.xaml.cs">
@@ -210,6 +219,12 @@
     <Page Update="UControls\UCTBaoThue.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="UControls\UCThongKe.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCThongKeCV.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UControls\UCThoPhanHoi.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -220,6 +235,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UserPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCThongKeTN.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserMain.xaml">

@@ -150,7 +150,7 @@
                                     </MenuItem.Icon>
                                 </MenuItem>
 
-                                <MenuItem Header="Thống kê công việc"  Width="350"   FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True">
+                                <MenuItem Header="Thống kê công việc"  Width="350"   FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="mnuThongKe_Click">
                                     <MenuItem.Icon>
                                         <materialDesign:PackIcon Width="26" Height="24" Kind="ListStatus"  Margin="-6,0,0,0" VerticalAlignment="Center">
                                             <materialDesign:PackIcon.Foreground>
