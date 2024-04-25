@@ -86,8 +86,8 @@ namespace DoAnTGVL.DAO
         }
         public void SuaBaiDang(BaiDang baidang)
         {
-            string query = string.Format("Update BaiDang SET TieuDe = N'{0}', LinhVuc = N'{1}', KhuVuc = N'{2}', MoTa = N'{3}', KinhNghiem = N'{4}', YeuCau = N'{5}', GhiChu = N'{6}' WHERE ID = '{7}'"
-                    , baidang.TieuDe, baidang.LinhVuc, baidang.KhuVuc, baidang.MoTa, baidang.KinhNghiem, baidang.YeuCau, baidang.GhiChu, baidang.ID);
+            string query = string.Format("Update BaiDang SET TieuDe = N'{0}', LinhVuc = N'{1}', KhuVuc = N'{2}', MoTa = N'{3}', KinhNghiem = N'{4}', YeuCau = N'{5}', GhiChu = N'{6}', Date = '{7}' WHERE ID = '{8}'"
+                    , baidang.TieuDe, baidang.LinhVuc, baidang.KhuVuc, baidang.MoTa, baidang.KinhNghiem, baidang.YeuCau, baidang.GhiChu, baidang.DateThue.Date.ToShortDateString() ,baidang.ID);
             dbConection.Process(query);
         }
     }

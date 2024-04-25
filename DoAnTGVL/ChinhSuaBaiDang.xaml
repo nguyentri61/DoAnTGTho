@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoAnTGVL"
         mc:Ignorable="d"
+        xmlns:converts="clr-namespace:DoAnTGVL.Converts"
         WindowStartupLocation="CenterScreen"
-        Title="Chỉnh sửa bài đăng" Height="630" Width="800">
+        Title="Chỉnh sửa bài đăng" Height="650" Width="800">
+    <Window.Resources>
+        <converts:StringToDateConverter x:Key="StringToDateConverter"/>
+    </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
@@ -19,86 +23,125 @@
     </Window.Triggers>
     <Grid Margin="15">
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <GroupBox Header="Tiêu đề" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="80" >
-                <TextBox Text="{Binding Path= TieuDe, Mode=TwoWay}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="25" />
+            <GroupBox Header="Tiêu đề" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" VerticalAlignment="Top" BorderThickness="1.5" Height="70" >
+                <TextBox Text="{Binding Path= TieuDe, Mode=TwoWay}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
             </GroupBox>
         </Grid>
 
         <Grid Grid.Row="1">
-            <GroupBox Header="Mô tả chi tiết" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="100" >
-                <TextBox Text="{Binding Path= MoTa, Mode=TwoWay}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
-            </GroupBox>
-        </Grid>
-
-        <Grid Grid.Row="2">
-            <GroupBox Header="Yêu cầu" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="100" >
-                <TextBox Text="{Binding Path= YeuCau, Mode=TwoWay}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
-            </GroupBox>
-        </Grid>
-
-        <Grid Grid.Row="3">
-            <GroupBox Header="Ghi chú" Style="{DynamicResource d}" BorderBrush="#707070" Foreground="#707070" BorderThickness="1.5" Height="100" >
-                <TextBox Text="{Binding Path= MoTa, Mode=TwoWay}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
-            </GroupBox>
-        </Grid>
-
-        <Grid Grid.Row="4">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
-                <TextBlock  Text="Lĩnh Vực:"
+                <TextBlock Text="Lĩnh Vực:"
                        Foreground="#001E00" FontSize="20" FontWeight="DemiBold"
-                       Margin="0 10 0 0"
-                       ></TextBlock>
-                <TextBlock  Text="Ngày Thuê:"
-       Foreground="#001E00" FontSize="20" FontWeight="DemiBold"
-       Margin="350 10 0 0"
-       ></TextBlock>
+                       Margin="0 10 0 0"/>
+                <TextBlock  Text="Khu Vực:"
+                           Foreground="#001E00" FontSize="20" FontWeight="DemiBold"
+                           Margin="380 10 0 0"/>
             </Grid>
 
             <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <ComboBox BorderThickness="0" FontSize="15" Width="100" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Foreground="#5E6D55" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"
-                              SelectedItem="{Binding Path=LinhVuc, Mode=TwoWay}">
-                        <ComboBoxItem Content="Điện nước"/>
+                    <ComboBox BorderThickness="0" Padding="40 0 0 0" FontSize="15" Width="150" Height="40" Foreground="#5E6D55" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"
+                              Text="{Binding Path=LinhVuc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ComboBoxItem Content="Điện Nước"/>
                         <ComboBoxItem Content="Điện Tử"/>
                         <ComboBoxItem Content="Bảo Trì"/>
                         <ComboBoxItem Content="Sửa Nhà"/>
                         <ComboBoxItem Content="Gia Sư"/>
                     </ComboBox>
                 </Border>
-                <Border Margin="250 0 0 0" CornerRadius="19" Background="#F2F7F2" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <DatePicker Width="120" Height="auto" FontSize="15" BorderThickness="0" Foreground="#5E6D55" FontWeight="SemiBold"
-                                     SelectedDate="{Binding DateThue ,StringFormat={}{0:MM/dd/yyy}, Mode=TwoWay}"
-                                     Style="{StaticResource MaterialDesignFloatingHintDatePicker}"/>
+                <Border Margin="225 0 0 0" CornerRadius="19" Background="#F2F7F2" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <ComboBox x:Name="cboKhuVuc" FontSize="15" Width="150" Height="40" BorderThickness="0" Padding="40 0 0 0"
+                              Foreground="#5E6D55" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"
+                              Text="{Binding KhuVuc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ComboBoxItem Content="Thủ Đức" />
+                        <ComboBoxItem Content="Quận 1" />
+                        <ComboBoxItem Content="Quận 2" />
+                        <ComboBoxItem Content="Quận 4" />
+                        <ComboBoxItem Content="Quận 5" />
+                        <ComboBoxItem Content="Quận 6" />
+                        <ComboBoxItem Content="Quận 7" />
+                        <ComboBoxItem Content="Quận 8" />
+                        <ComboBoxItem Content="Quận 9" />
+                        <ComboBoxItem Content="Bình Thạnh" />
+                        <ComboBoxItem Content="Tân Bình" />
+                    </ComboBox>
                 </Border>
-
             </StackPanel>
+        </Grid>
 
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <TextBlock Text="Kinh Nghiệm:"
+               Foreground="#001E00" FontSize="20" FontWeight="DemiBold"
+               Margin="0 10 0 0"/>
+                <TextBlock  Text="Ngày Thuê:"
+                   Foreground="#001E00" FontSize="20" FontWeight="DemiBold"
+                   Margin="380 10 0 0"/>
+            </Grid>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <ComboBox x:Name="cboKinhNghiem" FontSize="15" BorderThickness="0" Padding="40 0 0 0" Foreground="#5E6D55" FontWeight="SemiBold"
+                              Text="{Binding KinhNghiem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Height="40" Width="150">
+                        <ComboBoxItem Content="Ít hơn 1 năm" />
+                        <ComboBoxItem Content="1 - 2 năm" />
+                        <ComboBoxItem Content="2 - 3 năm" />
+                        <ComboBoxItem Content="Trên 3 năm" />
+                    </ComboBox>
+                </Border>
+                <Border Margin="225 0 0 0" CornerRadius="19" Background="#F2F7F2" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <DatePicker Width="150" Height="40" FontSize="15" BorderThickness="0" BorderBrush="Transparent" Foreground="#5E6D55" FontWeight="SemiBold" Padding="40 0 0 0"
+                             SelectedDate="{Binding DateThue, StringFormat={}{0:MM/dd/yyy}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StringToDateConverter}}"/>
+                </Border>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <GroupBox Header="Mô tả chi tiết" Style="{DynamicResource d}" Margin="0 10 0 0" BorderBrush="#707070" Foreground="#707070" VerticalAlignment="Top" BorderThickness="1.5" Height="80" >
+                <TextBox Text="{Binding Path= MoTa, Mode=TwoWay}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
+            </GroupBox>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <GroupBox Header="Yêu cầu" Style="{DynamicResource d}" Margin="0 10 0 0" BorderBrush="#707070" Foreground="#707070" VerticalAlignment="Top" BorderThickness="1.5" Height="80" >
+                <TextBox Text="{Binding Path= YeuCau, Mode=TwoWay}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
+            </GroupBox>
         </Grid>
 
         <Grid Grid.Row="5">
-            <Button x:Name="btn_Commfirm" Width="250" Height="50" Click="btn_Sua_CLick">
-                <TextBlock Text="Sửa" FontSize="20"/>
+            <GroupBox Header="Ghi chú" Style="{DynamicResource d}" Margin="0 10 0 0" BorderBrush="#707070" Foreground="#707070" VerticalAlignment="Top" BorderThickness="1.5" Height="80" >
+                <TextBox Text="{Binding Path= MoTa, Mode=TwoWay}" TextWrapping="Wrap" Margin="3,3,3,3" Style="{DynamicResource d}" BorderThickness="0" Foreground="#707070" FontSize="15" />
+            </GroupBox>
+        </Grid>
+
+        <Grid Grid.Row="6" Margin="0 15 0 0">
+            <Button x:Name="btn_Commfirm" Content="Sửa" FontSize="20" VerticalAlignment="Bottom" Width="250" Height="50" Click="btn_Sua_CLick">
                 <Button.Clip>
                     <RectangleGeometry Rect="0,0,250,50" RadiusX="10" RadiusY="10"/>
                 </Button.Clip>
-
             </Button>
-
-            <Button  Width="89" Height="50" Background="#9D9999" Content="Hủy" Click="btnHuy_Click"
-HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 10 0 0">
+            
+            <Button Width="89" Height="50" Background="#9D9999" Content="Hủy" Click="btnHuy_Click"
+                        HorizontalAlignment="Right" VerticalAlignment="Bottom">
                 <Button.Clip>
                     <RectangleGeometry Rect="0,0,89,50" RadiusX="10" RadiusY="10"/>
                 </Button.Clip>
