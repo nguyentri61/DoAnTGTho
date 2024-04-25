@@ -133,23 +133,9 @@
                                     </MenuItem.Icon>
                                 </MenuItem>
 
-                                <MenuItem Header="Hóa Đơn"  Width="200"   FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" >
+                                <MenuItem Header="Hóa Đơn" Width="200" FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" >
                                     <MenuItem.Icon>
                                         <materialDesign:PackIcon Width="26" Height="24" Kind="Billboard"  Margin="-6,0,0,0" VerticalAlignment="Center"  >
-                                            <materialDesign:PackIcon.Foreground>
-                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                                    <GradientStop Color="Black"/>
-                                                    <GradientStop Color="#FFD371F0" Offset="1"/>
-                                                    <GradientStop Color="#FF512B5C" Offset="0.387"/>
-                                                    <GradientStop Color="#FF4F2A5A" Offset="0.501"/>
-                                                </LinearGradientBrush>
-                                            </materialDesign:PackIcon.Foreground>
-                                        </materialDesign:PackIcon>
-                                    </MenuItem.Icon>
-                                </MenuItem>
-                                <MenuItem Header="Đánh Giá"  Width="200"  FontFamily="Arial" FontWeight="Bold"  FontSize="13" ForceCursor="True" Click="MnuDanhGia_Click">
-                                    <MenuItem.Icon>
-                                        <materialDesign:PackIcon Width="26" Height="26" Kind="ThumbsUp"  Margin="-6,-7,0,0"  >
                                             <materialDesign:PackIcon.Foreground>
                                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                                     <GradientStop Color="Black"/>

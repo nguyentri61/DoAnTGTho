@@ -29,9 +29,7 @@
                     <Grid Grid.Column="1">
                         <materialDesign:PopupBox
                               IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                              PlacementMode="BottomAndAlignCentres"
-                              ToolTip="PopupBox, Style MaterialDesignMultiFloatingActionPopupBox"
-                              ToolTipService.Placement="Right" Margin="-8,-22,0,22">
+                              PlacementMode="BottomAndAlignCentres" Margin="-8,-22,0,22">
                             <Border BorderThickness="1" CornerRadius="14">
                                 <StackPanel>
                                     <Button ToolTip="Xem chi tiết" Click="btn_XemChiTiet_Click">

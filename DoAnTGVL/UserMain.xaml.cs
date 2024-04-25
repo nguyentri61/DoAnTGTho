@@ -84,10 +84,6 @@ namespace DoAnTGVL
             CurUC = new UCThueTho(user);
             gridMainWin.Children.Add(CurUC);
         }
-        private void MnuDanhGia_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
 
         private void btnLichSuThue_Click(object sender, RoutedEventArgs e)
         {

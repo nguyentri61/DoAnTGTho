@@ -20,57 +20,44 @@
 
 
             <!--Loc bang-->
-            <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
-                <CheckBox x:Name="chbDaHoanThanh" Content="Đã hoàn thành"  Foreground="#707070" FontSize="20" Margin="112 0 0 0" 
-               materialDesign:CheckBoxAssist.CheckBoxSize="25" 
-                          IsChecked="{Binding Path = DaHoanThanh, UpdateSourceTrigger=PropertyChanged}" Click="chboxDaHoanThanh_Click" />
+            <Grid Grid.Row="0">
 
-                <CheckBox x:Name="chbDangThuchien" Content="Đang thực hiện" Foreground="#707070" FontSize="20" Margin="100 0 100 0"
-                materialDesign:CheckBoxAssist.CheckBoxSize="25"
-                          IsChecked="{Binding Path = DangThucHien, UpdateSourceTrigger=PropertyChanged}" Click="chboxDangThucHien_Click"/>
+                <materialDesign:ColorZone Width="300" Mode="Standard" Padding="8 0 8 0"
+CornerRadius="5" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="120,0,0,0"
+materialDesign:ShadowAssist.ShadowDepth="Depth1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15*"/>
+                            <RowDefinition Height="17*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                <CheckBox x:Name="chbChuaThucHien" Content="Chưa thực hiện" Foreground="#707070" FontSize="20" 
-                materialDesign:CheckBoxAssist.CheckBoxSize="25"
-                          IsChecked="{Binding Path = ChuaThucHien, UpdateSourceTrigger=PropertyChanged}" Click="chboxChuaThucHien_Click" />
+                        <Button Grid.Column="0" Style="{DynamicResource MaterialDesignToolButton}" Grid.RowSpan="2">
+                            <materialDesign:PackIcon Kind="Search" Opacity=".56" />
+                        </Button>
+                        <TextBox Grid.Column="1" x:Name="txbTimKiem"
+                             FontSize="18"
+                            Margin="8,4,0,0"
+                            materialDesign:HintAssist.Hint="Tìm kiếm"
+                            materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                            BorderThickness="0"
+                            Width="200" 
+                            VerticalAlignment="Top" Grid.RowSpan="2"
+                             Text="{Binding Path = TieuDe ,UpdateSourceTrigger=PropertyChanged}" KeyUp="txbTimKiem_KeyUp"/>
+                    </Grid>
+                </materialDesign:ColorZone>
 
-
-
-                <Grid VerticalAlignment="Center" Margin="80 0 0 0" Background="#F2F1F1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="15*"/>
-                        <RowDefinition Height="17*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <Button Grid.Column="0" Style="{DynamicResource MaterialDesignToolButton}" Grid.RowSpan="2">
-                        <materialDesign:PackIcon Kind="Search" Opacity=".56" />
-                    </Button>
-                    <TextBox Grid.Column="1" x:Name="txbTimKiem"
-                  FontSize="18"
-                  Text="{Binding Path = TieuDe,UpdateSourceTrigger=PropertyChanged}"
-                 Margin="8,4,0,0"
-                 materialDesign:HintAssist.Hint="Tìm kiếm"
-                 materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
-                 BorderThickness="0"
-                 Width="200" 
-                 VerticalAlignment="Top" Grid.RowSpan="2"  KeyUp="txbTimKiem_KeyUp" />
-                </Grid>
-                <Button x:Name="ngayBanbutton"
-    Margin="60,0,0,0"
-    materialDesign:ButtonAssist.CornerRadius="10"
-     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-    Style="{StaticResource MaterialDesignRaisedButton}"
-    ToolTip="MaterialDesignRaisedButton with Round Corners" Click="ngayBanbutton_Click">
-                    <TextBlock
-        Text="Ngày bận" />
+                <Button HorizontalAlignment="Right" x:Name="ngayBanbutton"
+                        materialDesign:ButtonAssist.CornerRadius="10"
+                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                        Style="{StaticResource MaterialDesignRaisedButton}"
+                        ToolTip="MaterialDesignRaisedButton with Round Corners" Click="ngayBanbutton_Click" Margin="0,16,120,12">
+                    <TextBlock Text="Ngày bận"/>
                 </Button>
-
-            </StackPanel>
-
-
+            </Grid>
         </materialDesign:ColorZone>
 
 
@@ -122,7 +109,6 @@
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding TrangThai}" Margin="20 0 0 0"></TextBlock>
-
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>

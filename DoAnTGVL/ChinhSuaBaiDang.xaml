@@ -17,7 +17,7 @@
             </BeginStoryboard>
         </EventTrigger>
     </Window.Triggers>
-    <Grid Margin="20">
+    <Grid Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -67,25 +67,21 @@
        ></TextBlock>
             </Grid>
 
-            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 5 0 0">
-
-                <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2">
-                    <Grid Width="97" Height="30">
-                        <ComboBox BorderThickness="0" BorderBrush="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" FontWeight="SemiBold" Width="98"  SelectedItem="{Binding Path=LinhVuc, Mode=TwoWay}">
-                            <ComboBoxItem Content="Điện nước"/>
-                            <ComboBoxItem Content="Điện Tủ"/>
-                            <ComboBoxItem Content="Bảo Trì"/>
-                            <ComboBoxItem  Content="Sửa Nhà"/>
-                            <ComboBoxItem Content="Gia Su"/>
-                        </ComboBox>
-                    </Grid>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <ComboBox BorderThickness="0" FontSize="15" Width="100" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Foreground="#5E6D55" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"
+                              SelectedItem="{Binding Path=LinhVuc, Mode=TwoWay}">
+                        <ComboBoxItem Content="Điện nước"/>
+                        <ComboBoxItem Content="Điện Tử"/>
+                        <ComboBoxItem Content="Bảo Trì"/>
+                        <ComboBoxItem Content="Sửa Nhà"/>
+                        <ComboBoxItem Content="Gia Sư"/>
+                    </ComboBox>
                 </Border>
-                <Border Margin="250 0 0 0" CornerRadius="19" Background="#F2F7F2" BorderThickness="2">
-                    <Grid Width="150" Height="30">
-                        <DatePicker  Height="30" BorderThickness="0" BorderBrush="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" FontWeight="SemiBold"
+                <Border Margin="250 0 0 0" CornerRadius="19" Background="#F2F7F2" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <DatePicker Width="120" Height="auto" FontSize="15" BorderThickness="0" Foreground="#5E6D55" FontWeight="SemiBold"
                                      SelectedDate="{Binding DateThue ,StringFormat={}{0:MM/dd/yyy}, Mode=TwoWay}"
                                      Style="{StaticResource MaterialDesignFloatingHintDatePicker}"/>
-                    </Grid>
                 </Border>
 
             </StackPanel>

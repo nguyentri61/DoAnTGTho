@@ -53,9 +53,9 @@ namespace DoAnTGVL.BUS
             return dAODSCongViec.ReadAllDSThueTho(id, trangthai);
         }
 
-        public List<CongViec> FilterCV(FilterDSCongViec filterDSCongViec, string idrole, int idtho)
+        public List<CongViec> FilterCV(FilterDSCongViec filterDSCongViec, int idtho)
         {
-            return dAODSCongViec.FilterCongViec(filterDSCongViec, idrole, idtho);
+            return dAODSCongViec.FilterCongViec(filterDSCongViec, idtho);
         }
 
         public void AddImage(string source)
