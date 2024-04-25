@@ -146,5 +146,17 @@ namespace DoAnTGVL.DAO
             string sqlStr = string.Format("DELETE FROM DSCongViec WHERE IDBaiDang = '{0}' and TrangThai = 'Chờ được duyệt'", congviec.IDBaiDang);
             dbConection.Process(sqlStr);
         }
+
+        internal int CountCV(Tho tho,string thang, string trangthai)
+        {
+            string query = string.Format("SELECT COUNT(*) FROM DSCongViec Where IDTho = {0} and TrangThai = N'{1}' and MONTH(DateThue)={2}", tho.Id, trangthai, thang);
+            return dbConection.CountCongViec(query);
+        }
+
+        internal List<int> GetThuNhap(Tho tho)
+        {
+            string query = string.Format("SELECT SUM(ChiPhi) AS TongChiPhi, MONTH(DateThue) AS Thang FROM DSCongViec WHERE IDTho = {0} GROUP BY MONTH(DateThue)", tho.Id);
+            return dbConection.GetThuNhap(query);
+        }
     }
 }

@@ -92,5 +92,12 @@ namespace DoAnTGVL
             gridMainWin.Children.Clear();
             gridMainWin.Children.Add(CurUC);
         }
+        
+        private void mnuThongKe_Click(object sender, RoutedEventArgs e)
+        {
+            CurUC = new UCThongKe(tho);
+            gridMainWin.Children.Clear();
+            gridMainWin.Children.Add(CurUC);
+        }
     }
 }
