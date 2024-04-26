@@ -35,7 +35,13 @@ namespace DoAnTGVL.UControls
 
         private void nvButton_Click(object sender, RoutedEventArgs e)
         {
-            bUSThongBaoThue.NhanViec(congviec, tho);
+            var thongbao = new ShowDialogCustom("Bạn có thật sự muốn nhận công việc này? ", ShowDialogCustom.YesNo);
+
+            if (thongbao.ShowDialog() == true)
+            {
+                bUSThongBaoThue.NhanViec(congviec, tho);
+                new ShowDialogCustom("Nhận việc thành công!", ShowDialogCustom.OK).Show();
+            }
             Window parentWindow = Window.GetWindow(this);
 
             // Kiểm tra xem cửa sổ cha có tồn tại không
@@ -48,7 +54,13 @@ namespace DoAnTGVL.UControls
 
         private void Huy_Click(object sender, RoutedEventArgs e)
         {
-            bUSThongBaoThue.HuyViec(congviec, tho);
+            var thongbao = new ShowDialogCustom("Bạn có thật sự muốn Hủy công việc này? ", ShowDialogCustom.YesNo);
+
+            if (thongbao.ShowDialog() == true)
+            {
+                bUSThongBaoThue.HuyViec(congviec, tho);
+                new ShowDialogCustom("Hủy việc thành công!", ShowDialogCustom.OK).Show();
+            }
             Window parentWindow = Window.GetWindow(this);
 
             // Kiểm tra xem cửa sổ cha có tồn tại không

@@ -39,7 +39,13 @@ namespace DoAnTGVL.UControls
 
         private void btnHuy_Click(object sender, RoutedEventArgs e)
         {
-            bUSThongBaoNhanTho.Xoa(congViec, tho);
+            var thongbao = new ShowDialogCustom("Bạn có thật sự muốn Hủy công việc này? ", ShowDialogCustom.YesNo);
+
+            if (thongbao.ShowDialog() == true)
+            {
+                bUSThongBaoNhanTho.Xoa(congViec, tho);
+                new ShowDialogCustom("Hủy việc thành công!", ShowDialogCustom.OK).Show();
+            }
             Window parentWindow = Window.GetWindow(this);
 
             // Kiểm tra xem cửa sổ cha có tồn tại không
@@ -59,7 +65,13 @@ namespace DoAnTGVL.UControls
 
         private void btnXacNhan_Click(object sender, RoutedEventArgs e)
         {
-            bUSThongBaoNhanTho.XacNhan(congViec, tho);
+            var thongbao = new ShowDialogCustom("Xác nhận công việc này? ", ShowDialogCustom.YesNo);
+
+            if (thongbao.ShowDialog() == true)
+            {
+                bUSThongBaoNhanTho.XacNhan(congViec, tho);
+                new ShowDialogCustom("Xác nhận thành công!", ShowDialogCustom.OK).Show();
+            }
             Window parentWindow = Window.GetWindow(this);
 
             // Kiểm tra xem cửa sổ cha có tồn tại không

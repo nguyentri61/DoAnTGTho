@@ -108,7 +108,7 @@ materialDesign:ShadowAssist.ShadowDepth="Depth1">
                         <GridViewColumn Header="Xem chi tiết" Width="110" >
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#FBB579" BorderThickness="0" Margin="20 0 0 0" Style="{DynamicResource d}" Click="btn_Sua">
+                                    <Button HorizontalAlignment="Center" HorizontalContentAlignment="Center" Background="#FBB579" BorderThickness="0" Margin="20 0 0 0" Style="{DynamicResource d}" Click="btn_XemChiTiet">
                                         <materialDesign:PackIcon Kind="DotsVerticalCircleOutline"/>
                                     </Button>
                                 </DataTemplate>

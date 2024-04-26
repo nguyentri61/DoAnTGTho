@@ -20,19 +20,18 @@
 
             <!--Loc bang-->
             <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
-                <CheckBox x:Name="chbDaHoanThanh" Content="Đã hoàn thành"  Foreground="#707070" FontSize="20" Margin="112 0 0 0" 
-                            materialDesign:CheckBoxAssist.CheckBoxSize="25" 
-                            IsChecked="{Binding Path = DaHoanThanh, UpdateSourceTrigger=PropertyChanged}" Click="chboxDaHoanThanh_Click" />
+                <CheckBox x:Name="chbChuaThucHien" Content="Chưa thực hiện" Foreground="#707070" FontSize="20" 
+                            materialDesign:CheckBoxAssist.CheckBoxSize="25" Margin="112 0 0 0"
+                            IsChecked="{Binding Path = ChuaThucHien, UpdateSourceTrigger=PropertyChanged}" Click="chboxChuaThucHien_Click" />       
 
                 <CheckBox x:Name="chbDangThuchien" Content="Đang thực hiện" Foreground="#707070" FontSize="20" Margin="100 0 100 0"
                             materialDesign:CheckBoxAssist.CheckBoxSize="25"
                             IsChecked="{Binding Path = DangThucHien, UpdateSourceTrigger=PropertyChanged}" Click="chboxDangThucHien_Click"/>
 
-                <CheckBox x:Name="chbChuaThucHien" Content="Chưa thực hiện" Foreground="#707070" FontSize="20" 
-                            materialDesign:CheckBoxAssist.CheckBoxSize="25"
-                            IsChecked="{Binding Path = ChuaThucHien, UpdateSourceTrigger=PropertyChanged}" Click="chboxChuaThucHien_Click" />
-
-
+                <CheckBox x:Name="chbDaHoanThanh" Content="Đã hoàn thành"  Foreground="#707070" FontSize="20"  
+                            materialDesign:CheckBoxAssist.CheckBoxSize="25" 
+                            IsChecked="{Binding Path = DaHoanThanh, UpdateSourceTrigger=PropertyChanged}" Click="chboxDaHoanThanh_Click" />
+                
                 <Grid VerticalAlignment="Center" Margin="80 0 0 0" Background="#F2F1F1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="15*"/>

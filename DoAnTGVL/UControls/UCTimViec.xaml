@@ -24,7 +24,7 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                           materialDesign:ToggleButtonAssist.OnContent="{materialDesign:PackIcon Kind=BellBadge}"
                           Content="{materialDesign:PackIcon Kind=Bell}"
                           Style="{StaticResource MaterialDesignActionToggleButton}"
-                          ToolTip="MaterialDesignActionLightToggleButton" Margin="50,0,0,0" Click="ToggleButton_Click" />
+                          ToolTip="Thông báo việc làm" Margin="50,0,0,0" Click="ToggleButton_Click" />
 
                     <Button Style="{DynamicResource MaterialDesignToolButton}" x:Name="btn_reload" Click="btn_reload_Click" Margin="50,0,0,0">
                         <materialDesign:PackIcon Kind="Reload" Height="25" Width="25"  />
