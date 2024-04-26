@@ -103,6 +103,9 @@
     <Compile Update="UControls\UCThueTho.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UControls\UCTienDoViecTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UControls\UCTimViec.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -229,6 +232,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCThueTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UControls\UCTienDoViecTho.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCTimViec.xaml">

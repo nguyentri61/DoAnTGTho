@@ -41,13 +41,13 @@ namespace DoAnTGVL.UControls
  
         private void LoadDataIntoListView()
         {
-            dataList = buschitietcv.LoadData(tho.Id);
+            dataList = buschitietcv.LoadDataHT(tho.Id);
             lsvDSCV.ItemsSource = dataList;
         }
 
         private void txbTimKiem_KeyUp(object sender, KeyEventArgs e)
         {
-            lsvDSCV.ItemsSource = buschitietcv.FilterCV(filterDSCongViec, tho.Id);
+            lsvDSCV.ItemsSource = buschitietcv.FilterCVHT(filterDSCongViec, tho.Id);
         }
 
         private void btn_Xoa(object sender, RoutedEventArgs e)
@@ -74,12 +74,6 @@ namespace DoAnTGVL.UControls
             chinhSuaDSCongViec.ShowDialog();
             buschitietcv.Sua(congviec, tho);
             LoadDataIntoListView();
-        }
-
-        private void ngayBanbutton_Click(object sender, RoutedEventArgs e)
-        {
-            LichBan lichban = new LichBan(tho);
-            lichban.Show();
         }
     }
 }

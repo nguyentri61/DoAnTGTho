@@ -45,8 +45,35 @@ namespace DoAnTGVL
 
         private void btnCapNhat_Click(object sender, RoutedEventArgs e)
         {
-            Window danhgiacv = new ThoHoanThanhCongViec(congviec);
-            danhgiacv.Show();
+            if (congviec.TrangThai != selectedListBoxItemContent)
+                congviec.TrangThai = selectedListBoxItemContent;
+            if (congviec.TrangThai == "Đã hoàn thành")
+            {
+                ThoHoanThanhCongViec thtcv = new ThoHoanThanhCongViec(congviec);
+                thtcv.ShowDialog();
+            }
+
+            else
+            {
+                var thongbao = new ShowDialogCustom("Bạn có thật sự muốn cập nhật Tình trạng của Công việc này? ", ShowDialogCustom.YesNo);
+
+                if (thongbao.ShowDialog() == true)
+                {
+                    new ShowDialogCustom("Cập nhật thành công", ShowDialogCustom.OK).Show();
+                }
+            }
+        }
+
+        private string selectedListBoxItemContent = "";
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListBox listBox = (ListBox)sender;
+
+            if (listBox.SelectedItem != null)
+            {
+                selectedListBoxItemContent = ((ListBoxItem)listBox.SelectedItem).Content.ToString();
+            }
         }
     }
 }

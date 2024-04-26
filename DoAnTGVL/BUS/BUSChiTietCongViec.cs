@@ -48,6 +48,11 @@ namespace DoAnTGVL.BUS
             return dAODSCongViec.ReadAllCongViec(id);
         }
 
+        public List<CongViec> LoadDataHT(int id)
+        {
+            return dAODSCongViec.ReadAllLichSuCongViec(id, "Đã hoàn thành");
+        }
+
         public List<CongViec> LoadDSThueTho(int id, string trangthai)
         {
             return dAODSCongViec.ReadAllDSThueTho(id, trangthai);
@@ -56,6 +61,11 @@ namespace DoAnTGVL.BUS
         public List<CongViec> FilterCV(FilterDSCongViec filterDSCongViec, int idtho)
         {
             return dAODSCongViec.FilterCongViec(filterDSCongViec, idtho);
+        }
+
+        public List<CongViec> FilterCVHT(FilterDSCongViec filterDSCongViec, int idtho)
+        {
+            return dAODSCongViec.FilterCongViecDaHoanThanh(filterDSCongViec, idtho);
         }
 
         public void AddImage(string source)

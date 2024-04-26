@@ -57,7 +57,13 @@ namespace DoAnTGVL.DAO
 
         public List<CongViec> ReadAllCongViec(int id)
         {
-            string query =string.Format("Select * From DSCongViec Where IDTho = {0} and TrangThai = N'Đã hoàn thành'", id);
+            string query =string.Format("Select * From DSCongViec Where IDTho = {0}", id);
+            return dbConection.ReadDatabaseCongViec(query);
+        }
+
+        public List<CongViec> ReadAllLichSuCongViec(int id, string trangthai)
+        {
+            string query = string.Format("Select * From DSCongViec Where IDTho = {0} and TrangThai = N'{1}'", id, trangthai);
             return dbConection.ReadDatabaseCongViec(query);
         }
 
@@ -67,14 +73,75 @@ namespace DoAnTGVL.DAO
             return dbConection.ReadDatabaseCongViec(query);
         }
 
-        public List<CongViec> FilterCongViec(FilterDSCongViec filterDSCongViec, int id)
+        public List<CongViec> FilterCongViecDaHoanThanh(FilterDSCongViec filterDSCongViec, int id)
         {
-            string query = string.Format("Select * From DSCongViec Where IDTho = {0} and TrangThai = N'Đã hoàn thành'", id); 
+            string query = string.Format("Select * From DSCongViec Where IDTho = {0} and TrangThai = N'Đã hoàn thành'", id);
             if (filterDSCongViec.TieuDe != "")
             {
                 query += string.Format(" AND TieuDe like N'%{0}%'", filterDSCongViec.TieuDe);
             }
+            return dbConection.ReadDatabaseCongViec(query);
+        }
 
+
+        public List<CongViec> FilterCongViec(FilterDSCongViec filterDSCongViec, int id)
+        {
+            string query = string.Format("Select * From DSCongViec Where IDTho = {0}", id);
+            bool conditionAppended = false;
+            if (!filterDSCongViec.checkemp())
+            {
+                if (filterDSCongViec.ChuaThucHien)
+                {
+                    if (!conditionAppended)
+                    {
+                        query += " AND (";
+                        conditionAppended = true;
+                    }
+                    else
+                    {
+                        query += " OR ";
+                    }
+                    query += string.Format("TrangThai = N'Chưa thực hiện'");
+                }
+
+                if (filterDSCongViec.DangThucHien)
+                {
+                    if (!conditionAppended)
+                    {
+                        query += " AND (";
+                        conditionAppended = true;
+                    }
+                    else
+                    {
+                        query += " OR ";
+                    }
+                    query += string.Format("TrangThai = N'Đang thực hiện'");
+                }
+
+                if (filterDSCongViec.DaHoanThanh)
+                {
+                    if (!conditionAppended)
+                    {
+                        query += " AND (";
+                        conditionAppended = true;
+                    }
+                    else
+                    {
+                        query += " OR ";
+                    }
+                    query += string.Format("TrangThai = N'Đã hoàn thành'");
+                }
+
+                if (conditionAppended)
+                {
+                    query += ")";
+                }
+
+                if (filterDSCongViec.TieuDe != "")
+                {
+                    query += string.Format(" AND TieuDe like N'%{0}%'", filterDSCongViec.TieuDe);
+                }
+            }
             return dbConection.ReadDatabaseCongViec(query);
         }
 

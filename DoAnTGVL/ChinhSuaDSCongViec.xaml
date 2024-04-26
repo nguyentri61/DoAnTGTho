@@ -91,12 +91,12 @@
             </Grid>
 
             <Grid Grid.Row="1" Margin="0 15 0 0">
-                <ListBox FontSize="18"
+                <ListBox FontSize="18" SelectionChanged="ListBox_SelectionChanged"
                   x:Name="RadioButtonGroupChoiceChip"
-                  Style="{StaticResource MaterialDesignFilterChipPrimaryOutlineListBox}">
+                  Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}">
 
-                    <ListBoxItem x:Name="cthlstItem" Margin="10 0 0 0" Content="Chưa thực hiện" IsEnabled="False"/>
-                    <ListBoxItem x:Name="dthlstItem" Margin="30 0 30 0" Content="Đang thực hiện" IsEnabled="False"/>
+                    <ListBoxItem x:Name="cthlstItem" Margin="10 0 0 0" Content="Chưa thực hiện"/>
+                    <ListBoxItem x:Name="dthlstItem" Margin="30 0 30 0" Content="Đang thực hiện"/>
                     <ListBoxItem x:Name="dhtlstItem" Content="Đã hoàn thành" IsSelected="True"/>
 
                 </ListBox>
@@ -108,6 +108,13 @@
                 <TextBlock Text="Cập nhật" FontSize="20"></TextBlock>
                 <Button.Clip>
                     <RectangleGeometry Rect="0,0,250,50" RadiusX="10" RadiusY="10"/>
+                </Button.Clip>
+            </Button>
+
+            <Button  Width="89" Height="50" Background="#9D9999" Content="Hủy" Click="btnHuy_Click"
+                    HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 10 0 0">
+                <Button.Clip>
+                    <RectangleGeometry Rect="0,0,89,50" RadiusX="10" RadiusY="10"/>
                 </Button.Clip>
             </Button>
         </Grid>

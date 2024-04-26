@@ -49,14 +49,6 @@ materialDesign:ShadowAssist.ShadowDepth="Depth1">
                              Text="{Binding Path = TieuDe ,UpdateSourceTrigger=PropertyChanged}" KeyUp="txbTimKiem_KeyUp"/>
                     </Grid>
                 </materialDesign:ColorZone>
-
-                <Button HorizontalAlignment="Right" x:Name="ngayBanbutton"
-                        materialDesign:ButtonAssist.CornerRadius="10"
-                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                        Style="{StaticResource MaterialDesignRaisedButton}"
-                        ToolTip="MaterialDesignRaisedButton with Round Corners" Click="ngayBanbutton_Click" Margin="0,16,120,12">
-                    <TextBlock Text="Ngày bận"/>
-                </Button>
             </Grid>
         </materialDesign:ColorZone>
 

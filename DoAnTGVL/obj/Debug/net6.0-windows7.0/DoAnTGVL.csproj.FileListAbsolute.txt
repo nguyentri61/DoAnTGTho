@@ -451,3 +451,5 @@ D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UCThongKeTN.g.cs
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThongKe.baml
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThongKeCV.baml
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UCThongKeTN.baml
+D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCTienDoViecTho.g.cs
+D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCTienDoViecTho.baml

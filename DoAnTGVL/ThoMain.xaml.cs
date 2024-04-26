@@ -81,7 +81,7 @@ namespace DoAnTGVL
 
         private void mnuDSVL_Click(object sender, RoutedEventArgs e)
         {
-            CurUC = new UCDSCongViecTho(tho);
+            CurUC = new UCTienDoViecTho(tho);
             gridMainWin.Children.Clear();
             gridMainWin.Children.Add(CurUC);
         }
@@ -96,6 +96,13 @@ namespace DoAnTGVL
         private void mnuThongKe_Click(object sender, RoutedEventArgs e)
         {
             CurUC = new UCThongKe(tho);
+            gridMainWin.Children.Clear();
+            gridMainWin.Children.Add(CurUC);
+        }
+
+        private void mnuLichSu_Click(object sender, RoutedEventArgs e)
+        {
+            CurUC = new UCDSCongViecTho(tho);
             gridMainWin.Children.Clear();
             gridMainWin.Children.Add(CurUC);
         }
