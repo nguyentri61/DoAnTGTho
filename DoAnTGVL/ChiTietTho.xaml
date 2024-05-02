@@ -90,7 +90,7 @@
                         <Border BorderBrush="#D5E0D5" BorderThickness="0 0 0 1">
                             <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 20">
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <TextBlock Text="{Binding Path= DanhGia}" FontSize="20" Margin="0 0 5 0" />
+                                    <TextBlock Text="{Binding Path= DanhGia, StringFormat={}{0:N1}}" FontSize="20" Margin="0 0 5 0" />
                                     <TextBlock Text="trên 5" FontSize="15" VerticalAlignment="Bottom" Margin="0 0 0 1"/>
                                 </StackPanel>
 

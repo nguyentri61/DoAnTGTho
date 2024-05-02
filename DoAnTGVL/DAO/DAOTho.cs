@@ -86,5 +86,11 @@ namespace DoAnTGVL.DAO
             string query = string.Format("Select * From Tho Where Id = {0}", id);
             return dbConection.ReadDatabaseTho(query);
         }
+
+        internal void UpDateDG(List<float> danhGiaTho)
+        {
+            string sql = string.Format("Update Tho Set DanhGia={0} Where Id={1}", danhGiaTho[0], danhGiaTho[1]);
+            dbConection.Process(sql);
+        }
     }
 }

@@ -42,8 +42,8 @@
                 <Grid Grid.Row="3">
                     <StackPanel Orientation="Vertical">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                            
-                            <TextBlock x:Name="txtDanhGia" Text="{Binding Path= DanhGia}" FontWeight="DemiBold" FontSize="16" Foreground="#5E6D55" ></TextBlock>
+
+                            <TextBlock x:Name="txtDanhGia" Text="{Binding Path= DanhGia, StringFormat={}{0:N1}}" FontWeight="DemiBold" FontSize="16" Foreground="#5E6D55" ></TextBlock>
                             <TextBlock Text="/5" FontSize="16" Foreground="#5E6D55" ></TextBlock>
                             <materialDesign:PackIcon  Kind="Star" VerticalAlignment="Center" Foreground="#14A800" />
                             <TextBlock Text=" | " FontSize="16" Foreground="#5E6D55"></TextBlock>

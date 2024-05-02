@@ -11,6 +11,8 @@ using System.Collections;
 using System.Reflection.PortableExecutable;
 using System.Windows.Markup;
 using System.Linq;
+using Microsoft.VisualStudio.Shell.Interop;
+using System.Windows.Media.Media3D;
 
 namespace DoAnTGVL.DAO
 {
@@ -431,6 +433,43 @@ namespace DoAnTGVL.DAO
                 }
             }
             return thuNhap;
+        }
+
+        internal List<float> ReadSaoDatabase(string sqlStr)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.connstring);
+            List<float> dgId = new List<float>();
+            using (conn)
+            {
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+                try
+                {
+                    conn.Open();
+                    SqlDataReader dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        float tong = Convert.ToInt32(dataReader["Tong"]);
+                        int sl = Convert.ToInt32(dataReader["SLuong"]);
+                        float idTho = Convert.ToInt32(dataReader["Id"]);
+                        MessageBox.Show(tong.ToString() + " " + sl.ToString());
+                        
+                        // Thêm giá trị thu nhập vào danh sách
+                        if (sl != 0)
+                            dgId.Add(tong/sl);
+                        dgId.Add(idTho);
+                        
+                        return dgId;
+                                  
+                    }
+                    dataReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            return null;
         }
     }
 }

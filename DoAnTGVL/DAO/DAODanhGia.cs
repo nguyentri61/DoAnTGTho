@@ -36,5 +36,11 @@ namespace DoAnTGVL.DAO
                 sqlStr += string.Format(" and DanhGia.Image  !=''");
             return dbConection.ReadDatabaseDanhGia(sqlStr);
         }
+
+        internal List<float> ReadSao(int idCV)
+        {
+            string sqlStr = string.Format("(select sum(DanhGia.DanhGia) as Tong,COUNT(DanhGia.DanhGia) as SLuong, Tho.Id from Tho,DanhGia, DSCongViec where  DSCongViec.ID={0} and DSCongViec.IDTho = Tho.Id group by Tho.Id) ", idCV);
+            return dbConection.ReadSaoDatabase(sqlStr);
+        }
     }
 }

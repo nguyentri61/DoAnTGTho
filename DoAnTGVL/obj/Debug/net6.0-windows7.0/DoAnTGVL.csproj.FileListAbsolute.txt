@@ -455,3 +455,7 @@ D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCTienDoViecT
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCTienDoViecTho.baml
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\ChiTietLichSuViecTho.g.cs
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\ChiTietLichSuViecTho.baml
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\ChiTietLichSuViecTho.g.cs
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCTienDoViecTho.g.cs
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\ChiTietLichSuViecTho.baml
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCTienDoViecTho.baml

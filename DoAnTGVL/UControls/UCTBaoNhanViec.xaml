@@ -32,7 +32,7 @@
                     </Button>
                     <Button x:Name="nvButton"
     
-                    Content="Nhận việc"
+                    Content="Nhận thợ"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                              Style="{StaticResource MaterialDesignRaisedDarkButton}"
                             ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" VerticalAlignment="Bottom" Height="40" Width="143" Click="btnXacNhan_Click" >

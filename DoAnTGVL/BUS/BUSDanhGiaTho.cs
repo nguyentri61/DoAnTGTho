@@ -18,6 +18,7 @@ namespace DoAnTGVL.BUS
         private string image = "";
         
         DAODanhGia dAODanhGia = new DAODanhGia();   
+        DAOTho dAOTho = new DAOTho();
 
         public string Image { get => image; set => image = value; }
 
@@ -63,7 +64,11 @@ namespace DoAnTGVL.BUS
         public void AddData(DanhGia danhGia,int idCV)
         {
             if (danhGia.MoTaDanhGia != "" && danhGia.DanhGiaCV != 0)
-                dAODanhGia.Add(danhGia,idCV, Image);
+            {
+                dAODanhGia.Add(danhGia, idCV, Image);
+                List<float> danhGiaTho = dAODanhGia.ReadSao(idCV);
+                dAOTho.UpDateDG(danhGiaTho);
+            }
             else
                 new ShowDialogCustom("Vui lòng nhập đầy đủ thông tin!", ShowDialogCustom.OK).Show();
         }
