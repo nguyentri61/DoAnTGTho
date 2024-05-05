@@ -13,8 +13,8 @@
             <RowDefinition Height="100"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid>
-            <TextBlock Text="Thống kê thu nhập trong năm" FontSize="20" FontFamily="Segoe UI Variable Small Semibold" ForceCursor="True">
+        <Grid Grid.Row="0">
+            <TextBlock Text="Thống kê thu nhập trong năm" FontSize="25" FontFamily="Segoe UI Variable Small Semibold" ForceCursor="True" HorizontalAlignment="Center" Margin="0 5 0 0">
                 <TextBlock.Foreground>
                     <SolidColorBrush Color="{DynamicResource Primary700}"/>
                 </TextBlock.Foreground>

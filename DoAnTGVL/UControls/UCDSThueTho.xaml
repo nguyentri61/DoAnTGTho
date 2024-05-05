@@ -12,26 +12,26 @@
         
         <TabControl x:Name="TabTrangThai">
 
-            <TabItem x:Name="Tabcxn" Header="Chờ xác nhận" Loaded="Tab_Loaded" Foreground="BlanchedAlmond">
-                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+            <TabItem x:Name="Tabcxn" Header="Chờ xác nhận" Loaded="Tab_Loaded">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2">
                     <StackPanel x:Name="staChoXacNhan"></StackPanel>
                 </ScrollViewer>
             </TabItem>
 
             <TabItem x:Name="Tabcth" Header="Chưa thực hiện" Loaded="Tab_Loaded">
-                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2">
                     <StackPanel x:Name="staChuaThucHien"></StackPanel>
                 </ScrollViewer>
             </TabItem>
 
             <TabItem x:Name="Tabdth" Header="Đang thực hiện" >
-                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" HorizontalAlignment="Center" >
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2">
                     <StackPanel x:Name="staDangThucHien"></StackPanel>
                 </ScrollViewer>
             </TabItem>
 
             <TabItem x:Name="Tabdht" Header="Đã hoàn thành" >
-                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2">
                     <StackPanel x:Name="staHoanThanh"></StackPanel>
                 </ScrollViewer>
             </TabItem>

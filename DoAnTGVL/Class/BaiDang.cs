@@ -11,6 +11,7 @@ namespace DoAnTGVL.Class
     {
         private int iD;
         private string iDUser;
+        private string tenUser;
         private string tieuDe;
         private string linhVuc;
         private string khuVuc;
@@ -44,6 +45,7 @@ namespace DoAnTGVL.Class
         public string GhiChu { get => ghiChu; set => ghiChu = value; }
         public string YeuCau { get => yeuCau; set => yeuCau = value; }
         public string LinhVuc { get => linhVuc; set => linhVuc = value; }
+        public string TenUser { get => tenUser; set => tenUser = value; }
 
         public event PropertyChangedEventHandler? PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)

@@ -33,7 +33,6 @@ namespace DoAnTGVL.UControls
             this.tho = tho;
             LoadChart();
             DataContext = this;
-
         }
 
         public Func<ChartPoint, string> PointLabel { get; set; }

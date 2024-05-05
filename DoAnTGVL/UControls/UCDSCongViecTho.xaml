@@ -71,33 +71,33 @@ materialDesign:ShadowAssist.ShadowDepth="Depth1">
                             </Style>
                         </GridView.ColumnHeaderContainerStyle>
 
-                        <GridViewColumn Width="430" Header="Tiêu Đề" DisplayMemberBinding="{Binding TieuDe}"/>
+                        <GridViewColumn Width="440" Header="Tiêu Đề" DisplayMemberBinding="{Binding TieuDe}"/>
 
-                        <GridViewColumn Width="130" Header="Lĩnh Vực">
+                        <GridViewColumn Width="150" Header="Lĩnh Vực">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding LinhVuc}" Margin="20 0 0 0"></TextBlock>
+                                    <TextBlock Text="{Binding LinhVuc}" Margin="30 0 0 0"></TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn Width="130" Header="Khu Vực" >
+                        <GridViewColumn Width="150" Header="Khu Vực">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding KhuVuc}" Margin="20 0 0 0"></TextBlock>
+                                    <TextBlock Text="{Binding KhuVuc}" Margin="30 0 0 0"></TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn Width="160" Header="Ngày Làm" >
+                        <GridViewColumn Width="180" Header="Ngày Làm" >
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding DateThue , StringFormat={}{0:MM/dd/yyy}}" Margin="20 0 0 0"></TextBlock>
+                                    <TextBlock Text="{Binding DateThue , StringFormat={}{0:MM/dd/yyy}}" Margin="30 0 0 0"></TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn Width="160" Header="Trạng Thái">
+                        <GridViewColumn Width="170" Header="Trạng Thái">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding TrangThai}" Margin="20 0 0 0"></TextBlock>
@@ -114,21 +114,8 @@ materialDesign:ShadowAssist.ShadowDepth="Depth1">
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-
-                        <GridViewColumn Header="Xóa" Width="80">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button HorizontalAlignment="Center" Background="#03417F" BorderThickness="0" Margin="2 0 0 0" Style="{DynamicResource d}" Click="btn_Xoa">
-                                        <materialDesign:PackIcon Kind="RemoveOutline"/>
-                                    </Button>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-
                     </GridView>
-
                 </ListView.View>
-
             </ListView>
         </Grid>
     </Grid>

@@ -32,7 +32,6 @@ namespace DoAnTGVL
             this.DataContext = baidang; 
             this.tho = tho;
             this.baiDang = baidang;
-            
         }
 
         private void btnHuy_Click(object sender, RoutedEventArgs e)

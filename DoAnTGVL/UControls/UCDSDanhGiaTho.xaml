@@ -17,11 +17,11 @@
 
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <materialDesign:ColorZone Grid.Column="0" Height="120" Mode="PrimaryLight" Background="#FFF4F4F4">
+            <materialDesign:ColorZone Grid.Column="0" Height="120" Mode="PrimaryLight" Background="#FFF4F4F4" BorderBrush="#717171" BorderThickness="0 0 1 0">
                 <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10 0 0 0">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBlock Text="4.5" FontSize="20" Margin="0 0 5 0" />
@@ -35,7 +35,6 @@
                                               Value="4.5" />
 
                 </StackPanel>
-
             </materialDesign:ColorZone>
 
             <Grid Grid.Column="1" Background="#FFF4F4F4">
@@ -44,8 +43,8 @@
                     <RowDefinition Height="4*"></RowDefinition>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <materialDesign:ColorZone Height="60" Mode="PrimaryLight" Background="#FFF4F4F4" VerticalAlignment="Center">
 
+                <materialDesign:ColorZone Height="60" Mode="PrimaryLight" Background="#FFF4F4F4" VerticalAlignment="Center">
                     <StackPanel  Orientation="Horizontal">
                         <ListBox FontSize="20" VerticalAlignment="Center"
                           x:Name="RadioButtonGroupChoiceChip"
@@ -57,21 +56,16 @@
                             <ListBoxItem  Margin="30 0 0 0" Content="2 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown" />
                             <ListBoxItem  Margin="30 0 0 0" Content="1 Sao" PreviewMouseDown="ListBoxItem_PreviewMouseDown" />
                         </ListBox>
-
                     </StackPanel>
-
                 </materialDesign:ColorZone>
 
-                <CheckBox 
-                Content="Có hình ảnh"
-                    FontSize="20"
-                Style="{StaticResource MaterialDesignCheckBox}" 
-                Height="30" Grid.Row="1"
-                    IsChecked="{Binding CoAnh}"
-                    Margin="60,15,0,3" Click="CheckBox_Click"
-/>
+                <CheckBox Content="Có hình ảnh"
+                            FontSize="20"
+                            Style="{StaticResource MaterialDesignCheckBox}" 
+                            Height="30" Grid.Row="1"
+                            IsChecked="{Binding CoAnh}"
+                            Margin="60,15,0,3" Click="CheckBox_Click"/>
             </Grid>
-
         </Grid>
 
 

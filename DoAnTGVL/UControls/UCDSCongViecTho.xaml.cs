@@ -50,22 +50,6 @@ namespace DoAnTGVL.UControls
             lsvDSCV.ItemsSource = buschitietcv.FilterCVHT(filterDSCongViec, tho.Id);
         }
 
-        private void btn_Xoa(object sender, RoutedEventArgs e)
-        {
-            var congviec = (sender as Button).DataContext as CongViec;
-            int index = lsvDSCV.Items.IndexOf((sender as Button).DataContext);
-
-            var thongbao = new ShowDialogCustom("Bạn có thật sự muốn Xóa công việc này? ", ShowDialogCustom.YesNo);
-
-            if (thongbao.ShowDialog() == true)
-            {
-                new ShowDialogCustom("Xoá thành công", ShowDialogCustom.OK).Show();
-                buschitietcv.Xoa(congviec);
-                LoadDataIntoListView();
-            }
-
-        }
-
         private void btn_XemChiTiet(object sender, RoutedEventArgs e)
         {
             var congviec = (sender as Button).DataContext as CongViec;

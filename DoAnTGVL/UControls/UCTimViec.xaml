@@ -17,9 +17,7 @@
 
             <materialDesign:ColorZone Grid.Row="0" Height="60"
 Mode="PrimaryLight" Background="#FFF4F4F4">
-
                 <StackPanel Orientation="Horizontal">
-
                     <ToggleButton
                           materialDesign:ToggleButtonAssist.OnContent="{materialDesign:PackIcon Kind=BellBadge}"
                           Content="{materialDesign:PackIcon Kind=Bell}"
@@ -27,7 +25,7 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                           ToolTip="Thông báo việc làm" Margin="50,0,0,0" Click="ToggleButton_Click" />
 
                     <Button Style="{DynamicResource MaterialDesignToolButton}" x:Name="btn_reload" Click="btn_reload_Click" Margin="50,0,0,0">
-                        <materialDesign:PackIcon Kind="Reload" Height="25" Width="25"  />
+                        <materialDesign:PackIcon Kind="Reload" Height="25" Width="25" />
                     </Button>
                     <StackPanel Orientation="Horizontal">
                         <ComboBox 
@@ -36,38 +34,22 @@ Mode="PrimaryLight" Background="#FFF4F4F4">
                         materialDesign:TextFieldAssist.HasClearButton="True"
                         Width="200" Height="50" Margin="15,0,0,0"
                         FontSize="20" BorderThickness="0"
-                        IsEditable="True" SelectionChanged="fil_SelectionChanged"
-                        >
-                            <ComboBoxItem
-                        Content="Quận 1" />
-                            <ComboBoxItem
-                        Content="Quận 2" />
-                            <ComboBoxItem
-                        Content="Quận 3" />
-                            <ComboBoxItem
-                        Content="Quận 4" />
-                            <ComboBoxItem
-                        Content="Quận 5" />
-                            <ComboBoxItem
-                        Content="Quận 6" />
-                            <ComboBoxItem
-                        Content="Quận 7" />
-                            <ComboBoxItem
-                        Content="Quận 8" />
-                            <ComboBoxItem
-                        Content="Quận 9" />
-                            <ComboBoxItem
-                        Content="Quận 10" />
-                            <ComboBoxItem
-                        Content="Quận 11" />
-                            <ComboBoxItem
-                        Content="Quận 12" />
-                            <ComboBoxItem
-                        Content="Thủ Đức" />
-                            <ComboBoxItem
-                        Content="Bình Thạnh" />
-                            <ComboBoxItem
-                        Content="Gò Vấp" />
+                        IsEditable="True" SelectionChanged="fil_SelectionChanged">
+                            <ComboBoxItem Content="Quận 1" />
+                            <ComboBoxItem Content="Quận 2" />
+                            <ComboBoxItem Content="Quận 3" />
+                            <ComboBoxItem Content="Quận 4" />
+                            <ComboBoxItem Content="Quận 5" />
+                            <ComboBoxItem Content="Quận 6" />
+                            <ComboBoxItem Content="Quận 7" />
+                            <ComboBoxItem Content="Quận 8" />
+                            <ComboBoxItem Content="Quận 9" />
+                            <ComboBoxItem Content="Quận 10" />
+                            <ComboBoxItem Content="Quận 11" />
+                            <ComboBoxItem Content="Quận 12" />
+                            <ComboBoxItem Content="Thủ Đức" />
+                            <ComboBoxItem Content="Bình Thạnh" />
+                            <ComboBoxItem Content="Gò Vấp" />
                         </ComboBox>
 
 

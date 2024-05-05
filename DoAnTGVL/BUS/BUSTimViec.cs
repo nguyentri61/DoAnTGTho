@@ -24,7 +24,7 @@ namespace DoAnTGVL.BUS
             {
                 userControl = new UCDanhSachCongViec(baidang,uctimviec.tho);
                 userControl.Width = 620;
-                userControl.Height = 370;
+                userControl.Height = 320;
                 userControl.Margin = new Thickness(10);
                 // Thêm UserControl vào WrapPanel
                 uctimviec.WpanelDanhS.Children.Add(userControl);
