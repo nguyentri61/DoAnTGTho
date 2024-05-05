@@ -15,6 +15,8 @@ namespace DoAnTGVL.Class
         private float danhGia;
         private bool dcYeuThich=false;
 
+        
+
         public Tho(int id, string hoTen, string cCCD, string sDT, DateTime dob, string khuvuc,string linhvuc,string chuyenmon, string kinhnghiem, int giaTien,float danhgia) : base(id, hoTen, cCCD, sDT, dob, khuvuc)
         {
             this.linhVuc = linhvuc;
@@ -23,6 +25,7 @@ namespace DoAnTGVL.Class
             this.danhGia = danhgia;
             this.Kinhnghiem= kinhnghiem;
         }
+        
 
         public string LinhVuc { get => linhVuc; set => linhVuc = value; }
         public string ChuyenMon { get => chuyenMon; set => chuyenMon = value; }

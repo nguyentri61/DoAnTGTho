@@ -14,7 +14,7 @@ namespace DoAnTGVL.BUS
         internal List<int>? GetCongViec(Tho tho, string thang)
         {
             List<int >? list = new List<int>();
-            list.Add(dAODSCongViec.CountCV(tho,thang, "Chưa thực hiện"));
+            list.Add(dAODSCongViec.CountCV(tho, thang, "Chưa thực hiện"));
             list.Add(dAODSCongViec.CountCV(tho, thang, "Đang thực hiện"));
             list.Add(dAODSCongViec.CountCV(tho, thang, "Đã hoàn thành"));
             return list;

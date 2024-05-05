@@ -30,15 +30,15 @@ namespace DoAnTGVL.UControls
         public UCThongKeCV(Tho tho)
         {
             InitializeComponent();
-            this.tho = tho;
-            LoadChart();
             DataContext = this;
+            this.tho= tho;
+            LoadChart();
         }
 
         public Func<ChartPoint, string> PointLabel { get; set; }
         private void cboThang_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            thang = (cboThang.SelectedItem != null) ? (cboThang.SelectedItem as ComboBoxItem).Content.ToString() : "";
+            thang = (cboThang.SelectedItem != null) ? (cboThang.SelectedItem as ComboBoxItem).Content.ToString() : DateTime.Now.Month.ToString();
             LoadChart();
         }
         private void LoadChart()

@@ -24,8 +24,9 @@
             <ComboBox Margin="50,50,0,0" x:Name="cboThang" HorizontalAlignment="Left"
                         Width="230" FontSize="15"
                         materialDesign:HintAssist.Hint="Chọn tháng"
+                       
                         Style="{StaticResource MaterialDesignOutlinedComboBox}" SelectionChanged="cboThang_SelectionChanged">
-                <ComboBoxItem Content="1" IsSelected="True"/>
+                <ComboBoxItem Content="1"/>
                 <ComboBoxItem Content="2" />
                 <ComboBoxItem Content="3" />
                 <ComboBoxItem Content="4" />
