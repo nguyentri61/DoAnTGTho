@@ -130,7 +130,7 @@
                             <Grid Grid.Column="1" Height="30" Width="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25 15 0 0">
                                 <materialDesign:PackIcon Kind="Magic" Height="24" Width="25" VerticalAlignment="Center"/>
                                 <ComboBox HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                                 FontSize="15" Text="{Binding Path= Kinhnghiem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 FontSize="15" Text="{Binding Kinhnghiem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                 materialDesign:HintAssist.Hint="Kinh nghiệm"
                                 Height="30" Padding="5" Width="220">
                                     <ComboBoxItem Content="Ít hơn 1 năm" />
@@ -143,8 +143,8 @@
                                 <materialDesign:PackIcon Kind="Work" Height="24" Width="25" VerticalAlignment="Center"/>
                                 <ComboBox HorizontalAlignment="Right" VerticalAlignment="Bottom"
                                              FontSize="15" 
-                                            Text="{Binding Path= LinhVuc, UpdateSourceTrigger=PropertyChanged}"
-   
+                                            Text="{Binding LinhVuc, UpdateSourceTrigger=PropertyChanged}"
+                                            materialDesign:HintAssist.Hint="Lĩnh vực"
                                             Height="30" Padding="5" Width="220">
                                     <ComboBoxItem Content="Gia Sư" />
                                     <ComboBoxItem Content="Sửa Nhà" />
@@ -173,7 +173,7 @@
 
                 </Grid>
                 
-                <Button Width="120" Height="40" Background="#478C10" Content="Lưu" FontSize="18"
+                <Button Width="120" Height="40" Background="#478C10" Content="Lưu" FontSize="18" Click="btn_Luu_Click"
                 HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,368,0,0">
                     <Button.Clip>
                         <RectangleGeometry Rect="0,0,120,40" RadiusX="10" RadiusY="10"/>

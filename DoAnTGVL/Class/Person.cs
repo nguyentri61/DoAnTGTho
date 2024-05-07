@@ -29,7 +29,7 @@ namespace DoAnTGVL.Class
         public string CCCD { get => cCCD; set => cCCD = value; }
         public string SDT { get => sDT; set => sDT = value; }
         public DateTime Dob { get => dob; set => dob = value; }
-        public string Khuvuc { get => khuvuc; set => khuvuc = value; }
         public int Id { get => id; set => id = value; }
+        public string Khuvuc { get => khuvuc; set => khuvuc = value; }
     }
 }

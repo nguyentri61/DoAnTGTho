@@ -92,5 +92,13 @@ namespace DoAnTGVL.DAO
             string sql = string.Format("Update Tho Set DanhGia={0} Where Id={1}", danhGiaTho[0], danhGiaTho[1]);
             dbConection.Process(sql);
         }
+
+        public void Sua(Tho tho)
+        {
+            string query = string.Format("Update Tho Set HoTen = N'{0}', CCCD = '{1}', SDT = '{2}', Dob = '{3}', KhuVuc = N'{4}', LinhVuc = N'{5}', ChuyenMon = N'{6}', KinhNghiem = N'{7}', GiaTien = {8}  Where Id={9}", 
+                tho.HoTen, tho.CCCD, tho.SDT, tho.Dob.Date.ToShortDateString(), tho.Khuvuc, tho.LinhVuc, tho.ChuyenMon, tho.KinhNghiem, tho.GiaTien, tho.Id);
+            dbConection.Process(query);
+        }
+
     }
 }

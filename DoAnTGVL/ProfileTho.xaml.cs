@@ -1,4 +1,5 @@
 ﻿using DoAnTGVL.Class;
+using DoAnTGVL.DAO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace DoAnTGVL
     public partial class ProfileTho : Window
     {
         Tho tho;
+        DAOTho daotho = new DAOTho();
         public ProfileTho(Tho tho)
         {
             InitializeComponent();
@@ -31,6 +33,12 @@ namespace DoAnTGVL
         private void click_Huy(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void btn_Luu_Click(object sender, RoutedEventArgs e)
+        {
+            daotho.Sua(tho);
+            new ShowDialogCustom("Lưu thành công", ShowDialogCustom.OK).Show();
         }
     }
 }

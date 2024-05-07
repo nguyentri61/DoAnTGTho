@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL 3500\\Desktop\\Winform\\DoAnTGTho\\DoAnTGVL\\DoAnTGVL.csproj": {}
+    "D:\\WinForm\\DoAnTGVL\\DoAnTGVL\\DoAnTGVL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL 3500\\Desktop\\Winform\\DoAnTGTho\\DoAnTGVL\\DoAnTGVL.csproj": {
+    "D:\\WinForm\\DoAnTGVL\\DoAnTGVL\\DoAnTGVL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL 3500\\Desktop\\Winform\\DoAnTGTho\\DoAnTGVL\\DoAnTGVL.csproj",
+        "projectUniqueName": "D:\\WinForm\\DoAnTGVL\\DoAnTGVL\\DoAnTGVL.csproj",
         "projectName": "DoAnTGVL",
-        "projectPath": "C:\\Users\\DELL 3500\\Desktop\\Winform\\DoAnTGTho\\DoAnTGVL\\DoAnTGVL.csproj",
-        "packagesPath": "C:\\Users\\DELL 3500\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL 3500\\Desktop\\Winform\\DoAnTGTho\\DoAnTGVL\\obj\\",
+        "projectPath": "D:\\WinForm\\DoAnTGVL\\DoAnTGVL\\DoAnTGVL.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\WinForm\\DoAnTGVL\\DoAnTGVL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL 3500\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -85,7 +89,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
