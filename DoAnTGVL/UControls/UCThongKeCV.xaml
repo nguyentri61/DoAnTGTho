@@ -22,9 +22,8 @@
             </TextBlock>
             
             <ComboBox Margin="50,50,0,0" x:Name="cboThang" HorizontalAlignment="Left"
-                        Width="230" FontSize="15"
+                        Width="230" FontSize="13"
                         materialDesign:HintAssist.Hint="Chọn tháng"
-                       
                         Style="{StaticResource MaterialDesignOutlinedComboBox}" SelectionChanged="cboThang_SelectionChanged">
                 <ComboBoxItem Content="1"/>
                 <ComboBoxItem Content="2" />
@@ -48,7 +47,7 @@
                              LabelPoint="{Binding PointLabel}"/>
                     <lvc:PieSeries x:Name="pieDangth" Title="Đang thực hiện"  DataLabels="True" 
                              LabelPoint="{Binding PointLabel}"/>
-                    <lvc:PieSeries x:Name="pieDath"  DataLabels="True" Title="Đã thực hiện" 
+                    <lvc:PieSeries x:Name="pieDath"  DataLabels="True" Title="Đã hoàn thành" 
                              LabelPoint="{Binding PointLabel}"/>
                 </lvc:PieChart.Series>
             </lvc:PieChart>

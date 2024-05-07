@@ -85,12 +85,11 @@
                                   Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                             </Grid>
                             <Grid Height="30" Width="213" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40 40 0 0">
-                                <materialDesign:PackIcon Kind="GenderMaleFemaleVariant" Height="25" Width="25" VerticalAlignment="Center"/>
-
+                                <materialDesign:PackIcon Kind="Money" Height="25" Width="25" VerticalAlignment="Center"/>
 
                                 <ComboBox x:Name="cbGioiTinh" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="30 0 0 0"
                                     Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                                    materialDesign:HintAssist.Hint="Giới tính"
+                                    materialDesign:HintAssist.Hint="Giá tiền"
                                     Height="25" Padding="5" Width="180">
                                     <ComboBoxItem Content="Nam" />
                                     <ComboBoxItem Content="Nữ" />

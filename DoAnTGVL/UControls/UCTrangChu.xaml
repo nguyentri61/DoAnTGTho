@@ -52,7 +52,7 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Column="0" Width="350">
-                    <GroupBox Header="Họ và tên"  FontSize="20" Margin="0 100 0 0"
+                    <GroupBox Header="Họ và tên"  FontSize="20" Margin="0 100 0 0" 
                               Style="{DynamicResource d}" BorderBrush="#FF4D4444" Foreground="#FF4D4A4A">
 
                         <TextBlock FontSize="25" Text="Nguyễn Văn A" Margin="5 5 0 5"></TextBlock>

@@ -8,9 +8,7 @@
             Title="" Height="450" Width="635">
     <Grid>
         <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <WrapPanel x:Name="wrapTbao">
-
-            </WrapPanel>
+            <WrapPanel x:Name="wrapTbao"/>
         </ScrollViewer>
     </Grid>
 </Window>

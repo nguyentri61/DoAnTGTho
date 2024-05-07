@@ -24,14 +24,12 @@ namespace DoAnTGVL.UControls
     public partial class UCDSDanhGiaTho : UserControl
     {
         Tho tho;
-        User user;
         FilterDanhGia filterDanhGia=new FilterDanhGia();
         BUSDanhGiaTho bUSDanhGiaTho = new BUSDanhGiaTho();
-        public UCDSDanhGiaTho(Tho tho, User user)
+        public UCDSDanhGiaTho(Tho tho)
         {
             InitializeComponent();
             this.DataContext = tho;
-            this.user = user;
             this.tho = tho;
             DataContext = filterDanhGia;
             bUSDanhGiaTho.CreateWrapDanhGia(tho,filterDanhGia, this);

@@ -32,8 +32,6 @@ namespace DoAnTGVL
             this.user = user;
             InitializeComponent();
             gridMainWin.Children.Add(CurUC);
-
-
         }
         public void MnuLogout_Click(object sender, RoutedEventArgs e)
         {

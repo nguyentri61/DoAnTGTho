@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnTGVL.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,12 @@ namespace DoAnTGVL
     /// </summary>
     public partial class ProfileTho : Window
     {
-        public ProfileTho()
+        Tho tho;
+        public ProfileTho(Tho tho)
         {
             InitializeComponent();
+            this.tho = tho;
+            this.DataContext = tho;
         }
 
         private void click_Huy(object sender, RoutedEventArgs e)

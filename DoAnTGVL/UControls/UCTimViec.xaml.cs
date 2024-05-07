@@ -25,9 +25,7 @@ namespace DoAnTGVL.UControls
     {
         BUSTimViec bustimviec = new BUSTimViec();
         FilterBaiDang filterBaiDang=new FilterBaiDang();
-        BUSThongBaoThue bUSThongBaoThue = new BUSThongBaoThue();
         public Tho tho;
-        public User user;
         public UCTimViec(Tho tho)
         {
             InitializeComponent();
@@ -44,7 +42,7 @@ namespace DoAnTGVL.UControls
         }
         private void btnUploadProfile_Click(object sender, RoutedEventArgs e)
         {
-            Window profile = new ProfileTho();
+            Window profile = new ProfileTho(tho);
             profile.Show();
         }
         private void txbTimKiem_KeyUp(object sender, KeyEventArgs e)
@@ -64,5 +62,4 @@ namespace DoAnTGVL.UControls
             thongbaoThue.Show();
         }
     }
-
 }

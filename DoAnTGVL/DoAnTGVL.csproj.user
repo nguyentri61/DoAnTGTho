@@ -121,9 +121,6 @@
     <Compile Update="XacNhanThueTho.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="XuatHoaDon.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="ChinhSuaBaiDang.xaml">
@@ -253,9 +250,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="XacNhanThueTho.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="XuatHoaDon.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

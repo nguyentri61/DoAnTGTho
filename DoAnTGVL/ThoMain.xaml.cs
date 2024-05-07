@@ -27,7 +27,6 @@ namespace DoAnTGVL
         private UserControl PreUC = new UCHome();
         private UserControl CurUC = new UCHome();
         Tho tho;
-        User user;
         public ThoMain(Tho tho)
         {
             this.tho= tho;
@@ -42,7 +41,6 @@ namespace DoAnTGVL
         }
         public void mnuSuaCV_Click(object sender, RoutedEventArgs e)
         {
-
             CurUC = new UCSuaCV();
             gridMainWin.Children.Remove(PreUC);
             PreUC = CurUC;
@@ -52,7 +50,6 @@ namespace DoAnTGVL
         {
             ButtonCloseMenu.Visibility = Visibility.Visible;
             ButtonOpenMenu.Visibility = Visibility.Collapsed;
-
         }
 
         private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
@@ -88,7 +85,7 @@ namespace DoAnTGVL
 
         private void mnLuotDGia_Click(object sender, RoutedEventArgs e)
         {
-            CurUC = new UCDSDanhGiaTho(tho, user);
+            CurUC = new UCDSDanhGiaTho(tho);
             gridMainWin.Children.Clear();
             gridMainWin.Children.Add(CurUC);
         }

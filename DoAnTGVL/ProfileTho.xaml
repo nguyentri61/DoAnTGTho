@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoAnTGVL"
         mc:Ignorable="d"
+        xmlns:converts="clr-namespace:DoAnTGVL.Converts"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Profile Thợ" Height="490" Width="700"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -18,6 +19,9 @@
         AllowsTransparency="True" 
         WindowStartupLocation="CenterScreen">
 
+    <Window.Resources>
+        <converts:StringToDateConverter x:Key="StringToDateConverter"/>
+    </Window.Resources>
     <Window.Clip>
         <RectangleGeometry Rect="0,0,700,490" RadiusX="10" RadiusY="10">
         </RectangleGeometry>
@@ -56,11 +60,11 @@
                             </Grid.ColumnDefinitions>
                             <Grid Grid.Column="0" Height="30" Width="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25 15 0 0">
                                 <materialDesign:PackIcon Kind="AccountBox" Height="25" Width="25"/>
-                                <TextBox Margin="30 0 0 0" FontSize="15" materialDesign:HintAssist.Hint="Họ và tên"/>
+                                <TextBox Text="{Binding HoTen, UpdateSourceTrigger=PropertyChanged}" Margin="30 0 0 0" FontSize="15" materialDesign:HintAssist.Hint="Họ và tên"/>
                             </Grid>
                             <Grid Grid.Column="1" Height="30" Width="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25 15 0 0">
                                 <materialDesign:PackIcon Kind="IdCard" Height="25" Width="25"/>
-                                <TextBox Margin="30 0 0 0" FontSize="15" materialDesign:HintAssist.Hint="CCCD"/>
+                                <TextBox Text="{Binding CCCD, UpdateSourceTrigger=PropertyChanged}" Margin="30 0 0 0" FontSize="15" MaxLength="12" materialDesign:HintAssist.Hint="CCCD"/>
                             </Grid>
                         </Grid>
 
@@ -73,11 +77,12 @@
                                 <materialDesign:PackIcon Kind="CalendarToday" Height="25" Width="25" VerticalAlignment="Top"/>
                                 <DatePicker Margin="30 0 0 0" FontSize="14" Height="35"
                                              materialDesign:HintAssist.Hint="Ngày sinh"
+                                           SelectedDate="{Binding Dob, UpdateSourceTrigger=PropertyChanged,Converter={StaticResource StringToDateConverter}}"
                                              Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
                             </Grid>
                             <Grid Grid.Column="1" Height="30" Width="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25 15 0 0">
                                 <materialDesign:PackIcon Kind="Phone" Height="25" Width="25"/>
-                                <TextBox Margin="30 0 0 0" MaxLength="10" FontSize="15" materialDesign:HintAssist.Hint="Nhập SDT"/>
+                                <TextBox Text="{Binding SDT, UpdateSourceTrigger=PropertyChanged}" Margin="30 0 0 0" MaxLength="10" FontSize="15" materialDesign:HintAssist.Hint="Nhập SDT"/>
                             </Grid>
                         </Grid>
 
@@ -99,9 +104,9 @@
                             <Grid Grid.Column="1" Height="30" Width="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25 15 0 0">
                                 <materialDesign:PackIcon Kind="Map" Height="24" Width="25" VerticalAlignment="Center"/>
                                 <ComboBox HorizontalAlignment="Right" VerticalAlignment="Bottom"
-         FontSize="15"
-        materialDesign:HintAssist.Hint="Khu vực"
-        Height="30" Padding="5" Width="220">
+                                         FontSize="15" Text="{Binding Khuvuc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        materialDesign:HintAssist.Hint="Khu vực"
+                                        Height="30" Padding="5" Width="220">
                                     <ComboBoxItem Content="Thủ Đức" />
                                     <ComboBoxItem Content="Quận 1" />
                                     <ComboBoxItem Content="Quận 2" />
@@ -125,7 +130,7 @@
                             <Grid Grid.Column="1" Height="30" Width="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25 15 0 0">
                                 <materialDesign:PackIcon Kind="Magic" Height="24" Width="25" VerticalAlignment="Center"/>
                                 <ComboBox HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                                 FontSize="15"
+                                 FontSize="15" Text="{Binding Path= Kinhnghiem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                 materialDesign:HintAssist.Hint="Kinh nghiệm"
                                 Height="30" Padding="5" Width="220">
                                     <ComboBoxItem Content="Ít hơn 1 năm" />
@@ -137,9 +142,10 @@
                             <Grid Grid.Column="0" Height="30" Width="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25 15 0 0">
                                 <materialDesign:PackIcon Kind="Work" Height="24" Width="25" VerticalAlignment="Center"/>
                                 <ComboBox HorizontalAlignment="Right" VerticalAlignment="Bottom"
- FontSize="15"
-materialDesign:HintAssist.Hint="Lĩnh vực"
-Height="30" Padding="5" Width="220">
+                                             FontSize="15" 
+                                            Text="{Binding Path= LinhVuc, UpdateSourceTrigger=PropertyChanged}"
+   
+                                            Height="30" Padding="5" Width="220">
                                     <ComboBoxItem Content="Gia Sư" />
                                     <ComboBoxItem Content="Sửa Nhà" />
                                     <ComboBoxItem Content="Bảo Trì" />
@@ -150,21 +156,30 @@ Height="30" Padding="5" Width="220">
                         </Grid>
 
                         <Grid Height="50" Margin="0,15,0,0">
-                            <Grid Grid.Column="0" Height="30" Width="552" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25 15 0 0">
-                                <materialDesign:PackIcon Kind="Note" Height="25" Width="25"/>
-                                <TextBox Margin="30 0 0 0" FontSize="15" materialDesign:HintAssist.Hint="Mô tả chi tiết"/>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" Height="30" Width="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25 15 0 0">
+                                <materialDesign:PackIcon Kind="Ballot" Height="24" Width="25" VerticalAlignment="Center"/>
+                                <TextBox Text="{Binding ChuyenMon, UpdateSourceTrigger=PropertyChanged}" Margin="30 0 0 0" FontSize="15" materialDesign:HintAssist.Hint="Chuyên môn"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="30" Width="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25 15 0 0">
+                                <materialDesign:PackIcon Kind="Money" Height="24" Width="25" VerticalAlignment="Center"/>
+                                <TextBox Text="{Binding GiaTien, UpdateSourceTrigger=PropertyChanged}" Margin="30 0 0 0" FontSize="15" materialDesign:HintAssist.Hint="Giá tiền"/>
                             </Grid>
                         </Grid>
-
                     </StackPanel>
 
                 </Grid>
+                
                 <Button Width="120" Height="40" Background="#478C10" Content="Lưu" FontSize="18"
                 HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,368,0,0">
                     <Button.Clip>
                         <RectangleGeometry Rect="0,0,120,40" RadiusX="10" RadiusY="10"/>
                     </Button.Clip>
                 </Button>
+                
                 <Button Width="89" Height="40" Background="#9D9999" Content="Hủy" FontSize="18" Click="click_Huy"
                 HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,47,21">
                     <Button.Clip>
