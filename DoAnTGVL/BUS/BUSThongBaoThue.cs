@@ -36,7 +36,7 @@ namespace DoAnTGVL.BUS
 
         internal void NhanViec(CongViec congviec, Tho tho)
         {
-            congviec.TrangThai = "Chưa thưc hiện";
+            congviec.TrangThai = "Chưa thực hiện";
             dAODSCongViec.SuaDSCongViec(congviec,tho);
         }
     }
