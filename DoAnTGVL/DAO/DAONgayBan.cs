@@ -14,7 +14,7 @@ namespace DoAnTGVL.DAO
 
         internal void Them(int id, DateTime selectedDate)
         {
-            string query= string.Format("INSERT INTO NgayBan ( IdTho, NgayBan) VALUES ({0}, '{1}')"
+            string query= string.Format("INSERT INTO NgayBan ( IdTho, DateThue) VALUES ({0}, '{1}')"
                     , id,selectedDate.Date);
             dbConection.Process(query);
         }
@@ -22,7 +22,7 @@ namespace DoAnTGVL.DAO
         internal List<DateTime> TimNgayBan(int id)
         {
             string query = string.Format("Select * From NgayBan Where IdTho = {0}", id);
-            return dbConection.ReadDatabaseNgayBanTho(query);
+            return dbConection.ReadDatabaseNgayBan(query);
         }
     }
 }

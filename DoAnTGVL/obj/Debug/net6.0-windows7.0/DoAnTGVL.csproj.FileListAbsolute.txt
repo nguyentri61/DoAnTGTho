@@ -355,7 +355,6 @@ C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThoPhanHoi.g.cs
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThueTho.g.cs
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCTimViec.g.cs
-C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCTrangChu.g.cs
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UserPopup.g.cs
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UserMain.g.cs
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\XacNhanThueTho.g.cs
@@ -392,7 +391,6 @@ C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThoPhanHoi.baml
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThueTho.baml
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCTimViec.baml
-C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCTrangChu.baml
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UserPopup.baml
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UserMain.baml
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\XacNhanThueTho.baml
@@ -455,3 +453,5 @@ C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.
 C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThongKeTN.baml
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThongTinUser.g.cs
 D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThongTinUser.baml
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThongTinUser.g.cs
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\UControls\UCThongTinUser.baml

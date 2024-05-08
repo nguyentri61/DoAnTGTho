@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\WinForm\DoAnTGVL\DoAnTGVL\obj\Debug\net6.0-windows7.0\
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\obj\Debug\net6.0-windows7.0\
 DoAnTGVL
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\WinForm\DoAnTGVL\DoAnTGVL\App.xaml
+C:\Users\DELL 3500\Desktop\Winform\DoAnTGTho\DoAnTGVL\App.xaml
 441005825019
 3-32135712
 831836731888
-203-986360805
+2031858990214
 ChinhSuaBaiDang.xaml;ChinhSuaDSCongViec.xaml;ChiTietCongViec.xaml;ChiTietLichSuThueTho.xaml;ChiTietLichSuViecTho.xaml;ChiTietTho.xaml;ChiTietThongBao.xaml;DangBai.xaml;DanhGiaTho.xaml;LichBan.xaml;MainWindow.xaml;ProfileTho.xaml;ShowDialogCustom.xaml;Style\PagingButtonStyle.xaml;Style\UCstyle.xaml;Style\WinStyle.xaml;ThoHoanThanhCongViec.xaml;ThoMain.xaml;ThongBaoNhanTho.xaml;ThongBaoThue.xaml;UControls\UCDanhGia.xaml;UControls\UCDanhSachCongViec.xaml;UControls\UCDanhSachTho.xaml;UControls\UCDSBaiDangUser.xaml;UControls\UCDSCongViecTho.xaml;UControls\UCDSDanhGiaTho.xaml;UControls\UCDSThue.xaml;UControls\UCDSThueTho.xaml;UControls\UCHome.xaml;UControls\UCQuanLyBaiDang.xaml;UControls\UCSuaCV.xaml;UControls\UCTBaoNhanViec.xaml;UControls\UCTBaoThue.xaml;UControls\UCThongKe.xaml;UControls\UCThongKeCV.xaml;UControls\UCThongKeTN.xaml;UControls\UCThongTinUser.xaml;UControls\UCThoPhanHoi.xaml;UControls\UCThueTho.xaml;UControls\UCTienDoViecTho.xaml;UControls\UCTimViec.xaml;UControls\UserPopup.xaml;UserMain.xaml;XacNhanThueTho.xaml;
 
-False
+True
 
