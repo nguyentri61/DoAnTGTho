@@ -363,7 +363,7 @@ namespace DoAnTGVL.DAO
                         //    tho = new((int)dataReader[0], dataReader[1].ToString(), dataReader[2].ToString(), dataReader[3].ToString(),
                         //(DateTime)dataReader[4], dataReader[5].ToString(), dataReader[6].ToString(), dataReader[7].ToString(), dataReader[8].ToString(), (int)dataReader[9], Convert.ToSingle(dataReader[10]));
                         tho = new(
-                            id: (int)dataReader["ID"],
+                            id: (int)dataReader["Id"],
                             hoTen: dataReader["HoTen"].ToString(),
                             cCCD: dataReader["CCCD"].ToString(),
                             sDT: dataReader["SDT"].ToString(),
@@ -403,7 +403,6 @@ namespace DoAnTGVL.DAO
                         return count ;
                     }
                     dataReader.Close();
-
                 }
                 catch (Exception ex)
                 {

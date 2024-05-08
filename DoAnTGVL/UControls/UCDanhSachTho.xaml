@@ -48,7 +48,7 @@
                             <materialDesign:PackIcon  Kind="Star" VerticalAlignment="Center" Foreground="#14A800" />
                             <TextBlock Text=" | " FontSize="16" Foreground="#5E6D55"></TextBlock>
                             
-                            <TextBlock x:Name="txtKinhNghiem" Text="{Binding Path= Kinhnghiem }" FontWeight="DemiBold" FontSize="16" Foreground="#5E6D55" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="txtKinhNghiem" Text="{Binding Path= KinhNghiem }" FontWeight="DemiBold" FontSize="16" Foreground="#5E6D55" HorizontalAlignment="Center"/>
                             <TextBlock Text=" kinh nghiệm" FontSize="16" Foreground="#5E6D55"></TextBlock>
                         </StackPanel>
 

@@ -31,7 +31,7 @@ namespace DoAnTGVL.UControls
         public UCThongKe(Tho tho)
         {
             InitializeComponent();
-            MessageBox.Show(tho.HoTen);
+            //MessageBox.Show(tho.HoTen);
             UCThongKeCV uCThongKeCV = new UCThongKeCV(tho);
             grdTkCongViec.Children.Add(uCThongKeCV);
             UCThongKeTN uCThongKeTN = new UCThongKeTN(tho);

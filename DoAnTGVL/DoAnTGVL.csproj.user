@@ -7,54 +7,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="ChinhSuaBaiDang.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ChinhSuaDSCongViec.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ChiTietCongViec.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ChiTietLichSuThueTho.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ChiTietLichSuViecTho.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ChiTietTho.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ChiTietThongBao.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="DangBai.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="DanhGiaTho.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="LichBan.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ProfileTho.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ShowDialogCustom.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ThoHoanThanhCongViec.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ThoMain.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ThongBaoNhanTho.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="ThongBaoThue.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="UControls\UCDanhGia.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -118,50 +70,8 @@
     <Compile Update="UControls\UserPopup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserMain.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="XacNhanThueTho.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="ChinhSuaBaiDang.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ChinhSuaDSCongViec.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ChiTietCongViec.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ChiTietLichSuThueTho.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ChiTietLichSuViecTho.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ChiTietTho.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ChiTietThongBao.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="DangBai.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="DanhGiaTho.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="LichBan.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ProfileTho.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ShowDialogCustom.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Style\PagingButtonStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -171,19 +81,7 @@
     <Page Update="Style\WinStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ThoHoanThanhCongViec.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ThoMain.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ThongBaoNhanTho.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="ThongBaoThue.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCDanhGia.xaml">
@@ -250,12 +148,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UserPopup.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UserMain.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="XacNhanThueTho.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
