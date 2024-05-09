@@ -399,7 +399,7 @@ namespace DoAnTGVL.DAO
                     SqlDataReader dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
-                        count = (int)dataReader["ID"];
+                        count = (int)dataReader["DemCV"];
                         return count ;
                     }
                     dataReader.Close();

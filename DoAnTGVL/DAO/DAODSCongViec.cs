@@ -27,7 +27,7 @@ namespace DoAnTGVL.DAO
             string sqlString = string.Format("INSERT INTO DSCongViec ( IDTho, IDUser, TieuDe, MoTa, GhiChu,LinhVuc, KhuVuc, DateThue, TrangThai) VALUES ({0}, {1}, N'{2}', N'{3}',N'{4}',N'{5}',N'{6}','{7}', N'{8}')", congViec.IDTho, congViec.IDUser,
                 congViec.TieuDe, congViec.MoTa,congViec.GhiChu ,congViec.LinhVuc,congViec.KhuVuc ,congViec.DateThue, congViec.TrangThai);
             dbConection.Process(sqlString);
-            new ShowDialogCustom("Thuê thành công", ShowDialogCustom.OK).Show();
+            new ShowDialogCustom("Thuê thành công", ShowDialogCustom.OK).ShowDialog();
         }
 
         public void XoaDSCongViec(int textid)
@@ -165,7 +165,7 @@ namespace DoAnTGVL.DAO
 
         internal int CountCV(Tho tho,string thang, string trangthai)
         {
-            string query = string.Format("SELECT COUNT(*) FROM DSCongViec Where IDTho = {0} and TrangThai = N'{1}' and MONTH(DateThue)={2}", tho.Id, trangthai, thang);
+            string query = string.Format("SELECT COUNT(*) as DemCV FROM DSCongViec Where IDTho = {0} and TrangThai = N'{1}' and MONTH(DateThue)={2}", tho.Id, trangthai, thang);
             return dbConection.CountCongViec(query);
         }
 
