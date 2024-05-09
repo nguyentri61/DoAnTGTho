@@ -47,7 +47,7 @@ namespace DoAnTGVL.DAO
             string sqlString = string.Format("INSERT INTO DSCongViec ( IDTho, IDUser, TieuDe, MoTa, GhiChu,LinhVuc, KhuVuc, DateThue, TrangThai, IDBaiDang) VALUES ({0}, {1}, N'{2}', N'{3}',N'{4}',N'{5}',N'{6}','{7}', N'{8}',{9})", tho.Id, baiDang.IDUser,
               baiDang.TieuDe, baiDang.MoTa, baiDang.GhiChu,baiDang.LinhVuc, baiDang.KhuVuc, baiDang.DateThue, "Chờ được duyệt",baiDang.ID);
             dbConection.Process(sqlString);
-            new ShowDialogCustom("Nhận việc thành công", ShowDialogCustom.OK).Show();
+            new ShowDialogCustom("Nhận việc thành công", ShowDialogCustom.OK).ShowDialog();
         }
         public bool CheckNgayBan(DateTime date, int idTho)
         {
