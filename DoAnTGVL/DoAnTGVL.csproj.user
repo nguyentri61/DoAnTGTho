@@ -31,6 +31,9 @@
     <Compile Update="UControls\UCDSThueTho.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UControls\UCHienThongTinTho.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UControls\UCHome.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -50,6 +53,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UControls\UCThongKeCV.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UControls\UCThongTinTho.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UControls\UCThongTinUser.xaml.cs">
@@ -72,6 +78,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Style\PagingButtonStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -79,9 +88,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Style\WinStyle.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UCDanhGia.xaml">
@@ -108,6 +114,9 @@
     <Page Update="UControls\UCDSThueTho.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="UControls\UCHienThongTinTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UControls\UCHome.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -132,6 +141,9 @@
     <Page Update="UControls\UCThongKeTN.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="UControls\UCThongTinTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UControls\UCThongTinUser.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -148,6 +160,63 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UControls\UserPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ChinhSuaBaiDang.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ChinhSuaDSCongViec.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ChinhSuaThongTinTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ChiTietCongViec.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ChiTietLichSuThueTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ChiTietLichSuViecTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ChiTietTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ChiTietThongBao.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\DangBai.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\DanhGiaTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\LichBan.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ProfileTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ShowDialogCustom.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ThoHoanThanhCongViec.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ThoMain.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ThongBaoNhanTho.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\ThongBaoThue.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\UserMain.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WINDOW\XacNhanThueTho.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

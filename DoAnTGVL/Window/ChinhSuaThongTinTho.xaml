@@ -1,0 +1,125 @@
+﻿<Window x:Class="DoAnTGVL.Window.ChinhSuaThongTinTho"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAnTGVL.Window"
+        mc:Ignorable="d"
+        Height="700" Width="800"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"  
+        WindowStyle="None">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                 From="0.5" To="1.0" Duration="0:0:0:0.5" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Window.Clip>
+        <RectangleGeometry Rect="0,0,800,700" RadiusX="20" RadiusY="20">
+        </RectangleGeometry>
+    </Window.Clip>
+
+    <Border CornerRadius="20" BorderThickness="2" BorderBrush="#D5E0D5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="225"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Grid.Row="0" Width="150" Height="170" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.557,0.71">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/image/man.jpg"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+
+                <Grid Grid.Column="1">
+                    <Button Background="Transparent" BorderBrush="Transparent" Width="50" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 5 10 0" Click="btn_close_Click">
+                        <materialDesign:PackIcon Kind="Close" Height="30" Width="30" Foreground="#5E6D55" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Button>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                        <TextBox Text="{Binding Path = HoTen, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource d}" BorderThickness="0" Foreground="#001E00" FontSize="35" FontWeight="Black" Margin="0 27.5 0 0"/>
+
+                        <StackPanel Orientation="Horizontal" Margin="0 20 0 0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <materialDesign:PackIcon Kind="LocationCheckOutline" Height="40" Width="40" Foreground="#5E6D55" Margin="-7 0 0 0"/>
+                            <TextBox Text="{Binding Path = Khuvuc, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource d}" BorderThickness="0" FontSize="30" Foreground="#5E6D55" FontWeight="DemiBold"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0 20 0 0" VerticalAlignment="Center">
+                            <TextBlock Text="Giá thuê: " Foreground="#5E6D55" FontSize="30" FontWeight="DemiBold"/>
+                            <TextBox Text="{Binding Path= GiaTien, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource d}" BorderThickness="0" FontSize="30" Foreground="#5E6D55" FontWeight="DemiBold"/>
+                            <TextBlock Text="đ" Margin="2 0 0 0" FontSize="30" Foreground="#5E6D55" FontWeight="DemiBold"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Border Grid.Column="0" BorderBrush="#D5E0D5" BorderThickness="1">
+                    <StackPanel Orientation="Vertical">
+                        <Border BorderBrush="#D5E0D5" BorderThickness="0 0 0 1">
+                            <StackPanel Orientation="Vertical" Margin="5 20 0 20">
+                                <TextBlock Text="Lĩnh vực :" Foreground="#5E6D55" FontSize="20" FontWeight="Bold" Height="30"/>
+                                <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2" Width="220" Height="50">
+                                    <ComboBox BorderThickness="0" Padding="40 0 0 0" FontSize="25" Width="200" Height="40" Foreground="#5E6D55" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                            Text="{Binding Path=LinhVuc, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                        <ComboBoxItem Content="Điện Nước"/>
+                                        <ComboBoxItem Content="Điện Tử"/>
+                                        <ComboBoxItem Content="Bảo Trì"/>
+                                        <ComboBoxItem Content="Sửa Nhà"/>
+                                        <ComboBoxItem Content="Gia Sư"/>
+                                    </ComboBox>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+
+                        <Border BorderBrush="#D5E0D5" BorderThickness="0 0 0 1">
+                            <StackPanel Orientation="Vertical" Margin="5 20 0 20">
+                                <TextBlock Text="Chuyên môn :" Foreground="#5E6D55" FontSize="20" FontWeight="Bold" Height="30"/>
+                                <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2" Width="220" Height="50">
+                                    <TextBox Text="{Binding Path= ChuyenMon, UpdateSourceTrigger=PropertyChanged}" Background="#F2F7F2" Style="{DynamicResource d}" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#5E6D55" FontSize="25" FontWeight="SemiBold"/>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+
+                        <Border BorderBrush="#D5E0D5" BorderThickness="0 0 0 1">
+                            <StackPanel Orientation="Vertical" Margin="5 20 0 20">
+                                <TextBlock Text="Kinh nghiệm :" Foreground="#5E6D55" FontSize="20" FontWeight="Bold" Height="30"/>
+                                <Border CornerRadius="19" Background="#F2F7F2" BorderThickness="2" Width="220" Height="50">
+                                    <ComboBox x:Name="cboKinhNghiem" FontSize="15" BorderThickness="0" Padding="40 0 0 0" Foreground="#5E6D55" FontWeight="SemiBold"
+                                          Text="{Binding KinhNghiem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        Height="40" Width="200">
+                                        <ComboBoxItem Content="Ít hơn 1 năm" />
+                                        <ComboBoxItem Content="1 - 2 năm" />
+                                        <ComboBoxItem Content="2 - 3 năm" />
+                                        <ComboBoxItem Content="Trên 3 năm" />
+                                    </ComboBox>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+
+                        <Button x:Name="btn_Commfirm" Content="Sửa" FontSize="20" Width="250" Height="50" Margin="0 30 0 0" Click="btn_Sua_Click">
+                            <Button.Clip>
+                                <RectangleGeometry Rect="0,0,250,50" RadiusX="10" RadiusY="10"/>
+                            </Button.Clip>
+                        </Button>
+
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
